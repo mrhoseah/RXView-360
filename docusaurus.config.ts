@@ -7,7 +7,7 @@ module.exports = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'rasterex', // Your GitHub org/user name.
-  projectName: 'rxview360-api-docs', // Your repo name.
+  projectName: 'RXView-360-api-docs', // Your repo name.
   themeConfig: {
     navbar: {
       title: 'RxView360',
@@ -46,6 +46,7 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Rasterex Software a.s.`,
     },
+
   },
   presets: [
     [
