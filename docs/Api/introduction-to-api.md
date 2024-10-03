@@ -1,7 +1,7 @@
 ---
-id: rxView360-methods
-title: RxView360 Methods
-sidebar_label: RxView360 Methods
+id: rxView360-api-methods
+title: RxView360 API Methods
+sidebar_label: Getting started with API
 ---
 
 ### RxView360 Methods
