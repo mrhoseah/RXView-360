@@ -1091,182 +1091,384 @@ Returns NA
 ### `createSpaceFromPolygon`
 
 Allows you to use the mouse to select a vector block in a vector drawing that has polylines or polygons by clicking inside and create a Rasterex space object.
-Syntax RxCore.createSpaceFromPolygon(selected)
-Parameters Selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.createSpaceFromPolygon(selected);
+```
+
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
 ### `createSpacefromBlock`
 
-Creates a Rasterex space object from existing vector block given by blockid. You can use the pickPolygon tool to select a vector block to retrieve the blockid, or search for blocks with a specific attribute value using RxCore.findBlockByAttr().
-Syntax RxCore.createSpacefromBlock (blockid)
-Parameters blockid Block index of a vector block
+Creates a Rasterex space object from existing vector block given by blockid. You can use the pickPolygon tool to select a vector block to retrieve the blockid, or search for blocks with a specific attribute value using `RxCore.findBlockByAttr()`.
+
+**Syntax**
+
+```javascript
+RxCore.createSpacefromBlock(blockid);
+```
+
+**Parameters**
+
+-   `blockid`: Block index of a vector block
+
 Returns NA
 
 ### `createTextRect`
 
 Create a text box using left, top, width and height in screen coordinates.
-Syntax RxCore. createTextRect (x, y, w, h, text)
-Parameters x,y,w,h Left, top, width and height in screen coordinates
-text Text content of the text box markup
+
+**Syntax**
+
+```javascript
+RxCore.createTextRect(x, y, w, h, text);
+```
+
+**Parameters**
+
+-   `x,y,w,h Left, top, width and height`: in screen coordinates
+-   `text`: Text content of the text box markup
+
 Returns NA
 
 ### `delete3DViewAttribute`
 
 Removes a custom attribute from a 3D view
-Syntax RxCore.delete3DViewAttribute(szname, viewname)
-Parameters szName String – Name of the custom attribute
-Parameters viewname String - Name of the view. The view name can be extracted from any 3D annotation as the name property of the annotation.
+
+**Syntax**
+
+```javascript
+RxCore.delete3DViewAttribute(szname, viewname);
+```
+
+**Parameters**
+
+-   `szName`: String – Name of the custom attribute
+-   `viewname`: String - Name of the view. The view name can be extracted from any 3D annotation as the name property of the annotation.
+
 Returns NA
-Example RxCore. delete3DViewAttribute("description", annotitem.name);
-//annotitem is a valid 3D annotation object.
+
+**Example**
+
+```javascript
+RxCore.delete3DViewAttribute("description", annotitem.name);
+//annotitem is a valid 3D annotation object
+```
 
 .
 
 ### `deleteCamera`
 
 Use this method to delete a 3D View
-Syntax RxCore.deleteCamera (name)
-Parameters name String - The name of the view.
+
+**Syntax**
+
+```javascript
+RxCore.deleteCamera(name);
+```
+
+**Parameters**
+
+-   `name`: The name of the view (String)
+
 Returns NA
 
 ### `deleteMarkUp`
 
 Use this method to delete selected markup.
-Syntax RxCore.deleteMarkUp ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.deleteMarkUp();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `deleteMarkupbyGUID`
 
 Use this method to delete markup specified by the unique GUID value. If this is not set the uniqueID is 0.
-Syntax RxCore.deleteMarkupbyGUID (GUID)
-Parameters GUID Unique property uniqueID of a markup object.
+
+**Syntax**
+
+```javascript
+RxCore.deleteMarkupbyGUID(GUID);
+```
+
+**Parameters**
+
+-   `GUID`: Unique property uniqueID of a markup object.
+
 Returns NA
 
 ### `deletePoint`
 
 Sets the drawing operation for markup edit to delete selected point for markup that has multiple points.
-Syntax RxCore.deletePoint ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.deletePoint();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `deleteVectorAttribute`
 
 Delete a specific attribute from added attributes by name. Apply to file types that have attributes.
-Syntax RxCore. deleteVectorAttribute (szAttribName)
-Parameters szAttribName Name of attribute to delete.
+
+**Syntax**
+
+```javascript
+RxCore.deleteVectorAttribute(szAttribName);
+```
+
+**Parameters**
+
+-   `szAttribName`: Name of attribute to delete.
+
 Returns NA
 
 ### `disablewelcome`
 
 Disables the automatic loading of the RxView360 welcome screen graphics.
-Syntax RxCore. disablewelcome (onoff)
-Parameters Onoff Boolean true = disables welcome screen graphics, false = default value. Welcome screen is displayed.
+
+**Syntax**
+
+```javascript
+RxCore.disablewelcome(onoff);
+```
+
+**Parameters**
+
+-   `Onoff`: true = disables welcome screen graphics, false = default value. Welcome screen is displayed (Boolean)
+
 Returns NA
 
 ### `displayFloorplan`
 
 If 2D floorplans has been injected into the model, this method can be used to turn the visibility on/off.
-Syntax RxCore.displayFloorplan (floornum, onOff, bAll)
-Parameters floornum Index of floor.
-onOff Boolean display status true = on, false = off.
-bAll Boolean will affect all inserted 2D floor plans.
+
+**Syntax**
+
+```javascript
+RxCore.displayFloorplan(floornum, onOff, bAll);
+```
+
+**Parameters**
+
+-   `floornum`: Index of floor.
+-   `onOff`: Boolean display status true = on, false = off.
+-   `bAll`: Boolean will affect all inserted 2D floor plans.
+
 Returns NA
 
 ### `documentOpened`
 
 Use this method to check if a document is open.
-Syntax RxCore.documentOpened ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.documentOpened();
+```
+
+**Parameters** None
+
 Returns True/false Boolean value true
 
 ### `doResize`
 
 If the html GUI needs to change the size of the canvas use this method to notify rxcorefunctions about the change.
-Syntax RxCore.doResize (offsetWidth, offsetHeight)
-Parameters offsetWidth New width of page to subtract from canvas width in pixels
-Parameters offsetHeight New height of page to subtract from canvas height in pixels.
+
+**Syntax**
+
+```javascript
+RxCore.doResize(offsetWidth, offsetHeight);
+```
+
+**Parameters**
+
+-   `offsetWidth`: New width of page to subtract from canvas width in pixels
+-   `offsetHeight`: New height of page to subtract from canvas height in pixels.
+
 Returns NA
 
 ### `doResizeEx`
 
 Use this if the rxcontainer div has absolute width and height and you need to change the size of the viewport. This require that you have used setLayout with an additional absolute property to the layout object set to true.
-Syntax RxCore.doResize (Width, Height)
-Parameters Width New absolute width of canvas in pixels
-Height New absolute height of canvas in pixels.
+
+**Syntax**
+
+```javascript
+RxCore.doResize(Width, Height);
+```
+
+**Parameters**
+
+-   `Width`: New absolute width of canvas in pixels
+-   `Height`: New absolute height of canvas in pixels.
+
 Returns NA
 
 ### `draw3DBirdseye`
 
 Draws the camera position and angle on the bird’s eye image.
-Syntax RxCore.draw3DBirdseye ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.draw3DBirdseye();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `drawmarkupToCanvas`
 
 Draw markup associated with a specific 3D view to a Canvas.
-Syntax RxCore.drawmarkupToCanvas (ctx, width, height, name)
-Parameters ctx Canvas context
-Parameters width Width of canvas
-Parameters height Height of canvas
-Parameters name Name of 3D view
+
+**Syntax**
+
+```javascript
+RxCore.drawmarkupToCanvas(ctx, width, height, name);
+```
+
+**Parameters**
+
+-   `ctx`: Canvas context
+-   `width`: Width of canvas
+-   `height`: Height of canvas
+-   `name`: Name of 3D view
+
 Returns NA
 
 ### `enableCamNavDraw`
 
 Use to temporarily turn off the automatic update of the camera indicator for drawings used as 2D navigation for a 3D model. This is used in combination with floor selection to prevent the automatic update of a floor plan when selecting active floorplan to move between floors.
-Syntax RxCore.enableCamNavDraw (onOff)
-Parameters onOff Boolean where true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.enableCamNavDraw(onOff);
+```
+
+**Parameters**
+
+-   `onOff`: Boolean where true = on, false = off.
+
 Returns NA
 
 ### `endGetTextRects`
 
 Used with getTextRects to terminate the operation and reset values.
-Syntax RxCore.endGetTextRects ()
-Parameters none
+
+**Syntax**
+
+```javascript
+RxCore.endGetTextRects();
+```
+
+**Parameters** none
+
 Returns NA
-Example RxCore.endGetTextRects();
+
+**Example**
+
+```javascript
+RxCore.endGetTextRects();
 //terminate operation started with RxCore.getTextRects
+```
 
 ### `endMarkupTextSearch`
 
-Use this method to terminate markup text search function initiated using
-RxCore. markupTextSearch
-Syntax RxCore. endMarkupTextSearch ()
-Parameters none
+Use this method to terminate markup text search function initiated using `RxCore. markupTextSearch`
+
+**Syntax**
+
+```javascript
+RxCore.endMarkupTextSearch();
+```
+
+**Parameters** none
+
 Returns NA
 
 ### `endTextSearch`
 
 Use this method to terminate text search function initiated using RxCore.textSearch
-Syntax RxCore.endTextSearch()
-Parameters none
+
+**Syntax**
+
+```javascript
+RxCore.endTextSearch();
+```
+
+**Parameters** none
+
 Returns NA
 
 ### `explode3D`
 
 Use this method in combination with RxCore.explode3DDistance to set the separation distance of blocks in a currently open 3D model.
-Syntax RxCore.explode3D (onoff)
-Parameters onoff Boolean value to actvate function true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.explode3D(onoff);
+```
+
+**Parameters**
+
+-   `onoff`: Boolean value to actvate function true = on, false = off.
+
 Returns NA
 
 ### `explode3DDistance`
 
 Use this method in combination with RxCore.explode3D to set the separation distance of blocks in a currently open 3D model.
-Syntax RxCore.explode3DDistance (value)
-Parameters Value Value in percentage of model extent.
+
+**Syntax**
+
+```javascript
+RxCore.explode3DDistance(value);
+```
+
+**Parameters**
+
+-   `Value`: Value in percentage of model extent.
+
 Returns NA
 
 ### `exportFile`
 
 Use this method to export currently active drawing or document to a supported export format like PDF.
-Syntax RxCore.exportFile (consolidate, format,UPI,paperSize,markupFlag)
-Parameters consolidate Boolean if true only consolidated markup will be exported.
-Parameters format Ex. “PDF” for PDF format.
-Parameters UPI Set to “0”. For future use.
-Parameters paperSize Ex. “A4”
-Parameters markupFlag “0” = burned in markup, “1” = native markup (PDF only)
+
+**Syntax**
+
+```javascript
+RxCore.exportFile(consolidate, format, UPI, paperSize, markupFlag);
+```
+
+**Parameters**
+
+-   `consolidate`: if true only consolidated markup will be exported (Boolean)
+-   `format`: Ex. “PDF” for PDF format.
+-   `UPI`: Set to “0”. For future use.
+-   `paperSize`: Ex. “A4”
+-   `markupFlag`: “0” = burned in markup, “1” = native markup (PDF only)
+
 Returns NA
 
 ### `exportFilePage`
@@ -1314,8 +1516,6 @@ Returns NA
 
 Use this method to export currently active drawing or document to PDF to use for printing.
 
-Returns NA
-
 **Syntax**
 
 ```javascript
@@ -1325,6 +1525,8 @@ RxCore.exportFilePrintPDF(szPapersize);
 **Parameters**
 
 -   `paperSize`: Ex. “A4”
+
+Returns NA
 
 ### `exportPDF`
 
@@ -1344,8 +1546,6 @@ Returns NA
 
 Used for setting export options. Currently only used to set if all markup or only the markup of current user is included with the export.
 
-Returns NA
-
 **Syntax**
 
 ```javascript
@@ -1355,6 +1555,8 @@ RxCore.exportSettings(settings);
 **Parameters**
 
 -   `settings`: Object.
+
+Returns NA
 
 **Example**
 
@@ -1368,8 +1570,6 @@ includeAllMarkup : true/false
 
 Opens a dialog containing information about the currently open document or drawing.
 
-Returns NA
-
 **Syntax**
 
 ```javascript
@@ -1378,11 +1578,11 @@ RxCore.fileInfoDialog();
 
 **Parameters** None
 
+Returns NA
+
 ### `fileSelected`
 
 Used in combination with a file input field onchange event. If a file input field is added to the html framework, this can be used to upload files to the server. When this function is called the file information from the input field will be used to post a file to the server.
-
-Returns NA
 
 **Syntax**
 
@@ -1391,6 +1591,8 @@ RxCore.fileSelected();
 ```
 
 **Parameters** None
+
+Returns NA
 
 ### `findBlockByAttr`
 
@@ -1413,8 +1615,6 @@ RxCore.findBlockByAttr(attrname, attrvalue);
 
 Opens a dialog where a search expression can be entered. If a matching markup object with the search text is found, RxView360 will zoom in on that markup.
 
-Returns NA
-
 **Syntax**
 
 ```javascript
@@ -1423,11 +1623,11 @@ RxCore.findMarkUp();
 
 **Parameters** None
 
+Returns NA
+
 ### `forcepagesState`
 
 Used with foxit integration to cause GUI_State callback event.
-
-Returns NA
 
 **Syntax**
 
@@ -1439,11 +1639,11 @@ RxCore.forcepagesState(state);
 
 -   `state`: State object.
 
+Returns NA
+
 ### `foxitcalibratepagemarkupEx`
 
 Used with foxit integration to set the scale and position of Rasterex markup.
-
-Returns NA
 
 **Syntax**
 
@@ -1457,11 +1657,11 @@ RxCore.foxitcalibratepagemarkupEx(pagepos, scale, pagenumber);
 -   `scale`: Page scale returned from Foxit getScale() method that is a method on the page render object.
 -   `pagenumber`: Page number (0 indexed page number)
 
+Returns NA
+
 ### `foxitForceRedraw`
 
 Used with foxit integration to force a redraw of the active PDF document.
-
-Returns NA
 
 **Syntax**
 
@@ -1471,13 +1671,13 @@ RxCore.foxitForceRedraw();
 
 **Parameters** None
 
+Returns NA
+
 ### `freeLicense`
 
 Call when closing web page to make sure the current license is released.
 
-Returns NA
-
-Syntax RxCore.freeLicense ()
+Syntax
 
 ```javascript
 RxCore.freeLicense();
@@ -1513,80 +1713,161 @@ defaultstate` = 'default on/off state'
 ### `get2DVectorfilterAttributes`
 
 Returns an Array of vector block attributes from a vector file with blocks. You can use attributeMask to return a set of attributes based on a search expression.
-Syntax RxCore. get2DVectorfilterAttributes()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.get2DVectorfilterAttributes();
+```
+
+**Parameters** None
+
 Returns Block Array Array of attribute objects
-var AttributeObject = \{
-name : szatrrname,
-value : szatrtvalue,
-blockref : readstate.blockpart
-\};
+
+```javascript
+var AttributeObject = {
+	name: szatrrname,
+	value: szatrtvalue,
+	blockref: readstate.blockpart,
+};
+```
 
 ### `get3DFloorplanCanvas`
 
 Activate this method using alignment data and a floor number to have a canvas returned in GUI_FloorplanCanvas callback. Use canvas to insert a floorplan plane into the 3D drawing using the create3DfloorplanfromCanvas method.
-Syntax RxCore.get3dFloorplanCanvas(floornum, alignarray)
-Parameters floornum Number index for the floor plan,
-alignarray Array of alignment data created with a compare/overlay
+
+**Syntax**
+
+```javascript
+RxCore.get3dFloorplanCanvas(floornum, alignarray);
+```
+
+**Parameters**
+
+-   `floornum`: Number index for the floor plan,
+-   `alignarray`: Array of alignment data created with a compare/overlay
+
 Returns N/A GUI_FloorplanCanvas callback Returns canvas
 
 ### `get3DmodelcurFloor`
 
 Get the current floor index from the currently active 3D model based on camera position.
-Syntax RxCore.get3DmodelcurFloor()
-Parameters None
-Returns curfloor; Index of floor.
+
+**Syntax**
+
+```javascript
+RxCore.get3DmodelcurFloor();
+```
+
+**Parameters** None
+
+Returns `curfloor`; Index of floor.
 
 ### `get3DmodelboxCenter`
 
 Returns the center of an open 3D model
-Syntax RxCore.get3DmodelboxCenter(targetdocindex)
-Parameters targetdocindex Open files index for the 3D model
-Returns boxCenter 3D vector with x, y and z values.
+
+**Syntax**
+
+```javascript
+RxCore.get3DmodelboxCenter(targetdocindex);
+```
+
+**Parameters**
+
+-   `targetdocindex`: Open files index for the 3D model
+
+Returns `boxCenter` 3D vector with x, y and z values.
 
 ### `get3DResetView`
 
 Returns an image of the 3D model initial view.
-Syntax RxCore.get3DResetView()
-Parameters none
-Returns image base64 encoded image data.
+
+**Syntax**
+
+```javascript
+RxCore.get3DResetView();
+```
+
+**Parameters** none
+
+Returns `image` base64 encoded image data.
 
 ### `get3DVectorBlocks`
 
 Returns the meshes userData from a 3D model which allow operations on all meshes.
-Syntax RxCore.get3DVectorBlocks ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.get3DVectorBlocks();
+```
+
+**Parameters** None
+
 Returns Block Array Array of 3D block objects
 
 ### `get3DViewAttribute`
 
 Returns an attribute key, value object from a 3D view by attribute name
-Syntax RxCore.getViewAttribute,( szName, viewname)
-Parameters Szname String attribute name
-Parameters viewname String 3D view name
+
+**Syntax**
+
+```javascript
+RxCore.getViewAttribute, (szName, viewname);
+```
+
+**Parameters**
+
+-   `Szname`: String attribute name
+-   `viewname`: String 3D view name
+
 Returns Attribute Key name and value object
 
 ### `get3DViewAttributes`
 
 Returns an array of all attribute key, value object from a 3D view by 3D view name
-Syntax RxCore. get3DViewAttributes,(viewname)
-Parameters viewname String 3D view name
+
+**Syntax**
+
+```javascript
+RxCore.get3DViewAttributes, viewname;
+```
+
+**Parameters**
+
+-   `viewname`: String 3D view name
+
 Returns Attributes Array of key name and value objects
 
 ### `getActiveFileFloorlevel`
 
 If a drawing is set up to be a 2D navigation floor plan for a 3D model this method will retrieve which floor level the drawing is set up for.
-Syntax RxCore.getActiveFileFloorlevel()
-Parameters None
-Returns floorlevel object = floorindex : number index for the floor plan,
-replaced : Boolean true = replaced, false = not replaced.
+
+**Syntax**
+
+```javascript
+RxCore.getActiveFileFloorlevel();
+```
+
+**Parameters** None
+
+Returns `floorlevel` object = \{floorindex : number\} index for the floor plan,
+`replaced` : Boolean true = replaced, false = not replaced.
 
 ### `getAllPageDimensions`
 
 Return an Array of page dimension objects for all pages in a document.
-Syntax RxCore. getAllSelectedMarkup()
-Parameters None
-Returns pgdim Array Page dimensions object.
+
+**Syntax**
+
+```javascript
+RxCore.getAllSelectedMarkup();
+```
+
+**Parameters** None
+
+Returns `pgdim` Array Page dimensions object.
 
 pgdim.x //page current x position
 pgdim.y //page current y position
@@ -1601,8 +1882,15 @@ pgdim.rotation //page current rotation
 ### `getAllSelectedMarkup`
 
 Return an array of all markup objects that are currently selected. Multiple markups can be selected if this is turned on using RxCore.markupMultiselect(true)
-Syntax RxCore. getAllSelectedMarkup()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.getAllSelectedMarkup();
+```
+
+**Parameters** None
+
 Returns Markup Array Array of markup objects.
 
 ### `getBlockAttributes`
@@ -1779,7 +2067,7 @@ RxCore.getCompareColors();
 
 **Parameters** None
 
-Returns comparecolors
+Returns `comparecolors`
 
 ```javascript
 var comparecolors = {
@@ -1798,79 +2086,178 @@ Returns the page number of the currently active page in a multipage document
 RxCore.getcurPage();
 ```
 
-Parameters None
-Returns curpage Number of currently active page.
+**Parameters** None
 
-2.126 getDisplayName
-Returns a string containing the User Displayname for the given signature.
-Syntax RxCore.getDisplayName (sign)
-Parameters sign User signature
-Returns Displayname Display name for the user.
+Returns `curpage` Number of currently active page.
 
-2.127 getdivcontainer
+### `getDisplayName`
+
+Returns a string containing the User `Displayname` for the given signature.
+
+**Syntax**
+
+```javascript
+RxCore.getDisplayName(sign);
+```
+
+**Parameters**
+
+-   `sign`: User signature
+
+Returns `Displayname` Display name for the user.
+
+### `getdivcontainer`
+
 Used for foxit integration to control where foxit iframe is located. Returns a div used by RxView360 to hold the foxit Iframe
-Syntax RxCore. getdivcontainer ()
-Parameters none
-Returns Html element Div
 
-2.128 getDocFileName
+**Syntax**
+
+```javascript
+RxCore.getdivcontainer();
+```
+
+**Parameters** none
+
+Returns `Html` element `Div`
+
+### `getDocFileName`
+
 Returns the name of the currently open drawing or document.
-Syntax RxCore. getDocFileName ()
-Parameters None
-Returns szFilename A string with the value of the file name or 'empty’ if no files are open.
 
-2.129 getdocInfo
+**Syntax**
+
+```javascript
+RxCore.getDocFileName();
+```
+
+**Parameters** None
+
+Returns `szFilename` A string with the value of the file name or 'empty’ if no files are open.
+
+### `getdocInfo`
+
 Returns an object with properties of the currently active drawing or document.
-Syntax RxCore.getdocInfo ()
-Parameters None
-Returns docinfo An object with the following properties
-iscompare : Boolean,
-isPDF : Boolean,
-is3D : Boolean,
-is2D : Boolean,
-numpages: number,
-currentpage:number
 
-2.130 getDocRect
+**Syntax**
+
+```javascript
+RxCore.getdocInfo();
+```
+
+**Parameters** None
+
+Returns `docinfo` An object with the following properties
+
+`iscompare` : Boolean,
+`isPDF` : Boolean,
+`is3D` : Boolean,
+`is2D` : Boolean,
+`numpages`: number,
+`currentpage`:number
+
+### `getDocRect`
+
 Used in combination with GUI_PrintRect callback. The callback Returns a rectangle in document units that can be added to the paperSize object that is included with the RxCore.printSizeEx method. Allows a selection to be printed instead of the whole page.
-Syntax RxCore. getDocRect (selected)
-Parameters Selected If true the method is activated if false the default input tool is used.
+
+**Syntax**
+
+```javascript
+RxCore.getDocRect(selected);
+```
+
+**Parameters**
+
+-   `Selected`: If true the method is activated if false the default input tool is used.
+
 Returns N/A
 
-2.131 getFillColor
+### `getFillColor`
+
 Returns the currently active markup fill color.
-Syntax RxCore. getFillColor()
-Parameters None
-Returns markupcolor A color object using html notation.
 
-2.132 getFillStyle
+**Syntax**
+
+```javascript
+RxCore.getFillColor();
+```
+
+**Parameters** None
+
+Returns `markupcolor` A color object using html notation.
+
+### `getFillStyle`
+
 Returns the currently active markup fill style.
-Syntax RxCore.getFillStyle ()
-Parameters None
-Returns Fillstyle Number of fill style.
 
-2.133 getFixedScale
+**Syntax**
+
+```javascript
+RxCore.getFillStyle();
+```
+
+**Parameters** None
+
+Returns `Fillstyle` Number of fill style.
+
+### `getFixedScale`
+
 Returns the fixed markup draw scale for the currently active document or drawing. The fixed scale is used to make sure that markup line widths and font sizes are independent of the current zoom factor.
-Syntax RxCore.getFixedScale()
-Parameters None
-Returns Scale Scale that is used to draw markup in 1:1.
 
-2.134 getfloorplanDocs
+**Syntax**
+
+```javascript
+RxCore.getFixedScale();
+```
+
+**Parameters** None
+
+Returns `Scale` Scale that is used to draw markup in 1:1.
+
+### `getfloorplanDocs`
+
 GUI_floorlevel callback event Returns a floor elevation object. This can be used with this method to find an open drawing being used as 2D navigation page for a floor in a 3D model.
-Syntax RxCore.getfloorplanDocs(floorelevationobj)
-Parameters floorelevationobj floorindex : num – Floor index from 3D model for current camera position.
+
+**Syntax**
+
+```javascript
+RxCore.getfloorplanDocs(floorelevationobj);
+```
+
+**Parameters**
+
+-   `floorelevationobj`: `floorindex` : num – Floor index from 3D model for current camera position.
+
 Returns Page list Array of pages connected to the elevation. Empty if none.
 
-2.135 getFloorplanList
+### `getFloorplanList`
+
 Returns a list of floorplan objects. Used to get elevation and floorplan images from a 3D model.
-Syntax RxCore.getFloorplanList(fileindex)
-Parameters fileindex Open file Index
-Returns floorplans Array of floorplan objects
-2.136 getFont
+
+**Syntax**
+
+```javascript
+RxCore.getFloorplanList(fileindex);
+```
+
+**Parameters**
+
+-   `fileindex`: Open file Index
+
+Returns `floorplans` Array of floorplan objects
+
+### `getFont`
+
 Returns the currently active markup font.
-Syntax RxCore.getFont ()
-Parameters None
-Returns fontstyle String indicating current font.
+
+**Syntax**
+
+```javascript
+RxCore.getFont();
+```
+
+**Parameters** None
+
+Returns `fontstyle` String indicating current font.
 
 ### `getFoxitIframeID`
 
@@ -1951,11 +2338,11 @@ var defaultLayout = {
 };
 ```
 
-offsetWidth = If absolute is false this is the offset from the left of main document in pixels.
+`offsetWidth`: If absolute is false this is the offset from the left of main document in pixels.
 
-offsetHeight = If absolute is false this is the offset from the top of main document in pixels.
+`offsetHeight`: If absolute is false this is the offset from the top of main document in pixels.
 
-absolute = A Boolean value that when true allow the use of a div with absolute values and the width and height is the height and width of the div rather than the offset.
+`absolute`: A Boolean value that when true allow the use of a div with absolute values and the width and height is the height and width of the div rather than the offset.
 
 ### `getLineColor`
 
@@ -4826,7 +5213,10 @@ Use this method to set the calibration scaling using a number.
 RxCore.setCalibration(scale);
 ```
 
-Parameters scale A number ex. 0.5 will set the scale to half original scale
+**Parameters**
+
+-   `scale`: A number ex. 0.5 will set the scale to half original scale
+
 Returns NA
 
 ### `setCameraTumbWidth`
@@ -4839,7 +5229,10 @@ Use to override the default thumbnail image width for 3D Views. Default value is
 RxCore.setCameraTumbWidth(num);
 ```
 
-Parameters Num New default width of 3D view thumbnail image.
+**Parameters**
+
+-   `Num`: New default width of 3D view thumbnail image.
+
 Returns NA
 
 ### `setCompareFiles`
@@ -4852,9 +5245,11 @@ Used in combination with the compare dialog to set the state of a file in a comp
 RxCore.setCompareFiles(index, state);
 ```
 
-Parameters index Index number reference to file in list of open files that can be used in a compare/overlay composite.
-state Role of the referenced file.
-0 = unused, 1 = background, 2= overlay
+**Parameters**
+
+-   `index`: Index number reference to file in list of open files that can be used in a compare/overlay composite.
+-   `state`: Role of the referenced file. 0 = unused, 1 = background, 2= overlay
+
 Returns NA
 
 ### `setCompareColors`
@@ -4867,8 +5262,11 @@ Use this method to set the drawing colors for overlay and background page in a c
 RxCore.setCompareColors(bgcolor, fgcolor);
 ```
 
-Parameters bgcolor Html color string to set color of background drawing.
-Parameters fgcolor Html color string to set color of foreground drawing.
+**Parameters**
+
+-   `bgcolor`: Html color string to set color of background drawing.
+-   `fgcolor`: Html color string to set color of foreground drawing.
+
 Returns NA
 
 ### `setCompareScale`
@@ -4881,10 +5279,15 @@ Set compare alignment using an array containing scaling object returned by GUI_C
 RxCore.setCompareScale(scalearray);
 ```
 
-Parameters scalearray Array of scale objects
-Scaleobject = \{
-dist: distance, angle : angle, offset : offset, pwidth : pagewidth
-\}
+**Parameters**
+
+-   `scalearray`: Array of scale objects
+-   `Scaleobject`: object= \{
+    `dist`: distance,
+    `angle` : angle,
+    `offset` : offset,
+    `pwidth` : pagewidth
+    \}
 
 Returns NA
 
@@ -4898,7 +5301,10 @@ Use this method to override the configuration location source loaded on startup.
 RxCore.setConfiguration(szURL);
 ```
 
-Parameters szURL Full URL to an XML source that is used to set the client configuration.
+**Parameters**
+
+-   `szURL`: Full URL to an XML source that is used to set the client configuration.
+
 Returns NA
 
 ### `setCountSize`
@@ -4911,7 +5317,10 @@ Set the display size of selected markup count element in pixels.
 RxCore.setCountSize(nSize);
 ```
 
-Parameters nSize New display size.
+**Parameters**
+
+-   `nSize`: New display size.
+
 Returns NA
 
 ### `setCountSizeAll`
@@ -4924,7 +5333,10 @@ Set the display size of all markup count element in pixels.
 RxCore.setCountSizeAll(nSize);
 ```
 
-Parameters nSize New display size.
+**Parameters**
+
+-   `nSize`: New display size.
+
 Returns NA
 
 ### `setCustomLabelText`
@@ -4937,8 +5349,11 @@ Sets a custom text and visibility of a selected Rasterex space markup object lab
 RxCore.setCustomLabelText(text, onoff);
 ```
 
-Parameters text Text to use with label.
-onoff Boolean : true = label displayed, false = label hidden.
+**Parameters**
+
+-   `text`: Text to use with label.
+-   `onoff`: Boolean : true = label displayed, false = label hidden.
+
 Returns NA
 
 ### `setDimOffset`
@@ -4951,7 +5366,10 @@ Sets the leader line offset for dimension line markup objects.
 RxCore.setDimOffset(size);
 ```
 
-Parameters size Number of pixels for leader line offset.
+**Parameters**
+
+-   `size`: Number of pixels for leader line offset.
+
 Returns NA
 
 ### `setdimPrecision`
@@ -4964,7 +5382,10 @@ Sets how many numbers after the decimal points are used for measurement markup. 
 RxCore.setdimPrecision(num);
 ```
 
-Parameters num New value of numbers after decimal points used.
+**Parameters**
+
+-   `num`: New value of numbers after decimal points used.
+
 Returns NA
 
 ### `setdisplayBackground`
@@ -4977,7 +5398,10 @@ Use this method to set the color of the display area outside the extent of the d
 RxCore.setdisplayBackground(color);
 ```
 
-Parameters color Color string using supported html color notation Ex “#00FF00”
+**Parameters**
+
+-   `color`: Color string using supported html color notation Ex “#00FF00”
+
 Returns NA
 
 ### `setFont`
@@ -4990,7 +5414,10 @@ Use this method to set the font used for markup text.
 RxCore.setFont(value);
 ```
 
-Parameters Value Type string. A valid font name.
+**Parameters**
+
+-   `Value`: Type string. A valid font name.
+
 Returns NA
 
 ### `setFontBold`
@@ -5003,7 +5430,8 @@ Use this method to toggle font bold on/off.
 RxCore.setFontBold();
 ```
 
-Parameters none
+**Parameters** none
+
 Returns NA
 
 ### `setFontFull`
@@ -5016,10 +5444,13 @@ Sets the current markup font using font name, font size, font style bold, font s
 RxCore.setFontFull(fontobject);
 ```
 
-Parameters fontobject Fontobject.font = \<string font name>
-Fontobject.size = \<height in points>
-Fontobject.style.bold = \<Boolean true/false>
-Fontobject.style.italic = \<Boolean true/false>
+**Parameters**
+
+-   `fontobject`: Fontobject.font = \<string font name>
+    `Fontobject.size `= \<height in points>
+    `Fontobject.style.bold` = \<Boolean true/false>
+    `Fontobject.style.italic` = \<Boolean true/false>
+
 Returns NA
 
 ### `setFontHeight`
@@ -5032,7 +5463,10 @@ Use this method to set the font height for markup text in points.
 RxCore.setFontHeight(value);
 ```
 
-Parameters Value Integer indicating font height in points.
+**Parameters**
+
+-   `Value`: Integer indicating font height in points.
+
 Returns NA
 
 ### `setFontItalic`
@@ -5045,7 +5479,8 @@ Use this method to set font italic on/off.
 RxCore.setFontItalic(value);
 ```
 
-Parameters OnOff Boolean to set Italic on/off
+-   `OnOff`: Boolean to set Italic on/off
+
 Returns NA
 
 ### `setGlobalStyle`
@@ -5058,7 +5493,10 @@ When on any changes to markup color, line width, and fill style will be set as t
 RxCore.setGlobalStyle(global);
 ```
 
-Parameters global Boolean value to turn setting on/off
+**Parameters**
+
+-   `global`: Boolean value to turn setting on/off
+
 Returns NA
 
 ### `setGUIDMarkupSelected`
@@ -5071,7 +5509,8 @@ Assign a unique ID to the currently selected markup.
 RxCore.setGUIDMarkupSelected();
 ```
 
-Parameters none
+**Parameters** none
+
 Returns NA
 
 ### `setHatchDescription`
@@ -5084,8 +5523,11 @@ Sets a description property on a fill style created using addFill.
 RxCore.setHatchDescription(szname, szdescription);
 ```
 
-Parameters szname Name identifier of the fill object.
-Parameters szdescription Text description to apply.
+**Parameters**
+
+-   `szname`: Name identifier of the fill object.
+-   `szdescription`: Text description to apply.
+
 Returns NA
 
 ### `setLabelSize`
@@ -5098,7 +5540,10 @@ Changes the label size for markup objects that has labels like area and dimensio
 RxCore.setLabelSize(size);
 ```
 
-Parameters size Number of pixels for the label text height.
+**Parameters**
+
+-   `size`: Number of pixels for the label text height.
+
 Returns NA
 
 ### `setLabelSizeAll`
@@ -5111,7 +5556,10 @@ Changes the label size for all markup objects that has labels like area and dime
 RxCore.setLabelSizeAll(size);
 ```
 
-Parameters size Number of pixels for the label text height.
+**Parameters**
+
+-   `size`: Number of pixels for the label text height.
+
 Returns NA
 
 ### `setLargePDFpageLimit`
@@ -5124,7 +5572,10 @@ If a loaded PDF file contains more pages than the set number, only a limited num
 RxCore.setLargePDFpageLimit(numpages);
 ```
 
-Parameters numpages Limit for number of pages that can be loaded at once.
+**Parameters**
+
+-   `numpages`: Limit for number of pages that can be loaded at once.
+
 Returns NA
 
 ### `setLayout`
@@ -5137,8 +5588,11 @@ Call to set canvas size based on web page content.
 RxCore.initialize(layout);
 ```
 
-Parameters offsetWidth Width to subtract from full width. Values in pixels.
-Parameters offsetHeight Height to subtract from full height. Values in pixels.
+**Parameters**
+
+-   `offsetWidth`: Width to subtract from full width. Values in pixels.
+-   `offsetHeight`: Height to subtract from full height. Values in pixels.
+
 Returns NA
 
 ### `setLineStyle`
@@ -5151,14 +5605,18 @@ Use this method to set the line style used for markup. NB! Not all browser curre
 RxCore_SetLineStyle(linestyle);
 ```
 
-Parameters Value 0 = '————' solid
-1 = '– – – – – ' dashed
-2 = '· · · · · · · ' dotted
-3 = '– · · – · · ' dash dot dot dash
-4 = '– · – · – · ' dash dot
+**Parameters**
+
+`Value`: 0 = '————' solid
+`1 `= '– – – – – ' dashed
+`2` = '· · · · · · · ' dotted
+`3` = '– · · – · · ' dash dot dot dash
+`4` = '– · – · – · ' dash dot
+
 Returns NA
 
-2.349 setLineWidth
+### `setLineWidth`
+
 Use this method to set the line width used for selected markup.
 
 **Syntax**
@@ -5167,7 +5625,10 @@ Use this method to set the line width used for selected markup.
 RxCore.setLineWidth(value);
 ```
 
-Parameters Value Width in pixels.
+**Parameters**
+
+-   `Value`: Width in pixels.
+
 Returns NA
 
 ### `setLineWidthAll`
@@ -5180,7 +5641,10 @@ Use this method to set the line width used for all markup.
 RxCore.setLineWidthAll(value);
 ```
 
-Parameters value Width in pixels.
+**Parameters**
+
+-   `value`: Width in pixels.
+
 Returns NA
 
 ### `setLineWidthMarkup`
@@ -5193,8 +5657,11 @@ Use this method to set the line width used for a markup object.
 RxCore.setLineWidth(markup, value);
 ```
 
-Parameters markup Markup object.
-value Width in pixels.
+**Parameters**
+
+-   `markup`: Markup object.
+-   `value`: Width in pixels.
+
 Returns NA
 
 ### `setLineWidthUnits`
@@ -5207,7 +5674,10 @@ Sets the line width for the selected markup to the width specified using he curr
 RxCore.setLineWidthUnits(value);
 ```
 
-Parameters Value Width in current measurement uinit.
+**Parameters**
+
+-   `Value`: Width in current measurement uinit.
+
 Returns NA
 
 ### `setMarkup3DSavefile`
@@ -5220,7 +5690,10 @@ Use to change the name of the json file that holds the 3D markups. Default is 'm
 RxCore.setMarkup3DSavefile(szfilename);
 ```
 
-Parameters szfilename String - Name of the file
+**Parameters**
+
+-   `szfilename`: String - Name of the file
+
 Returns NA
 
 ### `setMarkupLayer`
@@ -5233,7 +5706,10 @@ Set the currently active markup layer.
 RxCore.setMarkupLayer(layer);
 ```
 
-Parameters layer Number of the markup layer to set as active.
+**Parameters**
+
+-   `layer`: Number of the markup layer to set as active.
+
 Returns NA
 
 ### `setmarkupRxGUID`
@@ -5246,7 +5722,8 @@ Set unique id for markup objects.
 RxCore.setmarkupRxGUID();
 ```
 
-Parameters none
+**Parameters** none
+
 Returns NA
 
 ### `setMarkupSearchPadding`
@@ -5259,9 +5736,17 @@ Sets an internal variable that can be used with RxCore.markupTextSearch to contr
 RxCore.setMarkupSearchPadding(padding);
 ```
 
-Parameters padding object padding = \{x : int, y : int, w: int, h : int \}
+**Parameters**
+
+-   `padding`: object padding = \{x : int, y : int, w: int, h : int \}
+
 Returns NA
-Examples RxCore.setMarkupSearchPadding(\{x:50, y: 50, w:50, h:100\});
+
+**Examples**
+
+```javascript
+RxCore.setMarkupSearchPadding({ x: 50, y: 50, w: 50, h: 100 });
+```
 
 ### `setMarkupXMLData`
 
@@ -5273,7 +5758,10 @@ Create markup from XML markup structure.
 RxCore.setMarkupXMLData(xmldata);
 ```
 
-Parameters xmldata Xml structure representing markup to be created.
+**Parameters**
+
+-   `xmldata`: Xml structure representing markup to be created.
+
 Returns NA
 
 ### `setMonoChrome`
@@ -5286,7 +5774,10 @@ Turn monochrome display on/off for CAD and other vector based formats.
 RxCore.setMonoChrome(bonOff);
 ```
 
-Parameters bonOff Boolean value. True = monochrome on, false = monochrome off.
+**Parameters**
+
+`bonOff`: Boolean value. True = monochrome on, false = monochrome off.
+
 Returns NA
 
 ### `setnavigationScaleOffset`
@@ -5299,9 +5790,12 @@ Use alignment array from compare overlay to set the scale and offset of a drawin
 RxCore.setnavigationScaleOffset(targetdocindex, floornum, alignarray);
 ```
 
-Parameters targetdocindex Open file index of the 3D model.
-floornum 3D model floor that the scale and offset is for.
-Alignarray Array of alignment data created for the compare overlay.
+**Parameters**
+
+-   `targetdocindex`: Open file index of the 3D model.
+-   `floornum`: 3D model floor that the scale and offset is for.
+-   `Alignarray`: Array of alignment data created for the compare overlay.
+
 Returns NA
 
 ### `setnavScaleOffsetPage`
@@ -5314,7 +5808,10 @@ Use alignment array from compare overlay to set the scale and offset of current 
 RxCore.setnavigationScaleOffset(alignarray);
 ```
 
-Parameters alignarray Array of alignment data created for the compare overlay.
+**Parameters**
+
+-   `alignarray`: Array of alignment data created for the compare overlay.
+
 Returns NA
 
 ### `setpageAs3DNavigator`
@@ -5406,180 +5903,443 @@ RxCore.setRxSpaceColor(blockid, Color, override);
 ### `setscrollZoomKey`
 
 When on a keyboard key must be pressed in combination with using the mouse wheel in order to zoom in.
-Syntax RxCore. setscrollZoomKey (OnOff,key)
-Parameters OnOff true = on, false = off.
-Parameters key Character code of the keyboard key to use as control key
+
+**Syntax**
+
+```javascript
+RxCore.setscrollZoomKey(OnOff, key);
+```
+
+**Parameters**
+
+-   `OnOff`: true = on, false = off.
+-   `key`: Character code of the keyboard key to use as control key
+
 Returns NA
 
-2.367 setSingleDocument
+### `setSingleDocument`
+
 Use to switch between single or multiple document mode.
-Syntax RxCore.setSingleDocument (onoff)
-Parameters onoff If true only document at the time can be opened,
+
+**Syntax**
+
+```javascript
+RxCore.setSingleDocument(onoff);
+```
+
+**Parameters**
+
+-   `onoff`: If true only document at the time can be opened
+
 Returns NA
 
-2.368 setSpaceID
+### `setSpaceID`
+
 Sets the “SpaceID” attribute value for a selected Rasterex space object.
-Syntax RxCore.setSpaceID (idvalue)
-Parameters idvalue A number to be used as a Space ID.
+
+**Syntax**
+
+```javascript
+RxCore.setSpaceID(idvalue);
+```
+
+**Parameters**
+
+-   `idvalue`: A number to be used as a Space ID.
+
 Returns NA
 
-2.369 setText
+### `setText`
+
 Alternative reference to GUI_Textdiag setText method.
 
-2.370 setThumbnailFoxit
+### `setThumbnailFoxit`
+
 Used with Foxit integration object to set page thumbnail from Foxit thumbnail function.
-Syntax RxCore.setThumbnailFoxit (thumbnail, pagenum)
-Parameters thumbnail Thumbnail object
-Parameters pagenum Page index
+
+**Syntax**
+
+```javascript
+RxCore.setThumbnailFoxit(thumbnail, pagenum);
+```
+
+**Parameters**
+
+-   `thumbnail`: Thumbnail object
+-   `pagenum`: Page index
+
 Returns NA
 
-2.371 setUnit
+### `setUnit`
+
 Use this method to set the measure system used for measurement and markup.
-Syntax RxCore.setUnit (value)
-Parameters value Type integer.
-1 = Metric, 2 = Imperial, 3 = System and 4 = Custom
+
+**Syntax**
+
+```javascript
+RxCore.setUnit(value);
+```
+
+**Parameters**
+
+-   `value`: Type integer, 1 = Metric, 2 = Imperial, 3 = System and 4 = Custom
+
 Returns NA
 
-2.372 setVectorBlockArea
+### `setVectorBlockArea`
+
 Use this method to add a custom attribute to a vector block polygon that contain the area value.
-Syntax RxCore.setVectorBlockArea(partindex, foundblock, szAttname)
-Parameters Partindex Integer - vectorlist index
-Foundblock Integer – vector block index
-szAttname String - Attribute name to add the value too. Will be created if it does not exist.
+
+**Syntax**
+
+```javascript
+RxCore.setVectorBlockArea(partindex, foundblock, szAttname);
+```
+
+**Parameters**
+
+-   `Integer`: - vectorlist index
+-   `Foundblock`: Integer – vector block index
+-   `szAttname`: String - Attribute name to add the value too. Will be created if it does not exist.
+
 Returns NA
 
-2.373 setViews3DSavefile
+### `setViews3DSavefile`
+
 Use to change the name of the json file that holds the 3D Views. Default is 'views.json’.
-Syntax RxCore. setViews3DSavefile (szfilename)
-Parameters szfilename String - Name of the file
+
+**Syntax**
+
+```javascript
+RxCore.setViews3DSavefile(szfilename);
+```
+
+**Parameters**
+
+-   `szfilename`: Name of the file (String)
+
 Returns NA
 
-2.374 show3DViewMarkers
+### `show3DViewMarkers`
+
 Turns on/off the display of spheres that indicate the location where 3D views are located in the 3D model,
-Syntax RxCore.show3DViewMarkers (OnOff)
-Parameters OnOff Boolean : true = on, false = off
+
+**Syntax**
+
+```javascript
+RxCore.show3DViewMarkers(OnOff);
+```
+
+**Parameters**
+
+-   `OnOff`: Boolean : true = on, false = off
+
 Returns NA
 
-2.375 showMarkupLabels
+### `showMarkupLabels`
+
 Turn the display on/off for markup labels that are displayed when mouse is hovering over a markup object.
-Syntax RxCore.showMarkupLabels (OnOff)
-Parameters OnOff Boolean : true = on, false = off
+
+**Syntax**
+
+```javascript
+RxCore.showMarkupLabels(OnOff);
+```
+
+**Parameters**
+
+`OnOff`: Boolean : true = on, false = off
+
 Returns NA
 
-2.376 singlePageScrollPan
+### `singlePageScrollPan`
+
 Disable automatic zoom on mouse wheel and enables vertical pan instead.
-Syntax RxCore.singlePageScrollPan (OnOff)
-Parameters OnOff Boolean : true = on, false = off
+
+**Syntax**
+
+```javascript
+RxCore.singlePageScrollPan(OnOff);
+```
+
+**Parameters**
+
+-   `OnOff`: true = on, false = off (Boolean)
+
 Returns NA
 
-2.377 spaceEdit
+### `spaceEdit`
+
 Set the Viewer to use the state that allow editing of Rasterex space objects. This will enable mouse control to select a Rasterex space object for editing and pan a 2D drawing using left mouse button, Zoom using scroll wheel. For touch devices this will enable zoom and pan using two touch points. For 3D files on touch point will rotate model and two will zoom and pan.
-Syntax RxCore.spaceEdit ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.spaceEdit();
+```
+
+**Parameters** None
+
 Returns NA
 
-2.378 switchPages
+### `switchPages`
+
 Replace page loaded using RxCore.openFilePages() with another page.
-Syntax RxCore.switchPages (Filepath, pages)
-Parameters Filepath URL address or full server-side windows path to a file to open in the viewer.
-Parameters pages Array of page numbers to open.
+
+**Syntax**
+
+```javascript
+RxCore.switchPages(Filepath, pages);
+```
+
+**Parameters**
+
+-   `Filepath`: URL address or full server-side windows path to a file to open in the viewer.
+-   `pages`: Array of page numbers to open.
+
 Returns NA
 
-2.379 textSearch
+### `textSearch`
+
 Use this method to initiate and perform text searches. Call RxCore.textsearchend to terminate text search. Search results are returned using the GUI_NumMathces callback event.
-Syntax RxCore.textSearch (text,direction,casesens)
-Parameters text String to search for
-Parameters direction Boolean search direction true = forward, false = backward.
-Parameters casesens Boolean Case sensitive true/false
+
+**Syntax**
+
+```javascript
+RxCore.textSearch(text, direction, casesens);
+```
+
+**Parameters**
+
+-   `text`: String to search for
+-   `direction`: Boolean search direction true = forward, false = backward.
+-   `casesens`: Boolean Case sensitive true/false
+
 Returns NA
 
-2.380 textSelect
+### `textSelect`
+
 Use this method to use turn on/off the text select tool for documents that has selectable text. When tool is active, text can be selected using the mouse.
-Syntax RxCore. textSelect(selected)
-Parameters selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.textSelect(selected);
+```
+
+**Parameters**
+
+-   `selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
-2.381 toggle3DVisible
+### `toggle3DVisible`
+
 Use this method to turn on/off the 3D visible tool that enable the user to hide 3D parts using the mouse and clicking on parts in the 3D model with the left mouse button.
-Syntax RxCore.toggle3DVisible (selected)
-Parameters selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.toggle3DVisible(selected);
+```
+
+**Parameters**
+
+-   `selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
-2.382 toggleBackground
+### `toggleBackground`
+
 Use this method to set the background display color for vector drawings.
-Syntax RxCore.toggleBackground ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.toggleBackground();
+```
+
+**Parameters** None
+
 Returns NA
 
-2.383 transparency3D
+### `transparency3D`
+
 Use this method to set the transparency of the 3D model
-Syntax RxCore.transparency3D(value)
-Parameters Value Transparency using a value between 0-1 where 1 is full opaque.
+
+**Syntax**
+
+```javascript
+RxCore.transparency3D(value);
+```
+
+**Parameters**
+
+-   `Value`: Transparency using a value between 0-1 where 1 is full opaque.
+
 Returns NA
 
-2.384 transparency3DEx
+### `transparency3DEx`
+
 Use this alternative method to set the transparency of the 3D model that has better reset of transparency created for the new mesh structure.
-Syntax RxCore.transparency3DEx(value)
-Parameters Value Transparency using a value between 0-1 where 1 is full opaque.
+
+**Syntax**
+
+```javascript
+RxCore.transparency3DEx(value);
+```
+
+**Parameters**
+
+-   `Value`: Transparency using a value between 0-1 where 1 is full opaque.
+
 Returns NA
 
-2.385 unSelectAllMarkup
+### `unSelectAllMarkup`
+
 Use this method to set all markups in unselected state.
-Syntax RxCore.unSelectAllMarkup()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.unSelectAllMarkup();
+```
+
+**Parameters** None
+
 Returns NA
 
-2.386 unSelectMarkupbyGUID
+### `unSelectMarkupbyGUID`
+
 Use this method to unselect a specific markup object based on a unique identifier.
-Syntax RxCore. unSelectMarkupbyGUID (GUID)
-Parameters GUID Unique ID of a markup object.
+
+**Syntax**
+
+```javascript
+RxCore.unSelectMarkupbyGUID(GUID);
+```
+
+**Parameters**
+
+-   `GUID`: Unique ID of a markup object.
+
 Returns NA
 
-2.387 unSelectMarkupbyGUIDs
+### `unSelectMarkupbyGUIDs`
+
 Use to unselect multiple markup objects using and array of unique identifiers.
-Syntax RxCore. unSelectMarkupbyGUIDs (GUIDs)
-Parameters GUIDs Array of strings each string being a unique id.
+
+**Syntax**
+
+```javascript
+RxCore.unSelectMarkupbyGUIDs(GUIDs);
+```
+
+**Parameters**
+
+-   `GUIDs`: Array of strings each string being a unique id.
+
 Returns NA
 
-2.388 unSelectMarkupbyIndex
+### `unSelectMarkupbyIndex`
+
 Use this method to unselect a specific markup object based on the markup index.
-Syntax RxCore.unSelectMarkupbyIndex (index)
-Parameters index index of a markup object.
+
+**Syntax**
+
+```javascript
+RxCore.unSelectMarkupbyIndex(index);
+```
+
+**Parameters**
+
+-   `index`: index of a markup object.
+
 Returns NA
 
-2.389 update3DViewAttribute
+### `update3DViewAttribute`
+
 Use this method to update an attribute associated with a 3D view.
-Syntax RxCore. update3DViewAttribute (szName, newszValue, viewname)
-Parameters szName Name of the attribute to update.
-Parameters newszValue New value to replace the current value.
-Parameters viewname Name of the 3D view the attribute is associated with..
+
+**Syntax**
+
+```javascript
+RxCore.update3DViewAttribute(szName, newszValue, viewname);
+```
+
+**Parameters** szName Name of the attribute to update.
+
+-   `newszValue`: New value to replace the current value.
+-   `viewname`: Name of the 3D view the attribute is associated with
+
 Returns NA
 
-2.390 useCompanyFeature
+### `useCompanyFeature`
+
 Used with a license server to allow special license features per company to be called from the client.
-Syntax RxCore.useCompanyFeature (szfeature)
-Parameters szfeature String that sets license feature for a company.
+
+**Syntax**
+
+```javascript
+RxCore.useCompanyFeature(szfeature);
+```
+
+**Parameters**
+
+-   `szfeature`: String that sets license feature for a company.
+
 Returns NA
 
-2.391 useCredentials
+### `useCredentials`
+
 Set withCredentials to true or false for all XMLHttpRequest calls to the server.
-Syntax RxCore. useCredentials (OnOff)
-Parameters OnOff Boolean : true = on, false = off
+
+**Syntax**
+
+```javascript
+RxCore.useCredentials(OnOff);
+```
+
+**Parameters**
+
+-   `OnOff`: Boolean : true = on, false = off
+
 Returns NA
 
-2.392 useFixedScale
+### `useFixedScale`
+
 Use this method to set a global flag that will display markup with a fixed scale relative to the zoom scale. If off the markup will be created using display scale.
-Syntax RxCore. useFixedScale (OnOff)
-Parameters OnOff Boolean : true = on, false = off
+
+**Syntax**
+
+```javascript
+RxCore.useFixedScale(OnOff);
+```
+
+**Parameters**
+
+-   `OnOff`: Boolean : true = on, false = off
+
 Returns NA
 
-2.393 useFraction
+### `useFraction`
+
 Turn on/off fraction notation for markup measurement object when using Imperial measurement units.
-Syntax RxCore.useFraction (OnOff)
-Parameters OnOff Boolean : true = on, false = off
+
+**Syntax**
+
+```javascript
+RxCore.useFraction(OnOff);
+```
+
+**Parameters**
+
+-   `OnOff`: true = on, false = off (Boolean)
+
 Returns NA
 
-2.394 useNoScale
+### `useNoScale`
+
 Turn on/off scaling of markup line width and count sizes. When on the line width stays the same regardless of drawing zoom factor.
 **Syntax**
 
@@ -5790,13 +6550,15 @@ RxCore.zoomPageUpdate(zoomparams, type);
 
 -   `zoomparams`: Zoom operation parameters returned by callback function.
 
-Parameters Type Type of zoom operation.
-0 = Zoom in
-1 = Zoom out
-2 = zoom window
-3 = zoom all
-4 = zoom width
-5= zoom height
+**Parameters**
+
+-   `Type`: Type of zoom operation.
+    `0`: Zoom in
+    `1`: Zoom out
+    `2`: zoom window
+    `3`: zoom all
+    `4`: zoom width
+    `5`:zoom height
 
 ### `zoomWindow`
 
@@ -5810,7 +6572,9 @@ Returns NA
 RxCore_ZoomWindow(selected);
 ```
 
-Parameters Selected Boolean value. true = on, false = off.
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
 
 **Callback connection objects**
 
@@ -6245,12 +7009,13 @@ The callback function should have the following parameters.
 
 -   `stampdata.type`: type of event with values
 
-2 – stampdata.data = library name
-3 – stampdata.data = number of stamps.
-5 – stampdata.data = stamp image object.
-stampdata.index = stamp name
-stampdata.width = stamp width
-stampdata.height = stamp height
+    -   `2` : stampdata.data = library name
+    -   `3` : stampdata.data = number of stamps.
+    -   `5` : stampdata.data = stamp image object.
+
+`stampdata.index` :stamp name
+`stampdata.width` :stamp width
+`stampdata.height`: stamp height
 
 ### `GUI_Download`
 
@@ -7591,60 +8356,68 @@ To control the redlining information on a web system you can set transfer config
 
 ### `Appendix C`
 
-These are supported mime that can be used with RxCore.openFile method.
+These are supported mime that can be used with `RxCore.openFile` method.
 
-Solidworks
-• application/slddrw
-• application/sldprt
-• application/sldasm
+`Solidworks`
 
-Acrobat PDF
-• application/pdf
-• application/x-pdf
+-   application/slddrw
+-   application/sldprt
+-   application/sldasm
 
-IFC
-• application/x-extension-ifc
+`Acrobat PDF`
 
-AutoCAD DWG
-• application/dwg
-• application/acad
+-   application/pdf
+-   application/x-pdf
 
-MS Office word
-• application/vnd.openxmlformats-officedocument.wordprocessingml.document
-• application/msword
+`IFC`
 
-MS Office PowerPoint
-• application/vnd.openxmlformats-officedocument.presentationml.presentation
-• application/vnd.ms-powerpoint
+-   application/x-extension-ifc
 
-MS Office Excel
-• application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-• application/vnd.ms-excel
+`AutoCAD DWG`
 
-Autodesk Inventor
-Drawing
-• application/idw
-Part
-• application/ipt
-Assembly
-• application/iam
+-   application/dwg
+-   application/acad
 
-\Image formats
+`MS Office word`
 
-• image/tiff
-• image/png
-• image/jpeg
-• image/gif
-• image/cgm
-• image/bmp
-• image/x-pcx
-• image/x-icon
-• image/webp
+-   application/vnd.openxmlformats-officedocument.wordprocessingml.document
+-   application/msword
 
-Visio (only supported by LibreOffice)
+`MS Office PowerPoint`
 
-• application/vnd.visio
-• application/vnd.visio2013
+-   application/vnd.openxmlformats-officedocument.presentationml.presentation
+-   application/vnd.ms-powerpoint
+
+`MS Office Excel`
+
+-   application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+-   application/vnd.ms-excel
+
+`Autodesk Inventor`
+`Drawing`
+
+-   application/idw
+    `Part`
+-   application/ipt
+    `Assembly`
+-   application/iam
+
+`\Image formats`
+
+-   image/tiff
+-   image/png
+-   image/jpeg
+-   image/gif
+-   image/cgm
+-   image/bmp
+-   image/x-pcx
+-   image/x-icon
+-   image/webp
+
+`Visio (only supported by LibreOffice)`
+
+-   application/vnd.visio
+-   application/vnd.visio2013
 
 ```
 
