@@ -1,7 +1,7 @@
 ---
 id: methods
 title: RxView360 API Methods
-sidebar_label: API Methods
+sidebar_label: All API Methods
 ---
 
 ### `add3DViewAttribute`
