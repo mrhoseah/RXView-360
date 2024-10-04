@@ -3035,31 +3035,36 @@ function onGetMatches(rects, currentpage) {
 
 **Callbacks** `RxCore.GUI_MathcesRectsPage` , `RxCore.GUI_NumMathcesRect`
 
-2.214 markupMeasurePath
+### `markupMeasurePath`
+
 Use this method to turn on/off the markup measure path tool. This enables the user to add a measure path that is a poly line that has a label containing the accumulated length of all the lines.
 Syntax RxCore.markupMeasurePath(selected)
 Parameters Selected Boolean value. true = on, false = off.
 Returns NA
 
-2.215 markupMultiselect
+### `markupMultiselect`
+
 Use this method to turn on and off the ability to select multiple markup objects.
 Syntax RxCore.markupMultiselect (onOff)
 Parameters onOff Boolean value. true = on, false = off.
 Returns NA
 
-2.216 markUpNote
+### `markUpNote`
+
 Use this method to turn on/off the markup note tool. This enables the user to add a note that the where the user can add a longer text in a note dialog and display this text later by clicking the note markup object in the drawing using the mouse.
 Syntax RxCore.markUpNote (selected)
 Parameters Selected Boolean value. true = on, false = off.
 Returns NA
 
-2.217 markUpOutlined
+### `markUpOutlined`
+
 Set Markup fill style to Outlined to Draw markup objects with lines and no fill.
 Syntax RxCore.MarkupOutlined()
 Parameters None
 Returns NA
 
-2.218 markUpPolyline
+### `markUpPolyline`
+
 Use this method to turn on/off the markup polyline tool. This enables the user to add a polyline markup to the current drawing using the mouse.
 Syntax RxCore.markUpPolyline (selected)
 Parameters Selected Boolean value. true = on, false = off.
@@ -3071,31 +3076,36 @@ Syntax RxCore.markUpRedraw()
 Parameters None
 Returns NA
 
-2.220 markUpRedo
+### `markUpRedo`
+
 Used in combination with markUpUndo to redo operations undone with markUpUndo
 Syntax RxCore.markUpRedo ()
 Parameters None
 Returns NA
 
-2.221 markUpRotate
+### `markUpRotate`
+
 Use this method to set the rotation of a markup object in degrees.
 Syntax RxCore.markUpRotate(degrees)
 Parameters Degrees Degree of rotation negative 180 – positive 180
 Returns NA
 
-2.222 markUpSave
+### `markUpSave`
+
 Use this method to save markup to server.
 Syntax RxCore.markUpSave ()
 Parameters None
 Returns NA
 
-2.223 markupSaveCheck
+### `markupSaveCheck`
+
 Disables the unsaved markup warning shown when closing a file.
 Syntax RxCore. markupSaveCheck (OnOff)
 Parameters OnOff Boolean true = on, false = off.
 Returns NA
 
-2.224 markUpShape
+### `markUpShape`
+
 Use this method to turn on/off the markup shape tool. This enables the user to add a markup shape of a given type and subtype using the mouse.
 Syntax RxCore.markUpShape (selected,type,subtype)
 Parameters Selected Boolean value. true = on, false = off.
@@ -3103,37 +3113,43 @@ type Markup shape type. 0=rectangle, 1=ellipse, 2=cloud, 3=polygon,
 subtype 1=rounded rectangle (works with type 0 only)
 Returns NA
 
-2.225 markUpStamp
+### `markUpStamp`
+
 Use this method to add a markup stamp to the current drawing.
 Syntax RxCore.markUpStamp (Text)
 Parameters Text Stamp text
 Returns NA
 
-2.226 markupSymbol
+### `markupSymbol`
+
 Activates the symbol markup tool.
 Syntax RxCore.markupSymbol (selected)
 Parameters Selected Boolean value. true = on, false = off.
 Returns NA
 
-2.227 markUpSubType
+### `markUpSubType`
+
 Use this method to change the subtype of the selected markup object.
 Syntax RxCore.markUpSubType (num)
 Parameters num Subtype number
 Returns NA
 
-2.228 markUpTextRect
+### `markUpTextRect`
+
 Use this method to turn on/off the markup text tool. This enables the user to add a text markup to the current drawing using the mouse.
 Syntax RxCore.markUpTextRect (selected)
 Parameters Selected Boolean value. true = on, false = off.
 Returns NA
 
-2.229 markUpTextRectArrow
+### `markUpTextRectArrow`
+
 Use this method to turn on/off the markup text with leader line tool. This enables the user to add a text markup with leader line to the current drawing using the mouse.
 Syntax RxCore. markUpTextRectArrow (selected)
 Parameters Selected Boolean value. true = on, false = off.
 Returns NA
 
-2.230 markupTextSearch
+### `markupTextSearch`
+
 Starts a search for markup texts using a search expression. Terminate search using endMarkupTextSearch
 Syntax RxCore. markupTextSearch (text, direction, casesensitive)
 Parameters text The text to search for.
@@ -3141,58 +3157,67 @@ direction Boolean value. true = forward, false = backward.
 casesensitive Boolean value. true = case sensitive search, false = case insensitive search.
 Returns NA
 
-2.231 markUpUndo
+### `markUpUndo`
+
 Use this method to Undo last markup operation.
 Syntax RxCore.markUpUndo ()
 Parameters None
 Returns NA
 
-2.232 markUpUserDialog
+### `markUpUserDialog`
+
 Opens a dialog containing a list of markup users and the visibility state of the markup fore each user. The dialog allow the user to turn the visibility of markup for a specific user if the user is allowed to do this. If allowed the user can also set the markup signature using this dialog.
 Syntax RxCore.markUpUserDialog ()
 Parameters None
 Returns NA
 
-2.233 measure
+### `measure`
+
 Activates the measure tool. Measure tool allow the user to measure distances area and angles using a polygon.
 Syntax RxCore.measure (selected)
 
 Parameters selected Boolean turning the tool on/off
 Returns NA
 
-2.234 measure3D
+### `measure3D`
+
 Activates the 3D measure tool to measure a distance between 2 points in a 3D model.
 Syntax RxCore.measure3D (selected)
 Parameters selected Boolean turning the tool on/off
 Returns NA
 
-2.235 measuredistance
+### `measuredistance`
+
 Activates the measure distance tool. Measure distance tool allow the user to measure the distance between two points.
 Syntax RxCore.measuredistance (selected)
 
 Parameters selected Boolean turning the tool on/off
 Returns NA
 
-2.236 metricUnit
+### `metricUnit`
+
 Use this method to set the sub measure unit for the metric measurement system
 Syntax RxCore_MetricUnit(unit)
 Parameters unit Type string Select between. 'Millimeter’,, 'Centimeter', 'Decimeter', 'Meter', 'Kilometer' or 'Nautical Miles'.  
 Returns NA
 
-2.237 modifyMarkup
+### `modifyMarkup`
+
 Modifies markup given by a unique ID using xml data to change the markup.
 Syntax RxCore modifyMarkup (GUID, markupxml)
 Parameters GUID Unique property uniqueID of a markup object.
 Parameters markupxml Text string representing xml data that correspond to RxView360 markup format.
 Returns NA
 
-2.238 moveLabelEnable
+### `moveLabelEnable`
+
 Turn on/off the ability to select and move markup labels.
 Syntax RxCore.moveLabelEnable (onOff)
 Parameters onOff Boolean : true = on, false : off
 Returns NA
 
-2.239 moveTo3DNavPos
+### `moveTo3DNavPos`
+
 Used in combination with the GUI_3DNavPosition callback event.
 When clicking on a 2D drawing set up a as navigation page for a 3D model this method will move the camera to the location in the 3D model based on the position selected in the 2D drawing.
 Syntax RxCore.moveTo3DNavPos(campos)
@@ -3200,53 +3225,62 @@ Parameters campos Object = \{x, y, z\} x, y and z position of selected coordinat
 Calculated position returned from the GUI_3DNavPosition callback event.
 Returns NA
 
-2.240 moveTo3DPart
+### `moveTo3DPart`
+
 Calling this method will move the camera in the 3D model to point at the currently selected 3D part.
 Syntax RxCore.moveTo3DPart()
 Parameters None
 Returns NA
 
-2.241 navigateBookmark
+### `navigateBookmark`
+
 Causes navigation to a PDF bookmark
 Syntax RxCore. navigateBookmark (bookmark)
 Parameters bookmark Bookmark object from Foxit bookmark list.
 Returns NA
 
-2.242 nav3Dreplacediag
+### `nav3Dreplacediag`
+
 Same functionality as RxCore.compareDialog but uses a different callback called GUI_Nav3DreplaceDiag. The callback Returns a list of files that can be used to create a compare overlay. This is to be used to match drawings with 3D model generic floorplan to replace as 2D navigation drawing.
 Syntax RxCore.nav3Dreplacediag()
 Parameters none
 Returns NA
 
-2.243 nextMarkup
+### `nextMarkup`
+
 Use this method to cycle through and zoom into markup entities.
 Syntax RxCore.nextMarkup ()
 Parameters None
 Returns NA
 
-2.244 nextPage
+### `nextPage`
+
 Use this method to display next page in a multipage document.
 Syntax RxCore.nextPage ()
 Parameters None
 Returns NA
 
-2.245 noteFocus
+### `noteFocus`
+
 Use to prevent markup from being deleted by hitting delete when editing note text.
 Syntax RxCore. noteFocus (onOff)
 Parameters OnOff Boolean that turn the notefocus on/off
 Returns NA
 
-2.246 onTextPlaced
+### `onTextPlaced`
+
 Alternative reference to GUI_Textdiag callback.
 
-2.247 open3DFloorplanPage
+### `open3DFloorplanPage`
+
 Open a file to be used as 2D navigation for a 3D model. Uses GUI_floorLoadComplete callback instead of the GUI_loadComplete callback.
 Syntax RxCore. open3DFloorplanPage(fileurl, floorindex)
 Parameters fileurl String - URL address of the drawing.
 Parameters floorindex Integer – index of the associated floor.
 Returns NA
 
-2.248 openFile
+### `openFile`
+
 Use this method to open a file using a URL or server-side windows path.
 Syntax RxCore.openFile (fileurl)
 Parameters fileurl URL address or full server-side windows path to a file to open in the viewer.
@@ -3262,148 +3296,171 @@ fileurlobj.cacheid = A string containing a unique name to use for cache entry or
 fileurlobj.displayname = A string that is used as the document file name or null.
 Returns NA
 
-2.249 openFileCustom
+### `openFileCustom`
+
 Use this method to open a file using a URL to a web folder containing web content files for client display.
 Syntax RxCore.openFileCustom (fileurl)
 Parameters fileurl URL address to a web folder that contains web content.
 Returns NA
 
-2.250 openFileLayouts
+### `openFileLayouts`
+
 Opens a CAD drawing limited to a specified Layout range.
 Syntax RxCore. openFileLayouts (fileurl, layouts)
 Parameters fileurl URL address or full server-side windows path to a file to open in the viewer.
 Parameters layouts Array of layout numbers to open.
 Returns NA
 
-2.251 openFileLayoutsEx
+### `openFileLayoutsEx`
+
 Opens a CAD drawing limited to a specified Layout range same as openFileLayouts except that if the opening fails the GUI_Download callback is triggered which allow UI download progress to be hidden.
 Syntax RxCore. openFileLayoutsEx (fileurl, layouts)
 Parameters fileurl URL address or full server-side windows path to a file to open in the viewer.
 Parameters layouts Array of layout numbers to open.
 Returns NA
 
-2.252 openFilePages
+### `openFilePages`
+
 Opens a document limited to a specified page range. This does not work for PDF as the Foxit library always load all pages in a document,
 Syntax RxCore. openFilePages (fileurl, pages)
 Parameters fileurl URL address or full server-side windows path to a file to open in the viewer.
 Parameters pages Array of page numbers to open.
 Returns NA
 
-2.253 openFileSilent
+### `openFileSilent`
+
 Use this method to open a file using a URL or server-side windows path but without making the file the active file if other files are already open.
 Syntax RxCore. openFileSilent (fileurl)
 Parameters fileurl URL address or full server-side windows path to a file to open in the viewer.
 Returns NA
 
-2.254 openFloorplanFile
+### `openFloorplanFile`
+
 Opens a generic floorplan from a 3D model as a separate drawing.
 Syntax RxCore. openFloorplanFile (fileindex, floornum)
 Parameters fileindex Number : Open file index.
 floornum Number : Floor index.
 Returns NA
 
-2.255 openMarkup
+### `openMarkup`
+
 Use this method to open a markup rxml file to use with the currently active file
 Syntax RxCore. openMarkup (fileurl)
 Parameters fileurl URL address or full server-side windows path to an rxml file to open.
 Returns NA
 
-2.256 openRecent
+### `openRecent`
+
 Use this method to open a file from a recent file list using a URL or server-side windows path.
 Syntax RxCore.openRecent(fileurl)
 Parameters fileurl URL address or full server-side windows path to a file to open in the viewer.
 Returns NA
 
-2.257 orbit3D
+### `orbit3D`
+
 Use this method to “Orbit” a currently open 3D model.
 Syntax RxCore.orbit3D ()
 Parameters None
 Returns NA
 
-2.258 overlay
+### `overlay`
+
 Used in combination with RxCore.compareDialog to create an overlay from two open files. Works the same as compare but keeps original colors.
 Syntax RxCore.overlay (okcancel)
 Parameters okcancel Boolean that has to be true for the compare to be created.
 Returns NA
 
-2.259 overlayFiles
+### `overlayFiles`
+
 Open two files and create a overlay. Works the same way as compareFiles but uses the original colors.
 Syntax RxCore.overlayFiles (filebackground,fileoverlay)
 Parameters filebackground URL of file to use as background
 fileoverlay URL of file to overlay
 Returns NA
 
-2.260 pageLock
+### `pageLock`
+
 Lock pages in current document. Used with multiple instances of RxCore object where scale and offset of two pages should be locked together.
 Syntax RxCore. pageLock (onoff)
 Parameters OnOff true = on, false = off.
 Returns NA
 
-2.261 pageOnlyMarkup
+### `pageOnlyMarkup`
+
 Limits the markup array for markuplist to only markup on the current page.
 Syntax RxCore.pageOnlyMarkup (toggle)
 Parameters toggle if true the page only listing is toggled on/off if false it will be turned on regardless of current state.
 Returns NA
 
-2.262 pagePos
+### `pagePos`
+
 Moves current page to a specified position based on the given point in screen coordinates.
 Syntax RxCore. pagePos (x,y)
 Parameters X Horizontal position of page
 Parameters Y Vertical position of page
 Returns NA
 
-2.263 panPage
+### `panPage`
+
 Used in combination with GUI_PanUpdate callback event and pageLock to synchronize offset of pages into different instances of Rxcore. Moves the offset of current page given by x, y values.
 Syntax RxCore. panPage(x,y)
 Parameters X Horizontal position of page
 Parameters Y Vertical position of page
 Returns NA
 
-2.264 panWindow
+### `panWindow`
+
 Use to pan the current drawing or document using the mouse input.
 Syntax RxCore.panWindow ()
 Parameters none
 Returns NA
 
-2.265 pasteMarkUp
+### `pasteMarkUp`
+
 Use this method to paste a previously copied markup entity into the currently active drawing or document.
 Syntax RxCore.pasteMarkUp ()
 Parameters None
 Returns NA
 
-2.266 pickPolygon
+### `pickPolygon`
+
 Use this method to pick a Block in a vector drawing that has selectable blocks. A callback event is called set up GUI_2DBlockID with a callback function to get the block id(s).
 Syntax RxCore.pickPolygon (selected, multi)
 Parameters selected True / false to turn method on / off.
 Parameters Multi True = allow selection of multiple blocks.
 Returns NA
 
-2.267 pickRxSpace
+### `pickRxSpace`
+
 Use this method to pick a Rasterex space object. Set up GUI_2DBlockID with a callback function to get the block id(s).
 Syntax RxCore.pickRxSpace (selected, multi)
 Parameters selected True / false to turn method on / off.
 Parameters Multi True = allow selection of multiple blocks.
 Returns NA
 
-2.268 prevPage
+### `prevPage`
+
 Use this method to display previous page in a multipage document.
 Syntax RxCore.prevPage ()
 Parameters None
 Returns NA
 
-2.269 print
+### `print`
+
 Use this method to print currently active drawing or document on a available windows printer.
 Syntax RxCore.print ()
 Parameters None
 Returns NA
 
-2.270 printEx
+### `printEx`
+
 Same as RxCore_Printdocument but takes a parameter to select the html page to be used for printing.
 Syntax RXCore.printEx (PrintPgURL)
 Parameters PrintPgURL URL to an html page that is used to print content from Rxview360.
 Returns NA
 
-2.271 printSizeEx
+### `printSizeEx`
+
 Same as RxCorePrintEx but takes an additional parameter to specify the paper size in mm.
 Syntax RXCore. printSizeEx(PrintPgURL, PaperSize)
 Parameters PrintPgURL URL to an html page that is used to print content from Rxview360.
@@ -3411,31 +3468,36 @@ Parameters PaperSize PaperSize =\{width: number, height : number \}
 Use values in mm.
 Returns NA
 
-2.272 redrawPage
+### `redrawPage`
+
 Forces a redraw of a page given by page number.
 Syntax RxCore. redrawPage (pagenumber)
 Parameters pagenumber 0 indexed page number.
 Returns NA
 
-2.273 removeFloorplan
+### `removeFloorplan`
+
 Removes a 2D floorplan plane from the 3D model
 Syntax RxCore.removeFloorplan(floornum)
 Parameters floornum Index of floor.
 Returns NA
 
-2.274 removeLastPoint
+### `removeLastPoint`
+
 Removes the last point if a markup drawing operation is active that involves annotations that has multiple points.
 Syntax RxCore. removeLastPoint ()
 Parameters none
 Returns NA
 
-2.275 renderBirdseye
+### `renderBirdseye`
+
 Renders the current page to the birdseye overview window.
 Syntax RxCore. renderBirdseye ()
 Parameters none
 Returns NA
 
-2.276 replacefloorplan
+### `replacefloorplan`
+
 Use to replace generic floorplan used in Bird’s eye view for navigation with one generated from a separate open drawing.
 Syntax RxCore. replacefloorplan (sourceindex, targetdocindex, floornum)
 Parameters Sourceindex Open file index to use as source for replacement thumbnail.
@@ -3443,84 +3505,121 @@ Targetdocindex Open file index for the 3D model.
 Floornum Floor index indicating the floor.
 Returns NA
 
-2.277 replacefloorplanfromPage
+### `replacefloorplanfromPage`
+
 Use to replace generic floorplan used in Bird’s eye view for navigation with one generated from the currently active page.
 Syntax RxCore. replacefloorplan (targetdocindex, floornum)
 Parameters targetdocindex Open file index for the 3D model.
 Parameters Floornum Floor index indicating the floor.
 Returns NA
 
-2.278 reset3DModel
+### `reset3DModel`
+
 Use this method to reset a 3D model to its initial display state.
 Syntax RxCore.reset3DModel ()
 Parameters None
 Returns NA
 
-2.279 resetBlocks
+### `resetBlocks`
+
 Use this method to reset all blocks for a 2D drawing to its initial on/off state.
 Syntax RxCore.resetBlocks ()
 Parameters None
 Returns NA
 
-2.280 restoreBlockStates
+### `restoreBlockStates`
+
 Restore the drawing color for all blocks in vector file.
 Syntax RxCore.restoreBlockStates()
 Parameters None
 Returns NA
 
-2.281 restoreCameraByName
+### `restoreCameraByName`
+
 Activate existing 3D view by name.  
 Syntax RxCore. restoreCameraByName (name)
 Parameters Name String – name of 3D view to activate.
 Returns NA
 
-2.282 restoreDefault
+### `restoreDefault`
+
 Set the Viewer to use the default input state. Default will enable mouse control to pan a 2D drawing using left mouse button, Zoom using scroll wheel. For touch devices this will enable zoom and pan using two touch points. For 3D files on touch point will rotate model and two will zoom and pan.
 Syntax RxCore.restoreDefault ()
 Parameters None
 Returns NA
 
-2.283 restoreMouseInput
+### `restoreMouseInput`
+
 If the drawing of a markup is overridden using applyWidthHeight or applyAngleLength this method will restore mouse input.
 Syntax RxCore.restoreMouseInput()
 Parameters none
 Returns NA
 
-2.284 resetLayers
+### `resetLayers`
+
 Use this method to reset all layers for a 2D drawing to its initial on/off state.
 Syntax RxCore_resetLayers ()
 Parameters None
 Returns NA
-2.285 reverseNavMouse
+
+### `reverseNavMouse`
+
 Reverses the direction of the mouse when using the walkthrough mode.
 Syntax RxCore.reverseNavMouse (onoff)
 Parameters onoff Boolean true=reverse, false=not reversed.
 Returns NA
 
-2.286 rotate
+### `rotate`
+
 Use this method to set the current on screen rotation for the currently displayed drawing or document.
 Syntax RxCore.rotate (cycle,szrotatetool)
 Parameters cycle Boolean value. If true, the rotation will be set to current rotation + 90 degrees.
 szrotatetool Type text. A fixed rotation value in degrees. Values are '0’, '90’, '180’ or '270’.
 Returns NA
 
-2.287 rotatePage
+### `rotatePage`
+
 Rotates a page given by page number and angle in degrees.
-Syntax RxCore. rotatePage (pagenumber ,degrees)
-Parameters pagenumber 0 indexed page to be rotated.
-degrees Rotation value in degrees. Angles can be 0. 90, 180 or 270.
+
+**Syntax**
+
+```javascript
+RxCore.rotatePage(pagenumber, degrees);
+```
+
+**Parameters**
+
+-   `pagenumber`: 0 indexed page to be rotated.
+-   `degrees`: Rotation value in degrees. Angles can be 0. 90, 180 or 270.
+
 Returns NA
 
-2.288 RxCoreMulti
-A call that will return an instance of the RxCore object.
-Syntax RxCoreMulti ()
-Parameters None
-Returns RxCore object Assign to a variable to use as a separate instance of RxCore.
+### `RxCoreMulti`
 
-2.289 saveTop3DCamera
-Use to save the reset view for the 3D model. Use the callback GUI_CanSaveTop3DView to call the method.
-Syntax RxCore.saveTop3DCamera()
-Parameters None
+A call that will return an instance of the RxCore object.
+
+**Syntax**
+
+```javascript
+RxCoreMulti();
+```
+
+**Parameters** None
+
+Returns `RxCore` object Assign to a variable to use as a separate instance of RxCore.
+
+### `saveTop3DCamera`
+
+Use to save the reset view for the 3D model. Use the callback `GUI_CanSaveTop3DView` to call the method.
+
+**Syntax**
+
+```javascript
+RxCore.saveTop3DCamera();
+```
+
+**Parameters** None
+
 Returns NA
 
 **Example**
@@ -3535,118 +3634,137 @@ function GUI_CanSaveTop3DView() {
 }
 ```
 
-2.290 scale
+### `scale`
+
 Use this method to set the measure scaling using the current measure unit and subunit.
 Syntax RxCore.scale (scale)
 Parameters scale A scale value given by two numbers divided by a colon. Ex 1:1.
 Returns NA
 
-2.291 scaleOnResize
+### `scaleOnResize`
+
 Sets whether rescaling of the browser window will cause a zoom to fit for the opened drawing.
 Syntax RxCore. scaleOnResize (onOff)
 Parameters onOff Boolean true = on, false = off.
 Returns NA
 
-2.292 scrollBarCheck
+### `scrollBarCheck`
+
 Used with Foxit integration to synchronize the RxView360 markup display with the Foxit PDF scrollbar positions.
 Syntax RxCore.scrollBarCheck ()
 Parameters None
 Returns NA
 
-2.293 search3dAttribute
+### `search3dAttribute`
+
 Use this method to search for a 3D block that matches a specific Attribute value. Only the ID of the first match is returned by the method.
 Syntax RxCore. search3dAttribute(szAttribVal)
 Parameters szAttribVal String value representing an Attribute value.
 Returns Name 3D block Name reference.
 
-2.294 search3dAttributes
+### `search3dAttributes`
+
 Use this method to search for a 3D block attributes that matches a specific search expression.
 Syntax RxCore.search3dAttributes(expr)
 Parameters expr String value representing a search expression using “?” and “\*” wildcard characters.
 Returns meshattribarray Array of objects for each mesh that matches the search,
 
-2.295 search3dAttributesEx
+### `search3dAttributesEx`
+
 Use this method to search for a 3D block attributes that matches a specific search expression.
 Syntax RxCore. search3dAttributesEx(expr, useregexp)
 Parameters expr String value representing a search expression using “?” and “\*” wildcard characters.
 useregexp Boolean \true = use regular expression, false = use simple string compare.
 Returns meshattribarray Array of objects for each mesh that matches the search,
 
-2.296 select3D
+### `select3D`
+
 Use this method to turn on/off the 3D select tool that enable the user to select 3D parts using the mouse and clicking on parts in the 3D model with the left mouse button.
 Syntax RxCore.select3D (selected)
 Parameters selected Boolean value. true = on, false = off.
 Returns NA
 
-2.297 select3DMarkup
+### `select3DMarkup`
+
 Like select3D but works on 3D markup only.
 Use this method to turn on/off the 3D markup select tool that enable the user to select 3D markup using the mouse and clicking on parts in the 3D model with the left mouse button.
 Syntax RxCore. select3DMarkup (selected)
 Parameters selected Boolean value. true = on, false = off.
 Returns NA
 
-2.298 select3DMarkUpByID
+### `select3DMarkUpByID`
+
 Select a 3D markup using the mesh id.
 Syntax RxCore.select3DMarkUpByID(id)
 Parameters id The mesh id of the 3D markup.
 Returns NA
 
-2.299 select3DVectorBlock
+### `select3DVectorBlock`
+
 Use this method to select a 3D part by part name.
 Syntax RxCore.select3DVectorBlock (name)
 Parameters Name Name of 3D part to select.
 Returns NA
 
-2.300 selectMarkUp
+### `selectMarkUp`
+
 Enables markup selection tool (default tool) but also set any newly created markups in selected state. If the newly created object is a Rasterex space object it will allow the selection of Rasterex space objects.
 Syntax RxCore. selectMarkUp (selected)
 Parameters selected If true select markup tool is activated.
 Returns NA
 
-2.301 selectMarkupbyGUID
+### `selectMarkupbyGUID`
+
 Use this method to select a markup by markup unique ID.
 Syntax RxCore.selectMarkUpByIndex (GUID)
 Parameters GUID Unique ID of a markup object.
 Returns NA
 
-2.302 selectMarkupbyGUIDs
+### `selectMarkupbyGUIDs`
+
 Use to select multiple markup objects using and array of unique identifiers.
 Syntax RxCore.selectMarkupbyGUIDs (GUIDs)
 Parameters GUIDs Array of strings each string being a unique id.
 Returns NA
 
-2.303 selectMarkUpByIndex
+### `selectMarkUpByIndex`
+
 Use this method to select a markup by markup index.
 Syntax RxCore.selectMarkUpByIndex (indx)
 Parameters Indx Index in markup list to select.
 Returns NA
 
-2.304 selectRxSpace
+### `selectRxSpace`
+
 Select a Rasterex space object by a given SpaceID attribute value.
 Syntax RxCore. selectRxSpace (spaceIDval, multi)
 Parameters spaceIDval SpaceID value of the Rasterex space object.
 Parameters multi If true currently selected Rasterex space objects are not unselected.
 Returns NA
 
-2.305 selectSymbName
+### `selectSymbName`
+
 Select symbol name from a symbol library. Result returned using GUI_Symbols callback event.
 Syntax RxCore.getSymbolName(num)
 Parameters num Library number
 Returns N/A
 
-2.306 selectSymblib
+### `selectSymblib`
+
 Select symbol library from server. Result returned using GUI_Symbols callback event.
 Syntax RxCore.getSymbolName(num)
 Parameters num Library number
 Returns N/A
 
-2.307 selectVectorBlock
+### `selectVectorBlock`
+
 Use this method to select a 2D vector block in a vector drawing by using the Block ID.
 Syntax RxCore.select3DVectorBlock (blockid)
 Parameters blockid Block ID of the 2D vector block to select.
 Returns NA
 
-2.308 set3DBlockDistance
+### `set3DBlockDistance`
+
 Offset a 3D mesh using distance and direction.
 Syntax RxCore. set3DBlockDistance (blockid, distance, direction, override)
 Parameters blockid Mesh id for the 3D block.
@@ -3655,20 +3773,23 @@ direction Object with x, y and z properties that is converted to a direction vec
 override Boolean if false resets the 3D block to its original position.
 Returns NA
 
-2.309 set3DBlockState
+### `set3DBlockState`
+
 Set the visibility state of a specific 3D mesh
 Syntax RxCore.set3DBlockState (name, state)
 Parameters name Mesh ID of the 3D vector block to hide or display.
 state Boolean true = visibility on, false = visibility off
 Returns NA
 
-2.310 set3DBlockStateAll
+### `set3DBlockStateAll`
+
 Set the visibility state of all 3D meshes in a model.
 Syntax RxCore.set3DBlockState (state)
 Parameters state Boolean true = visibility on, false = visibility off
 Returns NA
 
-2.311 set3DBlockTransparency
+### `set3DBlockTransparency`
+
 Set transparency of a mesh in a 3D model by mesh id.
 Syntax RxCore. set3DBlockTransparency (blockid, value, override)
 Parameters Blockid Mesh id for the 3D block.
@@ -3676,13 +3797,15 @@ Value Transparency using a value between 0-1 where 1 is full opaque.
 Override Boolean if false resets the 3D block to its original transparency.
 Returns NA
 
-2.312 set3DmodelcurFloor
+### `set3DmodelcurFloor`
+
 Set the 3D navigation Bird’s eye generic floorplan. Then clicking the image will set the 3D walkthrough camera to the correct location.
 Syntax RxCore.set3DmodelcurFloor (floornum)
 Parameters Floornum Floor number.
 Returns NA
 
-2.313 set3dNavcameraPos
+### `set3dNavcameraPos`
+
 Set the 3D camera position indicator for a 2D drawing being used as navigation drawing for a 3D model floor.
 Syntax RxCore.set3dNavcameraPos (position, rotation, boxCenter)
 Parameters position Position of the 3D camera with x, y and z values
@@ -3690,37 +3813,43 @@ rotation Angle of the camera in radians.
 boxCenter Center of the 3D model with x, y and z values.
 Returns NA
 
-2.314 set3DViewSelectedMesh
+### `set3DViewSelectedMesh`
+
 Use to associate the selected 3D block to 3D view.
 Syntax RxCore. set3DViewSelectedMesh (name)
 Parameters name Name of 3D view.
 Returns NA
 
-2.315 setActiveFile
+### `setActiveFile`
+
 Use this method to set an open file as active file.
 Syntax RxCore.setActiveFile (index)
 Parameters Index Index of open file.
 Returns NA
 
-2.316 setActiveFileEx
+### `setActiveFileEx`
+
 Use this method to set an open file as active file. This method will wait until all open files rendering process is complete before changing the active file.
 Syntax RxCore.setActiveFileEx (index)
 Parameters Index Index of open file.
 Returns NA
 
-2.317 setAreaPerimeter
+### `setAreaPerimeter`
+
 Change selected area markup from displaying the area value to displaying the perimeter of the area outline.
 Syntax RxCore. setAreaPerimeter(onoff)
 Parameters Onoff Boolean. true=perimeter displayed, false=area displayed.
 Returns N/A
 
-2.318 setArrowSize
+### `setArrowSize`
+
 Use to change the size of arrow heads on arrow markup. Default size is 20
 Syntax RxCore.setArrowSize(num)
 Parameters num Arrow size
 Returns N/A
 
-2.319 setAuthorization
+### `setAuthorization`
+
 This must be called before RxCore.initialize. All calls to server will then use this authentication.
 Syntax RxCore.setAuthorization(string type, base64string token )
 Parameters type String – type of authentication method.
@@ -3728,7 +3857,8 @@ token Base64String – base 64 encoded string representing the token.
 Returns N/A
 Example RxCore.setAuthorization("Basic", "Q0FOWU9OQk9YXEZyYW5rZXN0ZXI=");
 
-2.320 setBirdseyeCanvas
+### `setBirdseyeCanvas`
+
 Use to connect HTML5 canvases to the birdseye overview tool.
 Syntax RxCore. setBirdseyeCanvas(imagecanvas, indicatorcanvas, markupcanvas)
 Parameters imagecanvas Canvas where the page is drawn
@@ -3736,14 +3866,16 @@ indicatorcanvas Canvas used for zoom scale indicator
 markupcanvas Canvas used for markup
 Returns NA
 
-2.321 setBirdsEyeFoxit
+### `setBirdsEyeFoxit`
+
 Sets the bitmap to be used with the birdseye overview for the current page.
 Syntax RxCore. setBirdsEyeFoxit (bitmap, pageindex)
 Parameters bitmap Clamped bitmap Array
 pageindex The 0 indexed page index
 Returns NA
 
-2.322 setBlockColor
+### `setBlockColor`
+
 Use this method to draw a selected vector block in a different color.
 Syntax RxCore.setBlockColor (blockid , Color, override)
 Parameters blockid Block ID of the block to change.
@@ -3751,7 +3883,8 @@ color Color to apply to block
 override If false reset the color to original block color.
 Returns NA
 
-2.323 setBlockFill
+### `setBlockFill`
+
 Use this method to draw a selected vector block using a different color or fill pattern created with addFill.
 Syntax RxCore.setBlockFill (blockid, name, override)
 Parameters blockid Block ID of the block to change.
@@ -3759,19 +3892,22 @@ name Name of fill object to apply to block.
 override If false resets to original block color.
 Returns NA
 
-2.324 setCalibration
+### `setCalibration`
+
 Use this method to set the calibration scaling using a number.
 Syntax RxCore. setCalibration (scale)
 Parameters scale A number ex. 0.5 will set the scale to half original scale
 Returns NA
 
-2.325 setCameraTumbWidth
+### `setCameraTumbWidth`
+
 Use to override the default thumbnail image width for 3D Views. Default value is 210 pixels.
 Syntax RxCore. setCameraTumbWidth (num)
 Parameters Num New default width of 3D view thumbnail image.
 Returns NA
 
-2.326 setCompareFiles
+### `setCompareFiles`
+
 Used in combination with the compare dialog to set the state of a file in a compare composite.
 Syntax RxCore.setCompareFiles (index,state)
 Parameters index Index number reference to file in list of open files that can be used in a compare/overlay composite.
@@ -3779,14 +3915,16 @@ state Role of the referenced file.
 0 = unused, 1 = background, 2= overlay
 Returns NA
 
-2.327 setCompareColors
+### `setCompareColors`
+
 Use this method to set the drawing colors for overlay and background page in a compare overlay composite.
 Syntax RxCore. setCompareColors (bgcolor, fgcolor)
 Parameters bgcolor Html color string to set color of background drawing.
 Parameters fgcolor Html color string to set color of foreground drawing.
 Returns NA
 
-2.328 setCompareScale
+### `setCompareScale`
+
 Set compare alignment using an array containing scaling object returned by GUI_CompareMeasure callback
 Syntax RxCore.setCompareScale(scalearray)
 Parameters scalearray Array of scale objects
@@ -3796,62 +3934,72 @@ dist: distance, angle : angle, offset : offset, pwidth : pagewidth
 
 Returns NA
 
-2.329 setConfiguration
+### `setConfiguration`
+
 Use this method to override the configuration location source loaded on startup. This must be called before RxCore.initialize to work.
 Syntax RxCore. setConfiguration (szURL)
 Parameters szURL Full URL to an XML source that is used to set the client configuration.
 Returns NA
 
-2.330 setCountSize
+### `setCountSize`
+
 Set the display size of selected markup count element in pixels.
 Syntax RxCore. setCountSize (nSize)
 Parameters nSize New display size.
 Returns NA
 
-2.331 setCountSizeAll
+### `setCountSizeAll`
+
 Set the display size of all markup count element in pixels.
 Syntax RxCore. setCountSizeAll (nSize)
 Parameters nSize New display size.
 Returns NA
 
-2.332 setCustomLabelText
+### `setCustomLabelText`
+
 Sets a custom text and visibility of a selected Rasterex space markup object label.
 Syntax RxCore. setCustomLabelText (text, onoff)
 Parameters text Text to use with label.
 onoff Boolean : true = label displayed, false = label hidden.
 Returns NA
 
-2.333 setDimOffset
+### `setDimOffset`
+
 Sets the leader line offset for dimension line markup objects.
 Syntax RxCore. setDimOffset (size)
 Parameters size Number of pixels for leader line offset.
 Returns NA
 
-2.334 setdimPrecision
+### `setdimPrecision`
+
 Sets how many numbers after the decimal points are used for measurement markup. Default is 2.
 Syntax RxCore. setdimPrecision (num)
 Parameters num New value of numbers after decimal points used.
 Returns NA
 
-2.335 setdisplayBackground
+### `setdisplayBackground`
+
 Use this method to set the color of the display area outside the extent of the document.
 Syntax RxCore.setdisplayBackground (color)
 Parameters color Color string using supported html color notation Ex “#00FF00”
 Returns NA
 
-2.336 setFont
+### `setFont`
+
 Use this method to set the font used for markup text.
 Syntax RxCore.setFont (value)
 Parameters Value Type string. A valid font name.
 Returns NA
 
-2.337 setFontBold
+### `setFontBold`
+
 Use this method to toggle font bold on/off.
 Syntax RxCore.setFontBold()
 Parameters none
 Returns NA
 
-2.338 setFontFull
+### `setFontFull`
+
 Sets the current markup font using font name, font size, font style bold, font style italic. Use instead of setFontBold, setFont, setFontHeight and setFontItalic separately.
 Syntax RxCore.setFontFull(fontobject)
 Parameters fontobject Fontobject.font = \<string font name>
@@ -3860,62 +4008,73 @@ Fontobject.style.bold = \<Boolean true/false>
 Fontobject.style.italic = \<Boolean true/false>
 Returns NA
 
-2.339 setFontHeight
+### `setFontHeight`
+
 Use this method to set the font height for markup text in points.
 Syntax RxCore. setFontHeight (value)
 Parameters Value Integer indicating font height in points.
 Returns NA
 
-2.340 setFontItalic
+### `setFontItalic`
+
 Use this method to set font italic on/off.
 Syntax RxCore.setFontItalic (value)
 Parameters OnOff Boolean to set Italic on/off
 Returns NA
 
-2.341 setGlobalStyle
+### `setGlobalStyle`
+
 When on any changes to markup color, line width, and fill style will be set as the new global value when creating any new markup elements.
 Syntax RxCore.setGlobalStyle (global)
 Parameters global Boolean value to turn setting on/off
 Returns NA
-2.342 setGUIDMarkupSelected
+
+### `setGUIDMarkupSelected`
+
 Assign a unique ID to the currently selected markup.
 Syntax RxCore.setGUIDMarkupSelected ()
 Parameters none
 Returns NA
 
-2.343 setHatchDescription
+### `setHatchDescription`
+
 Sets a description property on a fill style created using addFill.
 Syntax RxCore. setHatchDescription (szname, szdescription)
 Parameters szname Name identifier of the fill object.
 Parameters szdescription Text description to apply.
 Returns NA
 
-2.344 setLabelSize
+### `setLabelSize`
+
 Changes the label size for markup objects that has labels like area and dimension lines.
 Syntax RxCore.setLabelSize (size)
 Parameters size Number of pixels for the label text height.
 Returns NA
 
-2.345 setLabelSizeAll
+### `setLabelSizeAll`
+
 Changes the label size for all markup objects that has labels like area and dimension lines.
 Syntax RxCore. setLabelSizeAll(size)
 Parameters size Number of pixels for the label text height.
 Returns NA
 
-2.346 setLargePDFpageLimit
+### `setLargePDFpageLimit`
+
 If a loaded PDF file contains more pages than the set number, only a limited number of pages will be active at any given time to limit the memory needed to display the PDF document.
 Syntax RxCore. setLargePDFpageLimit (numpages)
 Parameters numpages Limit for number of pages that can be loaded at once.
 Returns NA
 
-2.347 setLayout
+### `setLayout`
+
 Call to set canvas size based on web page content.
 Syntax RxCore. initialize (layout)
 Parameters offsetWidth Width to subtract from full width. Values in pixels.
 Parameters offsetHeight Height to subtract from full height. Values in pixels.
 Returns NA
 
-2.348 setLineStyle
+### `setLineStyle`
+
 Use this method to set the line style used for markup. NB! Not all browser currently support this feature.
 Syntax RxCore_SetLineStyle(linestyle)
 Parameters Value 0 = '————' solid
@@ -3931,63 +4090,73 @@ Syntax RxCore.setLineWidth (value)
 Parameters Value Width in pixels.
 Returns NA
 
-2.350 setLineWidthAll
+### `setLineWidthAll`
+
 Use this method to set the line width used for all markup.
 Syntax RxCore. setLineWidthAll (value)
 Parameters value Width in pixels.
 Returns NA
 
-2.351 setLineWidthMarkup
+### `setLineWidthMarkup`
+
 Use this method to set the line width used for a markup object.
 Syntax RxCore.setLineWidth (markup, value)
 Parameters markup Markup object.
 value Width in pixels.
 Returns NA
 
-2.352 setLineWidthUnits
+### `setLineWidthUnits`
+
 Sets the line width for the selected markup to the width specified using he current measurement unit. I.E if the currently selected measurement unit is mm the width will be set in mm.
 Syntax RxCore. setLineWidthUnits (value)
 Parameters Value Width in current measurement uinit.
 Returns NA
 
-2.353 setMarkup3DSavefile
+### `setMarkup3DSavefile`
+
 Use to change the name of the json file that holds the 3D markups. Default is 'markup.json’.
 Syntax RxCore. setMarkup3DSavefile (szfilename)
 Parameters szfilename String - Name of the file
 Returns NA
 
-2.354 setMarkupLayer
+### `setMarkupLayer`
+
 Set the currently active markup layer.
 Syntax RxCore.setMarkupLayer (layer)
 Parameters layer Number of the markup layer to set as active.
 Returns NA
 
-2.355 setmarkupRxGUID
+### `setmarkupRxGUID`
+
 Set unique id for markup objects.
 Syntax RxCore.setmarkupRxGUID ()
 Parameters none
 Returns NA
 
-2.356 setMarkupSearchPadding
+### `setMarkupSearchPadding`
+
 Sets an internal variable that can be used with RxCore.markupTextSearch to control the markup zoom level.
 Syntax RxCore.setMarkupSearchPadding(padding)
 Parameters padding object padding = \{x : int, y : int, w: int, h : int \}
 Returns NA
 Examples RxCore.setMarkupSearchPadding(\{x:50, y: 50, w:50, h:100\});
 
-2.357 setMarkupXMLData
+### `setMarkupXMLData`
+
 Create markup from XML markup structure.
 Syntax RxCore. setMarkupXMLData (xmldata)
 Parameters xmldata Xml structure representing markup to be created.
 Returns NA
 
-2.358 setMonoChrome
+### `setMonoChrome`
+
 Turn monochrome display on/off for CAD and other vector based formats.
 Syntax RxCore.setMonoChrome (bonOff)
 Parameters bonOff Boolean value. True = monochrome on, false = monochrome off.
 Returns NA
 
-2.359 setnavigationScaleOffset
+### `setnavigationScaleOffset`
+
 Use alignment array from compare overlay to set the scale and offset of a drawing used to replace the generic floorplan thumbnail of a 3D model so the camera indicator from 3D model show up at the correct place. Alignment array data is returned by the GUI_CompareMeasure callback event.
 Syntax RxCore. setnavigationScaleOffset(targetdocindex, floornum, alignarray)
 Parameters targetdocindex Open file index of the 3D model.
@@ -3995,7 +4164,8 @@ floornum 3D model floor that the scale and offset is for.
 Alignarray Array of alignment data created for the compare overlay.
 Returns NA
 
-2.360 setnavScaleOffsetPage
+### `setnavScaleOffsetPage`
+
 Use alignment array from compare overlay to set the scale and offset of current drawing page to be used as a 2D navigation page. Will cause the camera indicator from 3D model to show up at the correct place. Alignment array data is returned by the GUI_CompareMeasure callback event.
 Syntax RxCore. setnavigationScaleOffset(alignarray)
 Parameters alignarray Array of alignment data created for the compare overlay.
