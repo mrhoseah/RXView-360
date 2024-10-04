@@ -19,9 +19,9 @@ function HomepageHeader() {
 				<div className={styles.buttons}>
 					<Link
 						className="button button--secondary button--lg"
-						to="https://rxview360-docs.netlify.app/"
+						to="https://rxview360-sdk-docs.netlify.app/"
 					>
-						Check Online Documentation{" "}
+						Get started now{" "}
 					</Link>
 				</div>
 			</div>
