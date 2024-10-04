@@ -957,73 +957,135 @@ RxCore.copyMarkUp();
 ### `create3Dfloorplan`
 
 Creates a plane from a 2D drawing that can be inserted into a 3D model.
-Syntax RxCore. create3Dfloorplan (sourceindex, targetdocindex, floornum)
-Parameters sourceindex An open file index of a 2D drawing.
-targetdocindex An open file index of the target 3D model
-floornum The floor index of the 3D model the floorplan plane is for.
+
+**Syntax**
+
+```javascript
+RxCore.create3Dfloorplan(sourceindex, targetdocindex, floornum);
+```
+
+**Parameters**
+
+-   `sourceindex`: An open file index of a 2D drawing.
+-   `targetdocindex`: An open file index of the target 3D model
+-   `floornum`: The floor index of the 3D model the floorplan plane is for.
+
 Returns NA
 
 ### `create3DfloorplanfromPage`
 
 Creates a plane from a 2D drawing that can be inserted into a 3D model using the currently active document and page.
-Syntax RxCore. create3DfloorplanfromPage (targetdocindex, floornum)
-Parameters targetdocindex An open file index of the target 3D model
+
+Syntax RxCore. create3DfloorplanfromPage(targetdocindex, floornum)
+
+Parameters
+
+targetdocindex An open file index of the target 3D model
 floornum The floor index of the 3D model the floorplan plane is for.
+
 Returns NA
-2.61 create3DfloorplanfromCanvas
-Creates a floor plan plane from a canvas that can be inserted into a 3D model. Get canvas using get3dFloorplanCanvas method. Canvas is returned using GUI_FloorplanCanvas.
-Syntax RxCore create3DfloorplanfromCanvas(canvas, floornum, alignarray)
-Parameters canvas An html5 canvas to be used as image source.
-floornum The floor index of the 3D model the floorplan plane is for.
-alignarray An Array of alignment data used when creating a compare overlay.
+
+### `create3DfloorplanfromCanvas`
+
+Creates a floor plan plane from a canvas that can be inserted into a 3D model. Get canvas using get3dFloorplanCanvas method. Canvas is returned using `GUI_FloorplanCanvas`
+
+**Syntax**
+
+```javascript
+RxCore create3DfloorplanfromCanvas(canvas, floornum, alignarray);
+```
+
+**Parameters**
+
+-   `canvas`: An html5 canvas to be used as image source.
+-   `floornum`: The floor index of the 3D model the floorplan plane is for.
+-   `alignarray`: An Array of alignment data used when creating a compare overlay.
+
 Returns NA
 
 ### `create3DMarkup`
 
 Creates a fixed view for a 3D model and enables the use of the annotation tools for 3D.
-Syntax RxCore. create3DMarkup(select)
-Parameters select Boolean – true = enable 3D markup, false = disable 3D view.
+
+**Syntax**
+
+RxCore. create3DMarkup(select)
+
+**Parameters**
+
+-   `select`: Boolean – true = enable 3D markup, false = disable 3D view.
+
 Returns NA
 
 ### `create3DTexture`
 
 Creates a texture to be used with 3D symbols. Use to preload textures that can be used to switch the texture of an existing 3D symbol markup.
-Syntax RxCore. create3DTexture (image, w, h, id)
-Parameters Image An HTML image source object.
-w Width of image in pixels
-H Height of image in pixels
-id A unique number used as ID for the symbol texture.
+
+**Syntax**
+
+```javascript
+RxCore.create3DTexture(image, w, h, id);
+```
+
+**Parameters**
+
+-   `Image`: An HTML image source object.
+    `w`: Width of image in pixels
+    `H`: Height of image in pixels
+    `id`: A unique number used as ID for the symbol texture.
+
 Returns NA
 
 ### `createAreaAttributes`
 
 Use to create an Attribute for all polygons in a 2D vector file that hold the area value of the polygon.
-Syntax RxCore.createAreaAttributes (szAttname)
-Parameters szAttname Name of Attribute to create.
+
+**Syntax**
+
+```javascript
+RxCore.createAreaAttributes(szAttname);
+```
+
+**Parameters**
+
+-   `szAttname`: Name of Attribute to create.
+
 Returns NA
 
 ### `createFoxitDoc`
 
 Used to create a document object from foxit integration.
-Syntax RxCore.createFoxitDoc (foxview)
-Parameters foxview foxit integration object.
+
+**Syntax**
+
+```javascript
+RxCore.createFoxitDoc(foxview);
+```
+
+**Parameters**
+
+-   `foxview`: foxit integration object.
+
 Returns NA
 
 ### `createServerContent`
 
 Use this method to create server content without actually opening the file. A callback event GUI_CreationComplete Returns the xml file for the content when the process is complete.
-Syntax RxCore.createServerContent (fileurl)
-Parameters fileurl URL address or full server-side windows path to a file to open in the viewer.
 
-This can be either a string or an object with the following properties.
+**Syntax**
 
-fileurlobj.filepath = A string containing URL or path of file to open.
+```javascript
+RxCore.createServerContent(fileurl);
+```
 
-fileurlobj.mime = A string containing mime type for the type of file to open or null. See appendix C for list of mime types.
+**Parameters**
 
-fileurlobj.cacheid = A string containing a unique name to use for cache entry or null.
+`fileurl`: URL address or full server-side windows path to a file to open in the viewer. This can be either a string or an object with the following properties.
+`fileurlobj.filepath`: A string containing URL or path of file to open.
+fileurlobj.mime`:  A string containing mime type for the type of file to open or null. See appendix C for list of mime types.
+`fileurlobj.cacheid`:  A string containing a unique name to use for cache entry or null.
+`fileurlobj.displayname`: A string that is used as the document file name or null.
 
-fileurlobj.displayname = A string that is used as the document file name or null.
 Returns NA
 
 ### `createSpaceFromPolygon`
@@ -1040,14 +1102,16 @@ Syntax RxCore.createSpacefromBlock (blockid)
 Parameters blockid Block index of a vector block
 Returns NA
 
-2.69 createTextRect
+### `createTextRect`
+
 Create a text box using left, top, width and height in screen coordinates.
 Syntax RxCore. createTextRect (x, y, w, h, text)
 Parameters x,y,w,h Left, top, width and height in screen coordinates
 text Text content of the text box markup
 Returns NA
 
-2.70 delete3DViewAttribute
+### `delete3DViewAttribute`
+
 Removes a custom attribute from a 3D view
 Syntax RxCore.delete3DViewAttribute(szname, viewname)
 Parameters szName String – Name of the custom attribute
@@ -1057,43 +1121,51 @@ Example RxCore. delete3DViewAttribute("description", annotitem.name);
 //annotitem is a valid 3D annotation object.
 
 .
-2.71 deleteCamera
+
+### `deleteCamera`
+
 Use this method to delete a 3D View
 Syntax RxCore.deleteCamera (name)
 Parameters name String - The name of the view.
 Returns NA
 
-2.72 deleteMarkUp
+### `deleteMarkUp`
+
 Use this method to delete selected markup.
 Syntax RxCore.deleteMarkUp ()
 Parameters None
 Returns NA
 
-2.73 deleteMarkupbyGUID
+### `deleteMarkupbyGUID`
+
 Use this method to delete markup specified by the unique GUID value. If this is not set the uniqueID is 0.
 Syntax RxCore.deleteMarkupbyGUID (GUID)
 Parameters GUID Unique property uniqueID of a markup object.
 Returns NA
 
-2.74 deletePoint
+### `deletePoint`
+
 Sets the drawing operation for markup edit to delete selected point for markup that has multiple points.
 Syntax RxCore.deletePoint ()
 Parameters None
 Returns NA
 
-2.75 deleteVectorAttribute
+### `deleteVectorAttribute`
+
 Delete a specific attribute from added attributes by name. Apply to file types that have attributes.
 Syntax RxCore. deleteVectorAttribute (szAttribName)
 Parameters szAttribName Name of attribute to delete.
 Returns NA
 
-2.76 disablewelcome
+### `disablewelcome`
+
 Disables the automatic loading of the RxView360 welcome screen graphics.
 Syntax RxCore. disablewelcome (onoff)
 Parameters Onoff Boolean true = disables welcome screen graphics, false = default value. Welcome screen is displayed.
 Returns NA
 
-2.77 displayFloorplan
+### `displayFloorplan`
+
 If 2D floorplans has been injected into the model, this method can be used to turn the visibility on/off.
 Syntax RxCore.displayFloorplan (floornum, onOff, bAll)
 Parameters floornum Index of floor.
@@ -1101,33 +1173,38 @@ onOff Boolean display status true = on, false = off.
 bAll Boolean will affect all inserted 2D floor plans.
 Returns NA
 
-2.78 documentOpened
+### `documentOpened`
+
 Use this method to check if a document is open.
 Syntax RxCore.documentOpened ()
 Parameters None
 Returns True/false Boolean value true
 
-2.79 doResize
+### `doResize`
+
 If the html GUI needs to change the size of the canvas use this method to notify rxcorefunctions about the change.
 Syntax RxCore.doResize (offsetWidth, offsetHeight)
 Parameters offsetWidth New width of page to subtract from canvas width in pixels
 Parameters offsetHeight New height of page to subtract from canvas height in pixels.
 Returns NA
 
-2.80 doResizeEx
+### `doResizeEx`
+
 Use this if the rxcontainer div has absolute width and height and you need to change the size of the viewport. This require that you have used setLayout with an additional absolute property to the layout object set to true.
 Syntax RxCore.doResize (Width, Height)
 Parameters Width New absolute width of canvas in pixels
 Height New absolute height of canvas in pixels.
 Returns NA
 
-2.81 draw3DBirdseye
+### `draw3DBirdseye`
+
 Draws the camera position and angle on the bird’s eye image.
 Syntax RxCore.draw3DBirdseye ()
 Parameters None
 Returns NA
 
-2.82 drawmarkupToCanvas
+### `drawmarkupToCanvas`
+
 Draw markup associated with a specific 3D view to a Canvas.
 Syntax RxCore.drawmarkupToCanvas (ctx, width, height, name)
 Parameters ctx Canvas context
@@ -1136,13 +1213,15 @@ Parameters height Height of canvas
 Parameters name Name of 3D view
 Returns NA
 
-2.83 enableCamNavDraw
+### `enableCamNavDraw`
+
 Use to temporarily turn off the automatic update of the camera indicator for drawings used as 2D navigation for a 3D model. This is used in combination with floor selection to prevent the automatic update of a floor plan when selecting active floorplan to move between floors.
 Syntax RxCore.enableCamNavDraw (onOff)
 Parameters onOff Boolean where true = on, false = off.
 Returns NA
 
-2.84 endGetTextRects
+### `endGetTextRects`
+
 Used with getTextRects to terminate the operation and reset values.
 Syntax RxCore.endGetTextRects ()
 Parameters none
@@ -1150,32 +1229,37 @@ Returns NA
 Example RxCore.endGetTextRects();
 //terminate operation started with RxCore.getTextRects
 
-2.85 endMarkupTextSearch
+### `endMarkupTextSearch`
+
 Use this method to terminate markup text search function initiated using
 RxCore. markupTextSearch
 Syntax RxCore. endMarkupTextSearch ()
 Parameters none
 Returns NA
 
-2.86 endTextSearch
+### `endTextSearch`
+
 Use this method to terminate text search function initiated using RxCore.textSearch
 Syntax RxCore.endTextSearch()
 Parameters none
 Returns NA
 
-2.87 explode3D
+### `explode3D`
+
 Use this method in combination with RxCore.explode3DDistance to set the separation distance of blocks in a currently open 3D model.
 Syntax RxCore.explode3D (onoff)
 Parameters onoff Boolean value to actvate function true = on, false = off.
 Returns NA
 
-2.88 explode3DDistance
+### `explode3DDistance`
+
 Use this method in combination with RxCore.explode3D to set the separation distance of blocks in a currently open 3D model.
 Syntax RxCore.explode3DDistance (value)
 Parameters Value Value in percentage of model extent.
 Returns NA
 
-2.89 exportFile
+### `exportFile`
+
 Use this method to export currently active drawing or document to a supported export format like PDF.
 Syntax RxCore.exportFile (consolidate, format,UPI,paperSize,markupFlag)
 Parameters consolidate Boolean if true only consolidated markup will be exported.
@@ -3038,143 +3122,304 @@ function onGetMatches(rects, currentpage) {
 ### `markupMeasurePath`
 
 Use this method to turn on/off the markup measure path tool. This enables the user to add a measure path that is a poly line that has a label containing the accumulated length of all the lines.
-Syntax RxCore.markupMeasurePath(selected)
-Parameters Selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markupMeasurePath(selected);
+```
+
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
 ### `markupMultiselect`
 
 Use this method to turn on and off the ability to select multiple markup objects.
-Syntax RxCore.markupMultiselect (onOff)
-Parameters onOff Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markupMultiselect(onOff);
+```
+
+**Parameters**
+
+-   `onOff`: Boolean value. true = on, false = off.
+
 Returns NA
 
 ### `markUpNote`
 
 Use this method to turn on/off the markup note tool. This enables the user to add a note that the where the user can add a longer text in a note dialog and display this text later by clicking the note markup object in the drawing using the mouse.
-Syntax RxCore.markUpNote (selected)
-Parameters Selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markUpNote(selected);
+```
+
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
 ### `markUpOutlined`
 
 Set Markup fill style to Outlined to Draw markup objects with lines and no fill.
-Syntax RxCore.MarkupOutlined()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.MarkupOutlined();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `markUpPolyline`
 
 Use this method to turn on/off the markup polyline tool. This enables the user to add a polyline markup to the current drawing using the mouse.
-Syntax RxCore.markUpPolyline (selected)
-Parameters Selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markUpPolyline(selected);
+```
+
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
-2.219 markUpRedraw
+### `markUpRedraw`
+
 Forces a redraw of all markup.
-Syntax RxCore.markUpRedraw()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.markUpRedraw();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `markUpRedo`
 
-Used in combination with markUpUndo to redo operations undone with markUpUndo
-Syntax RxCore.markUpRedo ()
-Parameters None
+Used in combination with markUpUndo to redo operations undone with `markUpUndo`
+
+**Syntax**
+
+```javascript
+RxCore.markUpRedo();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `markUpRotate`
 
 Use this method to set the rotation of a markup object in degrees.
-Syntax RxCore.markUpRotate(degrees)
-Parameters Degrees Degree of rotation negative 180 – positive 180
+
+**Syntax**
+
+```javascript
+RxCore.markUpRotate(degrees);
+```
+
+**Parameters**
+
+-   `Degrees`: Degree of rotation negative 180 – positive 180
+
 Returns NA
 
 ### `markUpSave`
 
 Use this method to save markup to server.
-Syntax RxCore.markUpSave ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.markUpSave();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `markupSaveCheck`
 
 Disables the unsaved markup warning shown when closing a file.
-Syntax RxCore. markupSaveCheck (OnOff)
-Parameters OnOff Boolean true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markupSaveCheck(OnOff);
+```
+
+**Parameters**
+
+-   `OnOff`: Boolean true = on, false = off.
+
 Returns NA
 
 ### `markUpShape`
 
 Use this method to turn on/off the markup shape tool. This enables the user to add a markup shape of a given type and subtype using the mouse.
-Syntax RxCore.markUpShape (selected,type,subtype)
-Parameters Selected Boolean value. true = on, false = off.
-type Markup shape type. 0=rectangle, 1=ellipse, 2=cloud, 3=polygon,
-subtype 1=rounded rectangle (works with type 0 only)
+
+**Syntax**
+
+```javascript
+RxCore.markUpShape(selected, type, subtype);
+```
+
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
+-   `type`: Markup shape type. 0=rectangle, 1=ellipse, 2=cloud, 3=polygon,
+-   `subtype`: 1=rounded rectangle (works with type 0 only)
+
 Returns NA
 
 ### `markUpStamp`
 
 Use this method to add a markup stamp to the current drawing.
-Syntax RxCore.markUpStamp (Text)
-Parameters Text Stamp text
+
+**Syntax**
+
+```javascript
+RxCore.markUpStamp(Text);
+```
+
+**Parameters**
+
+-   `Text`: Stamp text
+
 Returns NA
 
 ### `markupSymbol`
 
 Activates the symbol markup tool.
-Syntax RxCore.markupSymbol (selected)
-Parameters Selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markupSymbol(selected);
+```
+
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
 ### `markUpSubType`
 
 Use this method to change the subtype of the selected markup object.
-Syntax RxCore.markUpSubType (num)
-Parameters num Subtype number
+
+**Syntax**
+
+RxCore.markUpSubType (num)
+
+**Parameters**
+
+-   `num`: Subtype number
+
 Returns NA
 
 ### `markUpTextRect`
 
 Use this method to turn on/off the markup text tool. This enables the user to add a text markup to the current drawing using the mouse.
-Syntax RxCore.markUpTextRect (selected)
-Parameters Selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markUpTextRect(selected);
+```
+
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
 ### `markUpTextRectArrow`
 
 Use this method to turn on/off the markup text with leader line tool. This enables the user to add a text markup with leader line to the current drawing using the mouse.
-Syntax RxCore. markUpTextRectArrow (selected)
-Parameters Selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markUpTextRectArrow(selected);
+```
+
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
 ### `markupTextSearch`
 
 Starts a search for markup texts using a search expression. Terminate search using endMarkupTextSearch
-Syntax RxCore. markupTextSearch (text, direction, casesensitive)
-Parameters text The text to search for.
-direction Boolean value. true = forward, false = backward.
-casesensitive Boolean value. true = case sensitive search, false = case insensitive search.
+
+**Syntax**
+
+```javascript
+RxCore.markupTextSearch(text, direction, casesensitive);
+```
+
+**Parameters**
+
+-   `text`: The text to search for.
+-   `direction`: Boolean value. true = forward, false = backward.
+-   `casesensitive`: Boolean value. true = case sensitive search, false = case insensitive search.
+
 Returns NA
 
 ### `markUpUndo`
 
 Use this method to Undo last markup operation.
-Syntax RxCore.markUpUndo ()
+
+**Syntax**
+
+```javascript
+RxCore.markUpUndo();
+```
+
 Parameters None
 Returns NA
 
 ### `markUpUserDialog`
 
 Opens a dialog containing a list of markup users and the visibility state of the markup fore each user. The dialog allow the user to turn the visibility of markup for a specific user if the user is allowed to do this. If allowed the user can also set the markup signature using this dialog.
-Syntax RxCore.markUpUserDialog ()
+
+**Syntax**
+
+```javascript
+RxCore.markUpUserDialog();
+```
+
 Parameters None
 Returns NA
 
 ### `measure`
 
 Activates the measure tool. Measure tool allow the user to measure distances area and angles using a polygon.
-Syntax RxCore.measure (selected)
+
+**Syntax**
+
+```javascript
+RxCore.measure(selected);
+```
 
 Parameters selected Boolean turning the tool on/off
 Returns NA
@@ -3182,14 +3427,25 @@ Returns NA
 ### `measure3D`
 
 Activates the 3D measure tool to measure a distance between 2 points in a 3D model.
-Syntax RxCore.measure3D (selected)
+
+**Syntax**
+
+```javascript
+RxCore.measure3D(selected);
+```
+
 Parameters selected Boolean turning the tool on/off
 Returns NA
 
 ### `measuredistance`
 
 Activates the measure distance tool. Measure distance tool allow the user to measure the distance between two points.
-Syntax RxCore.measuredistance (selected)
+
+**Syntax**
+
+```javascript
+RxCore.measuredistance(selected);
+```
 
 Parameters selected Boolean turning the tool on/off
 Returns NA
@@ -3197,30 +3453,63 @@ Returns NA
 ### `metricUnit`
 
 Use this method to set the sub measure unit for the metric measurement system
-Syntax RxCore_MetricUnit(unit)
-Parameters unit Type string Select between. 'Millimeter’,, 'Centimeter', 'Decimeter', 'Meter', 'Kilometer' or 'Nautical Miles'.  
+
+**Syntax**
+
+```javascript
+RxCore_MetricUnit(unit);
+```
+
+**Parameters**
+
+-   `unit`: Type string Select between. 'Millimeter’,, 'Centimeter', 'Decimeter', 'Meter', 'Kilometer' or 'Nautical Miles'.
+
 Returns NA
 
 ### `modifyMarkup`
 
 Modifies markup given by a unique ID using xml data to change the markup.
-Syntax RxCore modifyMarkup (GUID, markupxml)
-Parameters GUID Unique property uniqueID of a markup object.
-Parameters markupxml Text string representing xml data that correspond to RxView360 markup format.
+
+**Syntax**
+
+```javascript
+RxCore modifyMarkup (GUID, markupxml)
+```
+
+**Parameters**
+
+-   `GUID`: Unique property uniqueID of a markup object.
+-   `markupxml`: Text string representing xml data that correspond to RxView360 markup format.
+
 Returns NA
 
 ### `moveLabelEnable`
 
 Turn on/off the ability to select and move markup labels.
-Syntax RxCore.moveLabelEnable (onOff)
-Parameters onOff Boolean : true = on, false : off
+
+**Syntax**
+
+```javascript
+RxCore.moveLabelEnable(onOff);
+```
+
+Parameters
+
+-   `onOff`: Boolean : true = on, false : off
+
 Returns NA
 
 ### `moveTo3DNavPos`
 
 Used in combination with the GUI_3DNavPosition callback event.
 When clicking on a 2D drawing set up a as navigation page for a 3D model this method will move the camera to the location in the 3D model based on the position selected in the 2D drawing.
-Syntax RxCore.moveTo3DNavPos(campos)
+
+**Syntax**
+
+```javascript
+RxCore.moveTo3DNavPos(campos);
+```
+
 Parameters campos Object = \{x, y, z\} x, y and z position of selected coordinate.
 Calculated position returned from the GUI_3DNavPosition callback event.
 Returns NA
@@ -3228,42 +3517,81 @@ Returns NA
 ### `moveTo3DPart`
 
 Calling this method will move the camera in the 3D model to point at the currently selected 3D part.
-Syntax RxCore.moveTo3DPart()
+
+**Syntax**
+
+```javascript
+RxCore.moveTo3DPart();
+```
+
 Parameters None
 Returns NA
 
 ### `navigateBookmark`
 
 Causes navigation to a PDF bookmark
-Syntax RxCore. navigateBookmark (bookmark)
-Parameters bookmark Bookmark object from Foxit bookmark list.
+
+**Syntax**
+
+```javascript
+RxCore.navigateBookmark(bookmark);
+```
+
+**Parameters**
+
+-   `bookmark`: Bookmark object from Foxit bookmark list.
+
 Returns NA
 
 ### `nav3Dreplacediag`
 
 Same functionality as RxCore.compareDialog but uses a different callback called GUI_Nav3DreplaceDiag. The callback Returns a list of files that can be used to create a compare overlay. This is to be used to match drawings with 3D model generic floorplan to replace as 2D navigation drawing.
-Syntax RxCore.nav3Dreplacediag()
+
+**Syntax**
+
+```javascript
+RxCore.nav3Dreplacediag();
+```
+
 Parameters none
 Returns NA
 
 ### `nextMarkup`
 
 Use this method to cycle through and zoom into markup entities.
-Syntax RxCore.nextMarkup ()
+
+**Syntax**
+
+```javascript
+RxCore.nextMarkup();
+```
+
 Parameters None
 Returns NA
 
 ### `nextPage`
 
 Use this method to display next page in a multipage document.
-Syntax RxCore.nextPage ()
+
+**Syntax**
+
+```javascript
+RxCore.nextPage();
+```
+
 Parameters None
 Returns NA
 
 ### `noteFocus`
 
 Use to prevent markup from being deleted by hitting delete when editing note text.
-Syntax RxCore. noteFocus (onOff)
+
+**Syntax**
+
+```javascript
+RxCore.noteFocus(onOff);
+```
+
 Parameters OnOff Boolean that turn the notefocus on/off
 Returns NA
 
@@ -3274,7 +3602,13 @@ Alternative reference to GUI_Textdiag callback.
 ### `open3DFloorplanPage`
 
 Open a file to be used as 2D navigation for a 3D model. Uses GUI_floorLoadComplete callback instead of the GUI_loadComplete callback.
-Syntax RxCore. open3DFloorplanPage(fileurl, floorindex)
+
+**Syntax**
+
+```javascript
+RxCore.open3DFloorplanPage(fileurl, floorindex);
+```
+
 Parameters fileurl String - URL address of the drawing.
 Parameters floorindex Integer – index of the associated floor.
 Returns NA
@@ -3282,7 +3616,13 @@ Returns NA
 ### `openFile`
 
 Use this method to open a file using a URL or server-side windows path.
-Syntax RxCore.openFile (fileurl)
+
+**Syntax**
+
+```javascript
+RxCore.openFile(fileurl);
+```
+
 Parameters fileurl URL address or full server-side windows path to a file to open in the viewer.
 
 This can be either a string or an object with the following properties.
@@ -3299,14 +3639,26 @@ Returns NA
 ### `openFileCustom`
 
 Use this method to open a file using a URL to a web folder containing web content files for client display.
-Syntax RxCore.openFileCustom (fileurl)
+
+**Syntax**
+
+```javascript
+RxCore.openFileCustom(fileurl);
+```
+
 Parameters fileurl URL address to a web folder that contains web content.
 Returns NA
 
 ### `openFileLayouts`
 
 Opens a CAD drawing limited to a specified Layout range.
-Syntax RxCore. openFileLayouts (fileurl, layouts)
+
+**Syntax**
+
+```javascript
+RxCore.openFileLayouts(fileurl, layouts);
+```
+
 Parameters fileurl URL address or full server-side windows path to a file to open in the viewer.
 Parameters layouts Array of layout numbers to open.
 Returns NA
@@ -3314,7 +3666,13 @@ Returns NA
 ### `openFileLayoutsEx`
 
 Opens a CAD drawing limited to a specified Layout range same as openFileLayouts except that if the opening fails the GUI_Download callback is triggered which allow UI download progress to be hidden.
-Syntax RxCore. openFileLayoutsEx (fileurl, layouts)
+
+**Syntax**
+
+```javascript
+RxCore.openFileLayoutsEx(fileurl, layouts);
+```
+
 Parameters fileurl URL address or full server-side windows path to a file to open in the viewer.
 Parameters layouts Array of layout numbers to open.
 Returns NA
@@ -3322,7 +3680,13 @@ Returns NA
 ### `openFilePages`
 
 Opens a document limited to a specified page range. This does not work for PDF as the Foxit library always load all pages in a document,
-Syntax RxCore. openFilePages (fileurl, pages)
+
+**Syntax**
+
+```javascript
+RxCore.openFilePages(fileurl, pages);
+```
+
 Parameters fileurl URL address or full server-side windows path to a file to open in the viewer.
 Parameters pages Array of page numbers to open.
 Returns NA
@@ -3330,14 +3694,26 @@ Returns NA
 ### `openFileSilent`
 
 Use this method to open a file using a URL or server-side windows path but without making the file the active file if other files are already open.
-Syntax RxCore. openFileSilent (fileurl)
+
+**Syntax**
+
+```javascript
+RxCore.openFileSilent(fileurl);
+```
+
 Parameters fileurl URL address or full server-side windows path to a file to open in the viewer.
 Returns NA
 
 ### `openFloorplanFile`
 
 Opens a generic floorplan from a 3D model as a separate drawing.
-Syntax RxCore. openFloorplanFile (fileindex, floornum)
+
+**Syntax**
+
+```javascript
+RxCore.openFloorplanFile(fileindex, floornum);
+```
+
 Parameters fileindex Number : Open file index.
 floornum Number : Floor index.
 Returns NA
@@ -3345,35 +3721,65 @@ Returns NA
 ### `openMarkup`
 
 Use this method to open a markup rxml file to use with the currently active file
-Syntax RxCore. openMarkup (fileurl)
+
+**Syntax**
+
+```javascript
+RxCore.openMarkup(fileurl);
+```
+
 Parameters fileurl URL address or full server-side windows path to an rxml file to open.
 Returns NA
 
 ### `openRecent`
 
 Use this method to open a file from a recent file list using a URL or server-side windows path.
-Syntax RxCore.openRecent(fileurl)
+
+**Syntax**
+
+```javascript
+RxCore.openRecent(fileurl);
+```
+
 Parameters fileurl URL address or full server-side windows path to a file to open in the viewer.
 Returns NA
 
 ### `orbit3D`
 
 Use this method to “Orbit” a currently open 3D model.
-Syntax RxCore.orbit3D ()
+
+**Syntax**
+
+```javascript
+RxCore.orbit3D();
+```
+
 Parameters None
 Returns NA
 
 ### `overlay`
 
 Used in combination with RxCore.compareDialog to create an overlay from two open files. Works the same as compare but keeps original colors.
-Syntax RxCore.overlay (okcancel)
+
+**Syntax**
+
+```javascript
+RxCore.overlay(okcancel);
+```
+
 Parameters okcancel Boolean that has to be true for the compare to be created.
 Returns NA
 
 ### `overlayFiles`
 
 Open two files and create a overlay. Works the same way as compareFiles but uses the original colors.
-Syntax RxCore.overlayFiles (filebackground,fileoverlay)
+
+**Syntax**
+
+```javascript
+RxCore.overlayFiles(filebackground, fileoverlay);
+```
+
 Parameters filebackground URL of file to use as background
 fileoverlay URL of file to overlay
 Returns NA
@@ -3381,200 +3787,410 @@ Returns NA
 ### `pageLock`
 
 Lock pages in current document. Used with multiple instances of RxCore object where scale and offset of two pages should be locked together.
-Syntax RxCore. pageLock (onoff)
-Parameters OnOff true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.pageLock(onoff);
+```
+
+Parameters
+
+-   `OnOff`: true = on, false = off.
+
 Returns NA
 
 ### `pageOnlyMarkup`
 
 Limits the markup array for markuplist to only markup on the current page.
-Syntax RxCore.pageOnlyMarkup (toggle)
-Parameters toggle if true the page only listing is toggled on/off if false it will be turned on regardless of current state.
+
+**Syntax**
+
+```javascript
+RxCore.pageOnlyMarkup(toggle);
+```
+
+**Parameters**
+
+-   `toggle`: if true the page only listing is toggled on/off if false it will be turned on regardless of current state.
+
 Returns NA
 
 ### `pagePos`
 
 Moves current page to a specified position based on the given point in screen coordinates.
-Syntax RxCore. pagePos (x,y)
-Parameters X Horizontal position of page
-Parameters Y Vertical position of page
+
+**Syntax**
+
+```javascript
+RxCore.pagePos(x, y);
+```
+
+**Parameters**
+
+-   `X`: Horizontal position of page
+-   `Y`: Vertical position of page
+
 Returns NA
 
 ### `panPage`
 
-Used in combination with GUI_PanUpdate callback event and pageLock to synchronize offset of pages into different instances of Rxcore. Moves the offset of current page given by x, y values.
-Syntax RxCore. panPage(x,y)
-Parameters X Horizontal position of page
-Parameters Y Vertical position of page
+Used in combination with `GUI_PanUpdate` callback event and pageLock to synchronize offset of pages into different instances of `Rxcore`. Moves the offset of current page given by x, y values.
+
+**Syntax**
+
+```javascript
+RxCore.panPage(x, y);
+```
+
+**Parameters**
+
+-   `X`: Horizontal position of page
+-   `Y`: Vertical position of page
+
 Returns NA
 
 ### `panWindow`
 
 Use to pan the current drawing or document using the mouse input.
-Syntax RxCore.panWindow ()
-Parameters none
+
+**Syntax**
+
+```javascript
+RxCore.panWindow();
+```
+
+**Parameters** none
+
 Returns NA
 
 ### `pasteMarkUp`
 
 Use this method to paste a previously copied markup entity into the currently active drawing or document.
-Syntax RxCore.pasteMarkUp ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.pasteMarkUp();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `pickPolygon`
 
 Use this method to pick a Block in a vector drawing that has selectable blocks. A callback event is called set up GUI_2DBlockID with a callback function to get the block id(s).
-Syntax RxCore.pickPolygon (selected, multi)
-Parameters selected True / false to turn method on / off.
-Parameters Multi True = allow selection of multiple blocks.
+
+**Syntax**
+
+```javascript
+RxCore.pickPolygon(selected, multi);
+```
+
+**Parameters**
+
+-   `selected`: True / false to turn method on / off.
+-   `Multi`: True = allow selection of multiple blocks.
+
 Returns NA
 
 ### `pickRxSpace`
 
-Use this method to pick a Rasterex space object. Set up GUI_2DBlockID with a callback function to get the block id(s).
-Syntax RxCore.pickRxSpace (selected, multi)
-Parameters selected True / false to turn method on / off.
-Parameters Multi True = allow selection of multiple blocks.
+Use this method to pick a Rasterex space object. Set up `GUI_2DBlockID` with a callback function to get the block id(s).
+
+**Syntax**
+
+```javascript
+RxCore.pickRxSpace(selected, multi);
+```
+
+**Parameters**
+
+-   `selected`: True / false to turn method on / off.
+-   `Multi`: True = allow selection of multiple blocks.
+
 Returns NA
 
 ### `prevPage`
 
 Use this method to display previous page in a multipage document.
-Syntax RxCore.prevPage ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.prevPage();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `print`
 
 Use this method to print currently active drawing or document on a available windows printer.
-Syntax RxCore.print ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.print();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `printEx`
 
-Same as RxCore_Printdocument but takes a parameter to select the html page to be used for printing.
-Syntax RXCore.printEx (PrintPgURL)
-Parameters PrintPgURL URL to an html page that is used to print content from Rxview360.
-Returns NA
+Same as `RxCore_Printdocument` but takes a parameter to select the html page to be used for printing.
+
+**Syntax**
+
+```javascript
+RXCore.printEx(PrintPgURL);
+```
+
+**Parameters**
+
+-   `PrintPgURL`: URL to an html page that is used to print content from Rxview360.
+    Returns NA
 
 ### `printSizeEx`
 
-Same as RxCorePrintEx but takes an additional parameter to specify the paper size in mm.
-Syntax RXCore. printSizeEx(PrintPgURL, PaperSize)
-Parameters PrintPgURL URL to an html page that is used to print content from Rxview360.
-Parameters PaperSize PaperSize =\{width: number, height : number \}
-Use values in mm.
+Same as `RxCorePrintEx` but takes an additional parameter to specify the paper size in mm.
+
+**Syntax**
+
+```javascript
+RXCore.printSizeEx(PrintPgURL, PaperSize);
+```
+
+**Parameters**
+
+-   `PrintPgURL`: URL to an html page that is used to print content from `Rxview360`.
+-   `PaperSize`: PaperSize =\{width: number, height : number \}
+    Use values in mm.
+
 Returns NA
 
 ### `redrawPage`
 
 Forces a redraw of a page given by page number.
-Syntax RxCore. redrawPage (pagenumber)
+
+**Syntax**
+
+```javascript
+RxCore.redrawPage(pagenumber);
+```
+
 Parameters pagenumber 0 indexed page number.
 Returns NA
 
 ### `removeFloorplan`
 
 Removes a 2D floorplan plane from the 3D model
-Syntax RxCore.removeFloorplan(floornum)
+
+**Syntax**
+
+```javascript
+RxCore.removeFloorplan(floornum);
+```
+
 Parameters floornum Index of floor.
 Returns NA
 
 ### `removeLastPoint`
 
 Removes the last point if a markup drawing operation is active that involves annotations that has multiple points.
-Syntax RxCore. removeLastPoint ()
+
+**Syntax**
+
+```javascript
+RxCore.removeLastPoint();
+```
+
 Parameters none
 Returns NA
 
 ### `renderBirdseye`
 
 Renders the current page to the birdseye overview window.
-Syntax RxCore. renderBirdseye ()
+
+**Syntax**
+
+```javascript
+RxCore.renderBirdseye();
+```
+
 Parameters none
 Returns NA
 
 ### `replacefloorplan`
 
 Use to replace generic floorplan used in Bird’s eye view for navigation with one generated from a separate open drawing.
-Syntax RxCore. replacefloorplan (sourceindex, targetdocindex, floornum)
-Parameters Sourceindex Open file index to use as source for replacement thumbnail.
-Targetdocindex Open file index for the 3D model.
-Floornum Floor index indicating the floor.
+
+**Syntax**
+
+```javascript
+RxCore.replacefloorplan(sourceindex, targetdocindex, floornum);
+```
+
+Parameters
+
+-   `Sourceindex`: Open file index to use as source for replacement thumbnail.
+-   `Targetdocindex`: Open file index for the 3D model.
+-   `Floornum`: Floor index indicating the floor.
+
 Returns NA
 
 ### `replacefloorplanfromPage`
 
 Use to replace generic floorplan used in Bird’s eye view for navigation with one generated from the currently active page.
-Syntax RxCore. replacefloorplan (targetdocindex, floornum)
-Parameters targetdocindex Open file index for the 3D model.
-Parameters Floornum Floor index indicating the floor.
+
+**Syntax**
+
+```javascript
+RxCore.replacefloorplan(targetdocindex, floornum);
+```
+
+**Parameters**
+
+-   `targetdocindex`: Open file index for the 3D model.
+-   `Floornum`: Floor index indicating the floor.
+
 Returns NA
 
 ### `reset3DModel`
 
 Use this method to reset a 3D model to its initial display state.
-Syntax RxCore.reset3DModel ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.reset3DModel();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `resetBlocks`
 
 Use this method to reset all blocks for a 2D drawing to its initial on/off state.
-Syntax RxCore.resetBlocks ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.resetBlocks();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `restoreBlockStates`
 
 Restore the drawing color for all blocks in vector file.
-Syntax RxCore.restoreBlockStates()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.restoreBlockStates();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `restoreCameraByName`
 
-Activate existing 3D view by name.  
-Syntax RxCore. restoreCameraByName (name)
-Parameters Name String – name of 3D view to activate.
+Activate existing 3D view by name.
+
+**Syntax**
+
+```javascript
+RxCore.restoreCameraByName(name);
+```
+
+**Parameters**
+
+-   `Name`: name of 3D view to activate (String)
+
 Returns NA
 
 ### `restoreDefault`
 
 Set the Viewer to use the default input state. Default will enable mouse control to pan a 2D drawing using left mouse button, Zoom using scroll wheel. For touch devices this will enable zoom and pan using two touch points. For 3D files on touch point will rotate model and two will zoom and pan.
-Syntax RxCore.restoreDefault ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.restoreDefault();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `restoreMouseInput`
 
 If the drawing of a markup is overridden using applyWidthHeight or applyAngleLength this method will restore mouse input.
-Syntax RxCore.restoreMouseInput()
-Parameters none
+
+**Syntax**
+
+```javascript
+RxCore.restoreMouseInput();
+```
+
+**Parameters** none
+
 Returns NA
 
 ### `resetLayers`
 
 Use this method to reset all layers for a 2D drawing to its initial on/off state.
-Syntax RxCore_resetLayers ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore_resetLayers();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `reverseNavMouse`
 
 Reverses the direction of the mouse when using the walkthrough mode.
-Syntax RxCore.reverseNavMouse (onoff)
-Parameters onoff Boolean true=reverse, false=not reversed.
+
+**Syntax**
+
+```javascript
+RxCore.reverseNavMouse(onoff);
+```
+
+**Parameters**
+
+-   `onoff`: Boolean true=reverse, false=not reversed.
+
 Returns NA
 
 ### `rotate`
 
 Use this method to set the current on screen rotation for the currently displayed drawing or document.
-Syntax RxCore.rotate (cycle,szrotatetool)
-Parameters cycle Boolean value. If true, the rotation will be set to current rotation + 90 degrees.
-szrotatetool Type text. A fixed rotation value in degrees. Values are '0’, '90’, '180’ or '270’.
+
+**Syntax**
+
+```javascript
+RxCore.rotate(cycle, szrotatetool);
+```
+
+**Parameters**
+
+-   `cycle`: Boolean value. If true, the rotation will be set to current rotation + 90 degrees.
+-   `szrotatetool`: Type text. A fixed rotation value in degrees. Values are '0’, '90’, '180’ or '270’.
+
 Returns NA
 
 ### `rotatePage`
@@ -3637,279 +4253,605 @@ function GUI_CanSaveTop3DView() {
 ### `scale`
 
 Use this method to set the measure scaling using the current measure unit and subunit.
-Syntax RxCore.scale (scale)
-Parameters scale A scale value given by two numbers divided by a colon. Ex 1:1.
+
+**Syntax**
+
+RxCore.scale (scale)
+
+**Parameters**
+
+-   `scale`: A scale value given by two numbers divided by a colon. Ex 1:1.
+
 Returns NA
 
 ### `scaleOnResize`
 
 Sets whether rescaling of the browser window will cause a zoom to fit for the opened drawing.
-Syntax RxCore. scaleOnResize (onOff)
-Parameters onOff Boolean true = on, false = off.
+
+**Syntax**
+
+RxCore. scaleOnResize (onOff)
+
+**Parameters**
+
+-   `onOff`: Boolean true = on, false = off.
+
 Returns NA
 
 ### `scrollBarCheck`
 
 Used with Foxit integration to synchronize the RxView360 markup display with the Foxit PDF scrollbar positions.
-Syntax RxCore.scrollBarCheck ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.scrollBarCheck();
+```
+
+**Parameters** None
+
 Returns NA
 
 ### `search3dAttribute`
 
 Use this method to search for a 3D block that matches a specific Attribute value. Only the ID of the first match is returned by the method.
-Syntax RxCore. search3dAttribute(szAttribVal)
-Parameters szAttribVal String value representing an Attribute value.
+
+**Syntax**
+
+```javascript
+RxCore.search3dAttribute(szAttribVal);
+```
+
+**Parameters**
+
+-   `szAttribVal`: String value representing an Attribute value.
+
 Returns Name 3D block Name reference.
 
 ### `search3dAttributes`
 
 Use this method to search for a 3D block attributes that matches a specific search expression.
-Syntax RxCore.search3dAttributes(expr)
-Parameters expr String value representing a search expression using “?” and “\*” wildcard characters.
-Returns meshattribarray Array of objects for each mesh that matches the search,
+
+**Syntax**
+
+```javascript
+RxCore.search3dAttributes(expr);
+```
+
+**Parameters**
+
+-   `expr`: String value representing a search expression using “?” and “\*” wildcard characters.
+
+Returns `meshattribarray` Array of objects for each mesh that matches the search,
 
 ### `search3dAttributesEx`
 
 Use this method to search for a 3D block attributes that matches a specific search expression.
-Syntax RxCore. search3dAttributesEx(expr, useregexp)
-Parameters expr String value representing a search expression using “?” and “\*” wildcard characters.
-useregexp Boolean \true = use regular expression, false = use simple string compare.
-Returns meshattribarray Array of objects for each mesh that matches the search,
+
+**Syntax**
+
+```javascript
+RxCore.search3dAttributesEx(expr, useregexp);
+```
+
+**Parameters**
+
+-   `expr`: String value representing a search expression using “?” and “\*” wildcard characters.
+-   `useregexp`: Boolean \true = use regular expression, false = use simple string compare.
+
+Returns `meshattribarray` Array of objects for each mesh that matches the search,
 
 ### `select3D`
 
 Use this method to turn on/off the 3D select tool that enable the user to select 3D parts using the mouse and clicking on parts in the 3D model with the left mouse button.
-Syntax RxCore.select3D (selected)
-Parameters selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.select3D(selected);
+```
+
+**Parameters**
+
+-   `selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
 ### `select3DMarkup`
 
 Like select3D but works on 3D markup only.
 Use this method to turn on/off the 3D markup select tool that enable the user to select 3D markup using the mouse and clicking on parts in the 3D model with the left mouse button.
-Syntax RxCore. select3DMarkup (selected)
-Parameters selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.select3DMarkup(selected);
+```
+
+**Parameters**
+
+-   `selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
 ### `select3DMarkUpByID`
 
 Select a 3D markup using the mesh id.
-Syntax RxCore.select3DMarkUpByID(id)
-Parameters id The mesh id of the 3D markup.
+
+**Syntax**
+
+```javascript
+RxCore.select3DMarkUpByID(id);
+```
+
+**Parameters**
+
+-   `id`: The mesh id of the 3D markup.
+
 Returns NA
 
 ### `select3DVectorBlock`
 
 Use this method to select a 3D part by part name.
-Syntax RxCore.select3DVectorBlock (name)
-Parameters Name Name of 3D part to select.
+
+**Syntax**
+
+```javascript
+RxCore.select3DVectorBlock(name);
+```
+
+**Parameters**
+
+-   `Name`: Name of 3D part to select.
+
 Returns NA
 
 ### `selectMarkUp`
 
 Enables markup selection tool (default tool) but also set any newly created markups in selected state. If the newly created object is a Rasterex space object it will allow the selection of Rasterex space objects.
-Syntax RxCore. selectMarkUp (selected)
-Parameters selected If true select markup tool is activated.
+
+**Syntax**
+
+```javascript
+RxCore.selectMarkUp(selected);
+```
+
+**Parameters**
+
+-   `selected`: If true select markup tool is activated.
+
 Returns NA
 
 ### `selectMarkupbyGUID`
 
 Use this method to select a markup by markup unique ID.
-Syntax RxCore.selectMarkUpByIndex (GUID)
-Parameters GUID Unique ID of a markup object.
+
+**Syntax**
+
+```javascript
+RxCore.selectMarkUpByIndex(GUID);
+```
+
+**Parameters**
+
+-   `GUID`: Unique ID of a markup object.
+
 Returns NA
 
 ### `selectMarkupbyGUIDs`
 
 Use to select multiple markup objects using and array of unique identifiers.
-Syntax RxCore.selectMarkupbyGUIDs (GUIDs)
-Parameters GUIDs Array of strings each string being a unique id.
+
+**Syntax**
+
+```javascript
+RxCore.selectMarkupbyGUIDs(GUIDs);
+```
+
+**Parameters**
+
+-   `GUIDs`: Array of strings each string being a unique id.
+
 Returns NA
 
 ### `selectMarkUpByIndex`
 
 Use this method to select a markup by markup index.
-Syntax RxCore.selectMarkUpByIndex (indx)
-Parameters Indx Index in markup list to select.
+
+**Syntax**
+
+```javascript
+RxCore.selectMarkUpByIndex(indx);
+```
+
+**Parameters**
+
+-   `Indx`: Index in markup list to select.
+
 Returns NA
 
 ### `selectRxSpace`
 
 Select a Rasterex space object by a given SpaceID attribute value.
-Syntax RxCore. selectRxSpace (spaceIDval, multi)
-Parameters spaceIDval SpaceID value of the Rasterex space object.
-Parameters multi If true currently selected Rasterex space objects are not unselected.
+
+**Syntax**
+
+```javascript
+RxCore.selectRxSpace(spaceIDval, multi);
+```
+
+**Parameters**
+
+-   `spaceIDval`: SpaceID value of the Rasterex space object.
+-   `multi`: If true currently selected Rasterex space objects are not unselected.
+
 Returns NA
 
 ### `selectSymbName`
 
 Select symbol name from a symbol library. Result returned using GUI_Symbols callback event.
-Syntax RxCore.getSymbolName(num)
-Parameters num Library number
+
+**Syntax**
+
+```javascript
+RxCore.getSymbolName(num);
+```
+
+**Parameters**
+
+-   `num`: Library number
+
 Returns N/A
 
 ### `selectSymblib`
 
 Select symbol library from server. Result returned using GUI_Symbols callback event.
-Syntax RxCore.getSymbolName(num)
-Parameters num Library number
+
+**Syntax**
+
+```javascript
+RxCore.getSymbolName(num);
+```
+
+**Parameters**
+
+-   `num`: Library number
+
 Returns N/A
 
 ### `selectVectorBlock`
 
 Use this method to select a 2D vector block in a vector drawing by using the Block ID.
-Syntax RxCore.select3DVectorBlock (blockid)
-Parameters blockid Block ID of the 2D vector block to select.
+
+**Syntax**
+
+```javascript
+RxCore.select3DVectorBlock(blockid);
+```
+
+**Parameters**
+
+-   `blockid`: Block ID of the 2D vector block to select.
+
 Returns NA
 
 ### `set3DBlockDistance`
 
 Offset a 3D mesh using distance and direction.
-Syntax RxCore. set3DBlockDistance (blockid, distance, direction, override)
-Parameters blockid Mesh id for the 3D block.
-distance Distance in model units
-direction Object with x, y and z properties that is converted to a direction vector, Example \{x:-1, y:0, z:0\} move in negative x direction.
-override Boolean if false resets the 3D block to its original position.
+
+**Syntax**
+
+```javascript
+RxCore.set3DBlockDistance(blockid, distance, direction, override);
+```
+
+**Parameters**
+
+-   `blockid`: Mesh id for the 3D block.
+-   `distance`: Distance in model units
+-   `direction`: Object with x, y and z properties that is converted to a direction vector,
+
+**Example**
+
+```javascript
+{x:-1, y:0, z:0} //move in negative x direction.
+//override Boolean if false resets the 3D block to its original position.
+```
+
 Returns NA
 
 ### `set3DBlockState`
 
 Set the visibility state of a specific 3D mesh
-Syntax RxCore.set3DBlockState (name, state)
-Parameters name Mesh ID of the 3D vector block to hide or display.
-state Boolean true = visibility on, false = visibility off
+
+**Syntax**
+
+```javascript
+RxCore.set3DBlockState(name, state);
+```
+
+**Parameters**
+
+-   `name`: Mesh ID of the 3D vector block to hide or display.
+-   `state`: Boolean true = visibility on, false = visibility off
+
 Returns NA
 
 ### `set3DBlockStateAll`
 
 Set the visibility state of all 3D meshes in a model.
-Syntax RxCore.set3DBlockState (state)
+
+**Syntax**
+
+```javascript
+RxCore.set3DBlockState(state);
+```
+
 Parameters state Boolean true = visibility on, false = visibility off
 Returns NA
 
 ### `set3DBlockTransparency`
 
 Set transparency of a mesh in a 3D model by mesh id.
-Syntax RxCore. set3DBlockTransparency (blockid, value, override)
-Parameters Blockid Mesh id for the 3D block.
-Value Transparency using a value between 0-1 where 1 is full opaque.
-Override Boolean if false resets the 3D block to its original transparency.
+
+**Syntax**
+
+```javascript
+RxCore.set3DBlockTransparency(blockid, value, override);
+```
+
+**Parameters**
+
+-   `Blockid`: Mesh id for the 3D block.
+-   `Value`: Transparency using a value between 0-1 where 1 is full opaque.
+-   `Override`: Boolean if false resets the 3D block to its original transparency.
+
 Returns NA
 
 ### `set3DmodelcurFloor`
 
 Set the 3D navigation Bird’s eye generic floorplan. Then clicking the image will set the 3D walkthrough camera to the correct location.
-Syntax RxCore.set3DmodelcurFloor (floornum)
-Parameters Floornum Floor number.
+
+**Syntax**
+
+```javascript
+RxCore.set3DmodelcurFloor(floornum);
+```
+
+**Parameters**
+
+-   `Floornum`: Floor number.
+
 Returns NA
 
 ### `set3dNavcameraPos`
 
 Set the 3D camera position indicator for a 2D drawing being used as navigation drawing for a 3D model floor.
-Syntax RxCore.set3dNavcameraPos (position, rotation, boxCenter)
-Parameters position Position of the 3D camera with x, y and z values
-rotation Angle of the camera in radians.
-boxCenter Center of the 3D model with x, y and z values.
+
+**Syntax**
+
+```javascript
+RxCore.set3dNavcameraPos(position, rotation, boxCenter);
+```
+
+**Parameters**
+
+-   `position`: Position of the 3D camera with x, y and z values
+-   `rotation`: Angle of the camera in radians.
+-   `boxCenter`: Center of the 3D model with x, y and z values.
+
 Returns NA
 
 ### `set3DViewSelectedMesh`
 
 Use to associate the selected 3D block to 3D view.
-Syntax RxCore. set3DViewSelectedMesh (name)
-Parameters name Name of 3D view.
+
+**Syntax**
+
+```javascript
+RxCore.set3DViewSelectedMesh(name);
+```
+
+**Parameters**
+
+-   `name`: Name of 3D view.
+
 Returns NA
 
 ### `setActiveFile`
 
 Use this method to set an open file as active file.
-Syntax RxCore.setActiveFile (index)
-Parameters Index Index of open file.
+
+**Syntax**
+
+```javascript
+RxCore.setActiveFile(index);
+```
+
+**Parameters**
+
+-   `Index`: Index of open file.
+
 Returns NA
 
 ### `setActiveFileEx`
 
 Use this method to set an open file as active file. This method will wait until all open files rendering process is complete before changing the active file.
-Syntax RxCore.setActiveFileEx (index)
-Parameters Index Index of open file.
+
+**Syntax**
+
+```javascript
+RxCore.setActiveFileEx(index);
+```
+
+**Parameters**
+
+-   `Index`: Index of open file.
+
 Returns NA
 
 ### `setAreaPerimeter`
 
 Change selected area markup from displaying the area value to displaying the perimeter of the area outline.
-Syntax RxCore. setAreaPerimeter(onoff)
-Parameters Onoff Boolean. true=perimeter displayed, false=area displayed.
+
+**Syntax**
+
+```javascript
+RxCore.setAreaPerimeter(onoff);
+```
+
+**Parameters**
+
+-   `Onoff`: Boolean. true=perimeter displayed, false=area displayed.
+
 Returns N/A
 
 ### `setArrowSize`
 
 Use to change the size of arrow heads on arrow markup. Default size is 20
-Syntax RxCore.setArrowSize(num)
-Parameters num Arrow size
+
+**Syntax**
+
+```javascript
+RxCore.setArrowSize(num);
+```
+
+**Parameters**
+
+-   `num`: Arrow size
+
 Returns N/A
 
 ### `setAuthorization`
 
 This must be called before RxCore.initialize. All calls to server will then use this authentication.
-Syntax RxCore.setAuthorization(string type, base64string token )
-Parameters type String – type of authentication method.
-token Base64String – base 64 encoded string representing the token.
+
+**Syntax**
+
+```javascript
+RxCore.setAuthorization(string type, base64string token );
+```
+
+**Parameters**
+
+-   `type`: String – type of authentication method.
+-   `token`: Base64String – base 64 encoded string representing the token.
+
 Returns N/A
-Example RxCore.setAuthorization("Basic", "Q0FOWU9OQk9YXEZyYW5rZXN0ZXI=");
+
+**Example**
+
+```javascript
+RxCore.setAuthorization("Basic", "Q0FOWU9OQk9YXEZyYW5rZXN0ZXI=");
+```
 
 ### `setBirdseyeCanvas`
 
 Use to connect HTML5 canvases to the birdseye overview tool.
-Syntax RxCore. setBirdseyeCanvas(imagecanvas, indicatorcanvas, markupcanvas)
-Parameters imagecanvas Canvas where the page is drawn
-indicatorcanvas Canvas used for zoom scale indicator
-markupcanvas Canvas used for markup
+
+**Syntax**
+
+```javascript
+RxCore.setBirdseyeCanvas(imagecanvas, indicatorcanvas, markupcanvas);
+```
+
+**Parameters**
+
+-   `imagecanvas`: Canvas where the page is drawn
+-   `indicatorcanvas`: Canvas used for zoom scale indicator
+-   `markupcanvas`: Canvas used for markup
+
 Returns NA
 
 ### `setBirdsEyeFoxit`
 
 Sets the bitmap to be used with the birdseye overview for the current page.
-Syntax RxCore. setBirdsEyeFoxit (bitmap, pageindex)
-Parameters bitmap Clamped bitmap Array
-pageindex The 0 indexed page index
+
+**Syntax**
+
+```javascript
+RxCore.setBirdsEyeFoxit(bitmap, pageindex);
+```
+
+**Parameters**
+
+-   `bitmap`: Clamped bitmap Array
+-   `pageindex`: The 0 indexed page index
+
 Returns NA
 
 ### `setBlockColor`
 
 Use this method to draw a selected vector block in a different color.
-Syntax RxCore.setBlockColor (blockid , Color, override)
-Parameters blockid Block ID of the block to change.
-color Color to apply to block
-override If false reset the color to original block color.
+
+**Syntax**
+
+```javascript
+RxCore.setBlockColor(blockid, Color, override);
+```
+
+**Parameters**
+
+-   `blockid`: Block ID of the block to change.
+-   `color`: Color to apply to block
+-   `override`: If false reset the color to original block color.
+
 Returns NA
 
 ### `setBlockFill`
 
 Use this method to draw a selected vector block using a different color or fill pattern created with addFill.
-Syntax RxCore.setBlockFill (blockid, name, override)
-Parameters blockid Block ID of the block to change.
-name Name of fill object to apply to block.
-override If false resets to original block color.
+
+**Syntax**
+
+```javascript
+RxCore.setBlockFill(blockid, name, override);
+```
+
+**Parameters**
+
+-   `blockid`: Block ID of the block to change.
+-   `name`: Name of fill object to apply to block.
+-   `override`: If false resets to original block color.
+
 Returns NA
 
 ### `setCalibration`
 
 Use this method to set the calibration scaling using a number.
-Syntax RxCore. setCalibration (scale)
+
+**Syntax**
+
+```javascript
+RxCore.setCalibration(scale);
+```
+
 Parameters scale A number ex. 0.5 will set the scale to half original scale
 Returns NA
 
 ### `setCameraTumbWidth`
 
 Use to override the default thumbnail image width for 3D Views. Default value is 210 pixels.
-Syntax RxCore. setCameraTumbWidth (num)
+
+**Syntax**
+
+```javascript
+RxCore.setCameraTumbWidth(num);
+```
+
 Parameters Num New default width of 3D view thumbnail image.
 Returns NA
 
 ### `setCompareFiles`
 
 Used in combination with the compare dialog to set the state of a file in a compare composite.
-Syntax RxCore.setCompareFiles (index,state)
+
+**Syntax**
+
+```javascript
+RxCore.setCompareFiles(index, state);
+```
+
 Parameters index Index number reference to file in list of open files that can be used in a compare/overlay composite.
 state Role of the referenced file.
 0 = unused, 1 = background, 2= overlay
@@ -3918,7 +4860,13 @@ Returns NA
 ### `setCompareColors`
 
 Use this method to set the drawing colors for overlay and background page in a compare overlay composite.
-Syntax RxCore. setCompareColors (bgcolor, fgcolor)
+
+**Syntax**
+
+```javascript
+RxCore.setCompareColors(bgcolor, fgcolor);
+```
+
 Parameters bgcolor Html color string to set color of background drawing.
 Parameters fgcolor Html color string to set color of foreground drawing.
 Returns NA
@@ -3926,7 +4874,13 @@ Returns NA
 ### `setCompareScale`
 
 Set compare alignment using an array containing scaling object returned by GUI_CompareMeasure callback
-Syntax RxCore.setCompareScale(scalearray)
+
+**Syntax**
+
+```javascript
+RxCore.setCompareScale(scalearray);
+```
+
 Parameters scalearray Array of scale objects
 Scaleobject = \{
 dist: distance, angle : angle, offset : offset, pwidth : pagewidth
@@ -3937,28 +4891,52 @@ Returns NA
 ### `setConfiguration`
 
 Use this method to override the configuration location source loaded on startup. This must be called before RxCore.initialize to work.
-Syntax RxCore. setConfiguration (szURL)
+
+**Syntax**
+
+```javascript
+RxCore.setConfiguration(szURL);
+```
+
 Parameters szURL Full URL to an XML source that is used to set the client configuration.
 Returns NA
 
 ### `setCountSize`
 
 Set the display size of selected markup count element in pixels.
-Syntax RxCore. setCountSize (nSize)
+
+**Syntax**
+
+```javascript
+RxCore.setCountSize(nSize);
+```
+
 Parameters nSize New display size.
 Returns NA
 
 ### `setCountSizeAll`
 
 Set the display size of all markup count element in pixels.
-Syntax RxCore. setCountSizeAll (nSize)
+
+**Syntax**
+
+```javascript
+RxCore.setCountSizeAll(nSize);
+```
+
 Parameters nSize New display size.
 Returns NA
 
 ### `setCustomLabelText`
 
 Sets a custom text and visibility of a selected Rasterex space markup object label.
-Syntax RxCore. setCustomLabelText (text, onoff)
+
+**Syntax**
+
+```javascript
+RxCore.setCustomLabelText(text, onoff);
+```
+
 Parameters text Text to use with label.
 onoff Boolean : true = label displayed, false = label hidden.
 Returns NA
@@ -3966,42 +4944,78 @@ Returns NA
 ### `setDimOffset`
 
 Sets the leader line offset for dimension line markup objects.
-Syntax RxCore. setDimOffset (size)
+
+**Syntax**
+
+```javascript
+RxCore.setDimOffset(size);
+```
+
 Parameters size Number of pixels for leader line offset.
 Returns NA
 
 ### `setdimPrecision`
 
 Sets how many numbers after the decimal points are used for measurement markup. Default is 2.
-Syntax RxCore. setdimPrecision (num)
+
+**Syntax**
+
+```javascript
+RxCore.setdimPrecision(num);
+```
+
 Parameters num New value of numbers after decimal points used.
 Returns NA
 
 ### `setdisplayBackground`
 
 Use this method to set the color of the display area outside the extent of the document.
-Syntax RxCore.setdisplayBackground (color)
+
+**Syntax**
+
+```javascript
+RxCore.setdisplayBackground(color);
+```
+
 Parameters color Color string using supported html color notation Ex “#00FF00”
 Returns NA
 
 ### `setFont`
 
 Use this method to set the font used for markup text.
-Syntax RxCore.setFont (value)
+
+**Syntax**
+
+```javascript
+RxCore.setFont(value);
+```
+
 Parameters Value Type string. A valid font name.
 Returns NA
 
 ### `setFontBold`
 
 Use this method to toggle font bold on/off.
-Syntax RxCore.setFontBold()
+
+**Syntax**
+
+```javascript
+RxCore.setFontBold();
+```
+
 Parameters none
 Returns NA
 
 ### `setFontFull`
 
 Sets the current markup font using font name, font size, font style bold, font style italic. Use instead of setFontBold, setFont, setFontHeight and setFontItalic separately.
-Syntax RxCore.setFontFull(fontobject)
+
+**Syntax**
+
+```javascript
+RxCore.setFontFull(fontobject);
+```
+
 Parameters fontobject Fontobject.font = \<string font name>
 Fontobject.size = \<height in points>
 Fontobject.style.bold = \<Boolean true/false>
@@ -4011,35 +5025,65 @@ Returns NA
 ### `setFontHeight`
 
 Use this method to set the font height for markup text in points.
-Syntax RxCore. setFontHeight (value)
+
+**Syntax**
+
+```javascript
+RxCore.setFontHeight(value);
+```
+
 Parameters Value Integer indicating font height in points.
 Returns NA
 
 ### `setFontItalic`
 
 Use this method to set font italic on/off.
-Syntax RxCore.setFontItalic (value)
+
+**Syntax**
+
+```javascript
+RxCore.setFontItalic(value);
+```
+
 Parameters OnOff Boolean to set Italic on/off
 Returns NA
 
 ### `setGlobalStyle`
 
 When on any changes to markup color, line width, and fill style will be set as the new global value when creating any new markup elements.
-Syntax RxCore.setGlobalStyle (global)
+
+**Syntax**
+
+```javascript
+RxCore.setGlobalStyle(global);
+```
+
 Parameters global Boolean value to turn setting on/off
 Returns NA
 
 ### `setGUIDMarkupSelected`
 
 Assign a unique ID to the currently selected markup.
-Syntax RxCore.setGUIDMarkupSelected ()
+
+**Syntax**
+
+```javascript
+RxCore.setGUIDMarkupSelected();
+```
+
 Parameters none
 Returns NA
 
 ### `setHatchDescription`
 
 Sets a description property on a fill style created using addFill.
-Syntax RxCore. setHatchDescription (szname, szdescription)
+
+**Syntax**
+
+```javascript
+RxCore.setHatchDescription(szname, szdescription);
+```
+
 Parameters szname Name identifier of the fill object.
 Parameters szdescription Text description to apply.
 Returns NA
@@ -4047,28 +5091,52 @@ Returns NA
 ### `setLabelSize`
 
 Changes the label size for markup objects that has labels like area and dimension lines.
-Syntax RxCore.setLabelSize (size)
+
+**Syntax**
+
+```javascript
+RxCore.setLabelSize(size);
+```
+
 Parameters size Number of pixels for the label text height.
 Returns NA
 
 ### `setLabelSizeAll`
 
 Changes the label size for all markup objects that has labels like area and dimension lines.
-Syntax RxCore. setLabelSizeAll(size)
+
+**Syntax**
+
+```javascript
+RxCore.setLabelSizeAll(size);
+```
+
 Parameters size Number of pixels for the label text height.
 Returns NA
 
 ### `setLargePDFpageLimit`
 
 If a loaded PDF file contains more pages than the set number, only a limited number of pages will be active at any given time to limit the memory needed to display the PDF document.
-Syntax RxCore. setLargePDFpageLimit (numpages)
+
+**Syntax**
+
+```javascript
+RxCore.setLargePDFpageLimit(numpages);
+```
+
 Parameters numpages Limit for number of pages that can be loaded at once.
 Returns NA
 
 ### `setLayout`
 
 Call to set canvas size based on web page content.
-Syntax RxCore. initialize (layout)
+
+**Syntax**
+
+```javascript
+RxCore.initialize(layout);
+```
+
 Parameters offsetWidth Width to subtract from full width. Values in pixels.
 Parameters offsetHeight Height to subtract from full height. Values in pixels.
 Returns NA
@@ -4076,7 +5144,13 @@ Returns NA
 ### `setLineStyle`
 
 Use this method to set the line style used for markup. NB! Not all browser currently support this feature.
-Syntax RxCore_SetLineStyle(linestyle)
+
+**Syntax**
+
+```javascript
+RxCore_SetLineStyle(linestyle);
+```
+
 Parameters Value 0 = '————' solid
 1 = '– – – – – ' dashed
 2 = '· · · · · · · ' dotted
@@ -4086,21 +5160,39 @@ Returns NA
 
 2.349 setLineWidth
 Use this method to set the line width used for selected markup.
-Syntax RxCore.setLineWidth (value)
+
+**Syntax**
+
+```javascript
+RxCore.setLineWidth(value);
+```
+
 Parameters Value Width in pixels.
 Returns NA
 
 ### `setLineWidthAll`
 
 Use this method to set the line width used for all markup.
-Syntax RxCore. setLineWidthAll (value)
+
+**Syntax**
+
+```javascript
+RxCore.setLineWidthAll(value);
+```
+
 Parameters value Width in pixels.
 Returns NA
 
 ### `setLineWidthMarkup`
 
 Use this method to set the line width used for a markup object.
-Syntax RxCore.setLineWidth (markup, value)
+
+**Syntax**
+
+```javascript
+RxCore.setLineWidth(markup, value);
+```
+
 Parameters markup Markup object.
 value Width in pixels.
 Returns NA
@@ -4108,35 +5200,65 @@ Returns NA
 ### `setLineWidthUnits`
 
 Sets the line width for the selected markup to the width specified using he current measurement unit. I.E if the currently selected measurement unit is mm the width will be set in mm.
-Syntax RxCore. setLineWidthUnits (value)
+
+**Syntax**
+
+```javascript
+RxCore.setLineWidthUnits(value);
+```
+
 Parameters Value Width in current measurement uinit.
 Returns NA
 
 ### `setMarkup3DSavefile`
 
 Use to change the name of the json file that holds the 3D markups. Default is 'markup.json’.
-Syntax RxCore. setMarkup3DSavefile (szfilename)
+
+**Syntax**
+
+```javascript
+RxCore.setMarkup3DSavefile(szfilename);
+```
+
 Parameters szfilename String - Name of the file
 Returns NA
 
 ### `setMarkupLayer`
 
 Set the currently active markup layer.
-Syntax RxCore.setMarkupLayer (layer)
+
+**Syntax**
+
+```javascript
+RxCore.setMarkupLayer(layer);
+```
+
 Parameters layer Number of the markup layer to set as active.
 Returns NA
 
 ### `setmarkupRxGUID`
 
 Set unique id for markup objects.
-Syntax RxCore.setmarkupRxGUID ()
+
+**Syntax**
+
+```javascript
+RxCore.setmarkupRxGUID();
+```
+
 Parameters none
 Returns NA
 
 ### `setMarkupSearchPadding`
 
 Sets an internal variable that can be used with RxCore.markupTextSearch to control the markup zoom level.
-Syntax RxCore.setMarkupSearchPadding(padding)
+
+**Syntax**
+
+```javascript
+RxCore.setMarkupSearchPadding(padding);
+```
+
 Parameters padding object padding = \{x : int, y : int, w: int, h : int \}
 Returns NA
 Examples RxCore.setMarkupSearchPadding(\{x:50, y: 50, w:50, h:100\});
@@ -4144,21 +5266,39 @@ Examples RxCore.setMarkupSearchPadding(\{x:50, y: 50, w:50, h:100\});
 ### `setMarkupXMLData`
 
 Create markup from XML markup structure.
-Syntax RxCore. setMarkupXMLData (xmldata)
+
+**Syntax**
+
+```javascript
+RxCore.setMarkupXMLData(xmldata);
+```
+
 Parameters xmldata Xml structure representing markup to be created.
 Returns NA
 
 ### `setMonoChrome`
 
 Turn monochrome display on/off for CAD and other vector based formats.
-Syntax RxCore.setMonoChrome (bonOff)
+
+**Syntax**
+
+```javascript
+RxCore.setMonoChrome(bonOff);
+```
+
 Parameters bonOff Boolean value. True = monochrome on, false = monochrome off.
 Returns NA
 
 ### `setnavigationScaleOffset`
 
 Use alignment array from compare overlay to set the scale and offset of a drawing used to replace the generic floorplan thumbnail of a 3D model so the camera indicator from 3D model show up at the correct place. Alignment array data is returned by the GUI_CompareMeasure callback event.
-Syntax RxCore. setnavigationScaleOffset(targetdocindex, floornum, alignarray)
+
+**Syntax**
+
+```javascript
+RxCore.setnavigationScaleOffset(targetdocindex, floornum, alignarray);
+```
+
 Parameters targetdocindex Open file index of the 3D model.
 floornum 3D model floor that the scale and offset is for.
 Alignarray Array of alignment data created for the compare overlay.
@@ -4167,7 +5307,13 @@ Returns NA
 ### `setnavScaleOffsetPage`
 
 Use alignment array from compare overlay to set the scale and offset of current drawing page to be used as a 2D navigation page. Will cause the camera indicator from 3D model to show up at the correct place. Alignment array data is returned by the GUI_CompareMeasure callback event.
-Syntax RxCore. setnavigationScaleOffset(alignarray)
+
+**Syntax**
+
+```javascript
+RxCore.setnavigationScaleOffset(alignarray);
+```
+
 Parameters alignarray Array of alignment data created for the compare overlay.
 Returns NA
 
