@@ -1995,363 +1995,801 @@ RxCore.getMarkupXMLData();
 
 Returns `XML`: XML structure representing markups for Active document
 
-2.149 getMarkupXMLSelected
-Returns an xml structure representing the currently selected markup element.
-Syntax RxCore. getMarkupXMLSelected()
-Parameters none
-Returns XML XML structure representing a markup object.
+### `getMarkupXMLSelected`
 
-2.150 getModelBox
+Returns `xml`: an xml structure representing the currently selected markup element.
+
+**Syntax**
+
+```javascript
+RxCore.getMarkupXMLSelected();
+```
+
+**Parameters** none
+
+Returns `XML` XML structure representing a markup object.
+
+### `getModelBox`
+
 Returns the Box of the currently active 3D model.
-Syntax RxCore.getModelBox()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.getModelBox();
+```
+
+**Parameters** None
+
 Returns Model box THREE.Box3() object for the model
 
-2.151 getModelCenter
-Returns the center of the currently active 3D model.
-Syntax RxCore.getModelCenter()
-Parameters None
-Returns Model center object unit : a number signifying the measurement unit,
-boxCenter : 3D vector with x, y and z values.
+### `getModelCenter`
 
-2.152 getmodelUnit
+Returns the center of the currently active 3D model.
+
+**Syntax**
+
+```javascript
+RxCore.getModelCenter();
+```
+
+**Parameters** None
+
+**Returns**
+
+Model center object unit : a number signifying the measurement unit,
+
+`boxCenter` : 3D vector with x, y and z values.
+
+### `getmodelUnit`
+
 Returns the measurement unit of the currently active 3D model.
-Syntax RxCore.getmodelUnit()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.getmodelUnit();
+```
+
+**Parameters** None
+
 Returns Unit 0 = mm, 1 = meter, 2 = feet, 3= Inch, 4=cm
 
-2.153 getNoteDiag
-Alternative reference to GUI_Notediag callback.
+### `getNoteDiag`
 
-2.154 getnumSymbols
-Returns the number of available symbols for selected symbol library using GUI_Symbols callback event.
-Syntax RxCore.getnumSymbols()
-Parameters num Symbol library number
+Alternative reference to `GUI_Notediag` callback.
+
+### `getnumSymbols`
+
+Returns the number of available symbols for selected symbol library using `GUI_Symbols` callback event.
+
+**Syntax**
+
+```javascript
+RxCore.getnumSymbols();
+```
+
+**Parameters**
+
+-   `num`: Symbol library number
+
 Returns N/A
 
-2.155 getOpenFiles
+### `getOpenFiles`
+
 Returns the name of currently open files that is used for compare function.
-Syntax RxCore.getOpenFiles ()
-Parameters None
-Returns OpenFileNames Array of Strings
 
-2.156 getOpenFileList
+**Syntax**
+
+```javascript
+RxCore.getOpenFiles();
+```
+
+**Parameters** None
+
+Returns `OpenFileNames`: Array of Strings
+
+### `getOpenFileList`
+
 Returns list of open files.
-Syntax RxCore.getOpenFileList ()
-Parameters None
-Returns openFilesList Array of objects with the current properties.
-Index – index of the file,
-name – file name,
-isActive – true if currently the active file otherwise false,
 
-2.157 getOriginalPath
+**Syntax**
+
+```javascript
+RxCore.getOpenFileList();
+```
+
+**Parameters** None
+
+Returns `openFilesList`: Array of objects with the current properties.
+
+-`` Index`: index of the file,
+
+-   `` name` : file name,
+-   ``isActive `: true if currently the active file otherwise false,
+
+### `getOriginalPath`
+
 Returns the original URL or path for the currently active document.
-Syntax RxCore.getOriginalPath ()
-Parameters None
-Returns OriginalURL Original URL or path of the currently active document.
 
-2.158 getPageDimensions
+**Syntax**
+
+```javascript
+RxCore.getOriginalPath();
+```
+
+**Parameters** None
+
+Returns `OriginalURL`: Original URL or path of the currently active document.
+
+### `getPageDimensions`
+
 Returns a page dimensions object that holds the dimensions of a page given by 0 indexed page number.
-Syntax RxCore. getPageDimensions (pagenumber)
-Parameters pagenumber 0 indexed page number of page to get dimensions of.
-Returns pgdim Page dimensions object.
-pgdim.x //page current x position
-pgdim.y //page current y position
-pgdim.w //page current width
-pgdim.h //page current height
-pgdim.origw // page original width
-pgdim.origh //page original height
-pgdim.scale //current display scale
-pgdim.dpi //page DPI
-pgdim.rotation //page current rotation
 
-2.159 getPageRotation
+**Syntax**
+
+```javascript
+RxCore.getPageDimensions(pagenumber);
+```
+
+**Parameters**
+
+-   `pagenumber`: 0 indexed page number of page to get dimensions of.
+
+Returns `pgdim`: Page dimensions object.
+
+`pgdim.x`: page current x position
+`pgdim.y`: page current y position
+`pgdim.w`: page current width
+`pgdim.h`: page current height
+`pgdim.origw`: page original width
+`pgdim.origh`: page original height
+`pgdim.scale`: current display scale
+`pgdim.dpi`: page DPI
+`pgdim.rotation`: page current rotation
+
+### `getPageRotation`
+
 Returns current page rotation
-Syntax RxCore.getPageRotation ()
-Parameters None
-Returns Rotation Rotation of current page in degrees
 
-2.160 getPDFDocobj
-Returns PDF.js document object for active document if this is a PDF. This can be used to share one document object if you use multiple instances of the same file in different views created using RxCoreMulti
-Syntax RxCore. getPDFDocobj()
-Parameters None
-Returns pdfDoc PDF.js document object.
+**Syntax**
 
-2.161 getPDFintialScale
+```javascript
+RxCore.getPageRotation();
+```
+
+**Parameters** None
+
+Returns `Rotation`: Rotation of current page in degrees
+
+### `getPDFDocobj`
+
+Returns PDF.js document object for active document if this is a PDF. This can be used to share one document object if you use multiple instances of the same file in different views created using `RxCoreMulti`
+
+**Syntax**
+
+```javascript
+RxCore.getPDFDocobj();
+```
+
+**Parameters** None
+
+Returns `pdfDoc`: PDF.js document object.
+
+### `getPDFintialScale`
+
 Used to get pdf scale used with foxit integration.
-Syntax RxCore. getPDFintialScale (width, height)
+
+**Syntax**
+
+```javascript
+RxCore.getPDFintialScale(width, height);
+```
+
 Parameters width Page width
+
 height Page height
+
 Returns scale Display scale of PDF document.
 
-2.162 getReadOnly
+### `getReadOnly`
+
 Returns true if read only mode is on.
-Syntax RxCore.getReadOnly()
+**Syntax**
+
+```javascript
+RxCore.getReadOnly();
+```
+
 Parameters None
 Returns True/false
 
-2.163 getSelectedMarkup
+### `getSelectedMarkup`
+
 Returns the currently selected markup object.
-Syntax RxCore. getSelectedMarkup()
+**Syntax**
+
+```javascript
+RxCore.getSelectedMarkup();
+```
+
 Parameters None
 Returns Markup object
 
-2.164 getSnapState
+### `getSnapState`
+
 Returns true if snap is on.
-Syntax RxCore.getSnapState()
+**Syntax**
+
+```javascript
+RxCore.getSnapState();
+```
+
 Parameters None
 Returns True/false
 
-2.165 getStoreyNames
+### `getStoreyNames`
+
 Returns the storey names of the currently active 3D model.
-Syntax RxCore.getStoreyNames ()
+**Syntax**
+
+```javascript
+RxCore.getStoreyNames();
+```
+
 Parameters None
 Returns Storeynames Array of Strings
 
-2.166 getStoreyAttributes
+### `getStoreyAttributes`
+
 Return the attributes of a 3D model storey.
-Syntax RxCore.getStoreyAttributes(storeyname)
+**Syntax**
+
+```javascript
+RxCore.getStoreyAttributes(storeyname);
+```
+
 Parameters storeyname String, the name of the storey.
 Returns Attributes Array mesh object attributes
 
-2.167 getStoreyAttributesEx
+### `getStoreyAttributesEx`
+
 Return specific attribute of a 3D model storey.
-Syntax RxCore.getStoreyAttributesEx(storeyname, expr, useregexp)
+**Syntax**
+
+```javascript
+RxCore.getStoreyAttributesEx(storeyname, expr, useregexp);
+```
+
 Parameters storeyname String, the name of the storey
 expr String, search expression
 useregexp Boolean, true = use regexp, false = use string compare
 Returns Attributes Array mesh object attributes
 
-2.168 getStoreyIDs
+### `getStoreyIDs`
+
 Returns the mesh IDs for a specific 3D model storey.
-Syntax RxCore. getStoreyIDs(storeyname)
+**Syntax**
+
+```javascript
+RxCore.getStoreyIDs(storeyname);
+```
+
 Parameters storeyname String, the name of the storey
 Returns Meshids Array of strings that hold the mesh IDs for the storey.
 
-2.169 getStoreyRealIDs
+### `getStoreyRealIDs`
+
 Returns the mesh IDs including the mesh group suffix for a specific 3D model storey.
-Syntax RxCore.getStoreyRealIDs(storeyname)
+**Syntax**
+
+```javascript
+RxCore.getStoreyRealIDs(storeyname);
+```
+
 Parameters storeyname String, the name of the storey
 Returns Meshids Array of strings that hold the mesh IDs for the storey.
 
-2.170 getSymbolLibNum
+### `getSymbolLibNum`
+
 Returns the number of available symbol libraries from the server using GUI_Symbols callback event.
-Syntax RxCore.getSymbolLibNum()
+**Syntax**
+
+```javascript
+RxCore.getSymbolLibNum();
+```
+
 Parameters None
 Returns N/A
 
-2.171 getSymbolLibPNGData
+### `getSymbolLibPNGData`
+
 Returns CDATA image to use as a symbol using GUI_Symbols callback event.
-Syntax RxCore.getSymbolLibNum(num,sname)
+**Syntax**
+
+```javascript
+RxCore.getSymbolLibNum(num, sname);
+```
+
 Parameters num Library number
 Parameters sname Symbol number
 Returns N/A
 
-2.172 getSymbolName
+### `getSymbolName`
+
 Returns symbol name from a symbol library using GUI_Symbols callback event.
-Syntax RxCore.getSymbolName(num,sname)
+**Syntax**
+
+```javascript
+RxCore.getSymbolName(num, sname);
+```
+
 Parameters num Library number
 Parameters sname Symbol number
 Returns N/A
 
-2.173 getTextColor
+### `getTextColor`
+
 Returns the currently active markup text color.
-Syntax RxCore. getTextColor()
+**Syntax**
+
+```javascript
+RxCore.getTextColor();
+```
+
 Parameters None
 Returns markupcolor A color object using html notation.
 
-2.174 getTextRects
+### `getTextRects`
+
 Starts the search for matching texts and return the text rectangles in a callback.
-Syntax RxCore.getTextRects(string searchexpr, Boolean casesensitive)
-Parameters Searchexpr The string to search for.
-Casesensitive If true search is case sensitive.
-Returns N/A
-Example RxCore.getTextRects(“Rasterex”, false)
-//Returns all rectangles for word Rasterex regardless of case.
-Callbacks RxCore.GUI_MathcesRectsPage
-RxCore.GUI_NumMathcesRect
 
-2.175 getUser
-Cause GUI_Users callback to return user list.
-Syntax RxCore.getUser()
-Parameters None
-Returns N/A
+**Syntax**
 
-2.176 getUsers
-Returns a list of users associated with loaded markup.
-Syntax RxCore. getUsers ()
-Parameters None
-Returns Array Array of User objects
-
-2.177 gotoPage
-Sets a page as active page.
-Syntax RxCore.gotoPage (pagenum)
-Parameters pagenum Page number to set as active page
-Returns NA
-
-2.178 hidedisplayCanvas
-Hide/Display Rxview360 display canvas when switching to with foxit Iframe.
-Syntax RxCore.hidedisplayCanvas (bhide)
-Parameters bhide Boolean : true = hide, false = show
-Returns NA
-2.179 hideAllCanvas
-Hide/Display Rxview360 display canvases to allow direct access to foxit Iframe.
-Syntax RxCore. hideAllCanvas (bhide)
-Parameters bhide Boolean : true = hide, false = show
-Returns NA
-
-2.180 hideMarkUp
-Toggles the Hide/Display of markup.
-Syntax RxCore.hideMarkUp()
-Parameters None
-Returns NA
-
-2.181 hideLabels
-Toggles the Hide/Display of labels for area and length measurement markup.
-Syntax RxCore.hideLabels(onoff)
-Parameters onoff Boolean value . true = labels off, false = labels on.
-Returns NA
-
-2.182 hideTextInput
-Call to turn off visibility of input field used to create markup text.
-Syntax RxCore.hideTextInput()
-Parameters None
-Returns NA
-
-2.183 imperialUnit
-Set the Sub unit for Imperial measurement system that will affect measurement operations.
-Syntax RxCore.imperialUnit(unit)
-Parameters Unit Use 'Inch', 'Feet', 'Yard', 'Mile' or 'Nautical Miles'
-Returns NA
-
-2.184 importFDF
-FDF files containing PDF markup can be imported using this method.
-Syntax RxCore. importFDF(szurl)
-Parameters szurl The URL that references the FDF source.
-Returns NA
-
-2.185 insertPoint
-Sets the drawing operation for markup edit to insert a new point by selecting a line in a markup that has multiple points.
-Syntax RxCore.insertPoint ()
-Parameters None
-Returns NA
-
-2.186 initFoxit
-Used from Foxit class event jrLicenseSuccess to let RxCore know Foxit is ready for use through the RxCore.GUI_FoxitReady callback.
-Syntax RxCore.initFoxit ()
-Parameters None
-Returns NA
-
-2.187 initialize
-Call to set intitial canvas size based on web page content.
-Syntax RxCore. initialize (layout, divid,class)
-Parameters Layout Object containing properties offsetWidth and offsetHeight. Values in pixels.
-Parameters divid Optional parameter assigning RxView360 to a div by element id.
-Parameters class Optional parameter assigning a style sheet class to the div
-Returns NA
-
-2.188 instanceReset
-Call to reset the instance so that initialize can be called again.
-Syntax RxCore.instanceReset()
-Parameters None
-Returns NA
-
-2.189 keepvectorColor
-Toggles the keep vector color flag. If on, white on black or black on white drawing colors are not automatically inverted but fixed to the defined color.
-Syntax RxCore.keepvectorColor (onoff)
-Parameters onoff Boolean value. true = on, false = off.
-Returns NA
-
-2.190 loadIFCSpaces
-By default IFC space objects are not loaded but can be loaded later using this method.
-Syntax RxCore. loadIFCSpaces()
-Parameters None
-Returns NA
-
-2.191 loadThumbnail
-Used to load single thumbnail by page index. Works on active document. Thumbnail is returned with GUI_pagethumb callback event.
-Syntax RxCore.loadThumbnail (pageindex)
-Parameters pageindex 0 indexed page index
-Returns NA
-
-2.192 lockMarkup
-Use this method to lock the markup in place. The markup cannot be moved and scaled until you unlock it.
-Syntax RxCore. lockMarkup (onoff)
-Parameters onoff Boolean value. true = on, false = off.
-Returns NA
-
-2.193 lockMarkupbyGUID
-Use this method to lock a specific markup in place based on unique GUID. The markup cannot be moved and scaled until you unlock it.
-Syntax RxCore. lockMarkupbyGUID (GUID, onoff)
-Parameters GUID Unique property uniqueID of a markup object.
-Parameters onoff Boolean value. true = on, false = off.
-Returns NA
-
-2.194 magnifyGlass
-Use this method to turn on/off the magnifying tool. This enables the user to magnify an area of the drawing by dragging a magnify window over the area.
-Syntax RxCore. magnifyGlass(selected)
-Parameters Selected Boolean value. true = on, false = off.
-Returns NA
-
-2.195 markupAddBlockText
-Adds a text markup to block in a vector file.
-Syntax RxCore.markupAddBlockText (BlockId,height,text,color)
-Parameters BlockId Block ID to add text to.
-height Height of text in mm
-text Text of the markup text
-color Markup text color.
-Returns NA
-
-2.196 markupAddMulti
-Set to allow adding multiple annotations and disables the callback that automatically selects newly added markup.
-Syntax RxCore.markupAddMulti(onoff)
-Parameters Onoff Boolean value. true = on, false = off.
-Returns NA
-
-2.197 markUpArea
-Use this method to turn on/off the markup area tool. This enables the user to draw a markup area on the currently open drawing, using the mouse.
-Syntax RxCore.markUpArea (selected)
-Parameters Selected Boolean value. true = on, false = off.
-Returns NA
-
-2.198 markUpArrow
-Use this method to turn on/off the markup arrow tool. This enables the user to draw a markup arrow of the given type using the mouse.
-Syntax RxCore.markUpArrow (selected,type)
-Parameters selected Boolean value. true = on, false = off.
-type Type of arrow 0=single open, 1=single filled, 2=double open, 3=double filled.
-Returns NA
-
-2.199 markupButton
-Activates the symbol markup tool but adding the symbol to be used as a button.
-Syntax RxCore.markupButton (selected)
-Parameters Selected Boolean value. true = on, false = off.
-Returns NA
-
-2.200 markupButtonFromMatch
-Can be used in combination with RxCore.getTextRects() text search to create a markup button at a position returned in the RxCore.GUI_NumMathcesRect callback.
-Syntax RxCore. markupButtonFromMatch(rectanle, pagenumber,image, padding)
+```javascript
+ RxCore.getTextRects(string searchexpr, Boolean casesensitive);
+```
 
 **Parameters**
 
-rectangle Rectangle object. = \{
-x : // rectangle left,
-y : //retanglle top
-w : //rectangle width,
-h : //rectangle height,
-pagenum : //0 indexed page number,
-pageheight : //page height
-\};
+-   `Searchexpr`: The string to search for.
+    Casesensitive If true search is case sensitive.
 
-Parameters pagenumber Number – pagenumber
-Parameters image Image object= \{
-src: //html image source
-width: // image width
-height: // image height
-orgwidth: // original image width
-orgheight: // original image height
-\};
-Parameters padding Padding object = \{left : 0, top : 10, right : 0, bottom : 0\};
-Returns \<promise> Promise that can be used to set button action..
+Returns N/A
+
+**Example**
+
+```javascript
+RxCore.getTextRects(“Rasterex”, false);
+```
+
+//Returns all rectangles for word Rasterex regardless of case.
+`Callbacks`: `RxCore.GUI_MathcesRectsPage`
+`RxCore.GUI_NumMathcesRect`
+
+### `getUser`
+
+Cause GUI_Users callback to return user list.
+
+**Syntax**
+
+```javascript
+RxCore.getUser();
+```
+
+**Parameters** None
+
+Returns N/A
+
+### `getUsers`
+
+Returns a list of users associated with loaded markup.
+
+**Syntax**
+
+```javascript
+RxCore.getUsers();
+```
+
+**Parameters** None
+
+Returns `Array`: Array of User objects
+
+### `gotoPage`
+
+Sets a page as active page.
+
+**Syntax**
+
+```javascript
+RxCore.gotoPage(pagenum);
+```
+
+**Parameters**
+
+-   `pagenum`: Page number to set as active page
+
+Returns NA
+
+### `hidedisplayCanvas`
+
+Hide/Display Rxview360 display canvas when switching to with foxit Iframe.
+
+**Syntax**
+
+```javascript
+RxCore.hidedisplayCanvas(bhide);
+```
+
+**Parameters**
+
+-   `bhide`: Boolean : true = hide, false = show
+
+Returns NA
+
+### `hideAllCanvas`
+
+Hide/Display Rxview360 display canvases to allow direct access to foxit Iframe.
+
+**Syntax**
+
+```javascript
+RxCore.hideAllCanvas(bhide);
+```
+
+**Parameters**
+
+-   `bhide`: Boolean : true = hide, false = show
+
+Returns NA
+
+### `hideMarkUp`
+
+Toggles the Hide/Display of markup.
+
+**Syntax**
+
+```javascript
+RxCore.hideMarkUp();
+```
+
+**Parameters** None
+
+Returns NA
+
+### `hideLabels`
+
+Toggles the Hide/Display of labels for area and length measurement markup.
+
+**Syntax**
+
+```javascript
+RxCore.hideLabels(onoff);
+```
+
+**Parameters**
+
+-   `onoff`: Boolean value . true = labels off, false = labels on.
+
+Returns NA
+
+### `hideTextInput`
+
+Call to turn off visibility of input field used to create markup text.
+
+**Syntax**
+
+```javascript
+RxCore.hideTextInput();
+```
+
+**Parameters** None
+
+Returns NA
+
+### `imperialUnit`
+
+Set the Sub unit for Imperial measurement system that will affect measurement operations.
+
+**Syntax**
+
+```javascript
+RxCore.imperialUnit(unit);
+```
+
+**Parameters**
+
+-   `Unit`: Use 'Inch', 'Feet', 'Yard', 'Mile' or 'Nautical Miles'
+
+Returns NA
+
+### `importFDF`
+
+FDF files containing PDF markup can be imported using this method.
+
+**Syntax**
+
+```javascript
+RxCore.importFDF(szurl);
+```
+
+**Parameters**
+
+-   `szurl`: The URL that references the FDF source.
+
+Returns NA
+
+### `insertPoint`
+
+Sets the drawing operation for markup edit to insert a new point by selecting a line in a markup that has multiple points.
+
+**Syntax**
+
+```javascript
+RxCore.insertPoint();
+```
+
+**Parameters** None
+
+Returns NA
+
+### `initFoxit`
+
+Used from Foxit class event jrLicenseSuccess to let RxCore know Foxit is ready for use through the RxCore.GUI_FoxitReady callback.
+
+**Syntax**
+
+```javascript
+RxCore.initFoxit();
+```
+
+**Parameters** None
+
+Returns NA
+
+### `initialize`
+
+Call to set intitial canvas size based on web page content.
+
+**Syntax**
+
+```javascript
+ RxCore. initialize (layout, divid,class);
+```
+
+**Parameters**
+
+-   `Layout`: Object containing properties `offsetWidth` and `offsetHeight`. Values in pixels.
+-   `divid`: Optional parameter assigning `RxView360` to a div by element id.
+-   `class`: Optional parameter assigning a style sheet class to the div
+
+Returns NA
+
+### `instanceReset`
+
+Call to reset the instance so that initialize can be called again.
+
+**Syntax**
+
+```javascript
+RxCore.instanceReset();
+```
+
+**Parameters** None
+
+Returns NA
+
+### `keepvectorColor`
+
+Toggles the keep vector color flag. If on, white on black or black on white drawing colors are not automatically inverted but fixed to the defined color.
+
+**Syntax**
+
+```javascript
+RxCore.keepvectorColor(onoff);
+```
+
+**Parameters**
+
+-   `onoff`: Boolean value. true = on, false = off.
+
+Returns NA
+
+### `loadIFCSpaces`
+
+By default IFC space objects are not loaded but can be loaded later using this method.
+
+**Syntax**
+
+```javascript
+RxCore.loadIFCSpaces();
+```
+
+**Parameters** None
+
+Returns NA
+
+### `loadThumbnail`
+
+Used to load single thumbnail by page index. Works on active document. Thumbnail is returned with GUI_pagethumb callback event.
+
+**Syntax**
+
+```javascript
+RxCore.loadThumbnail(pageindex);
+```
+
+**Parameters**
+
+-   `pageindex`: 0 indexed page index
+
+Returns NA
+
+### `lockMarkup`
+
+Use this method to lock the markup in place. The markup cannot be moved and scaled until you unlock it.
+
+**Syntax**
+
+```javascript
+RxCore.lockMarkup(onoff);
+```
+
+**Parameters**
+
+-   `onoff:` Boolean value. true = on, false = off.
+
+Returns NA
+
+### `lockMarkupbyGUID`
+
+Use this method to lock a specific markup in place based on unique GUID. The markup cannot be moved and scaled until you unlock it.
+
+**Syntax**
+
+```javascript
+RxCore.lockMarkupbyGUID(GUID, onoff);
+```
+
+**Parameters**
+
+-   `GUID`: Unique property uniqueID of a markup object.
+-   `onoff`: Boolean value. true = on, false = off.
+
+Returns NA
+
+### `magnifyGlass`
+
+Use this method to turn on/off the magnifying tool. This enables the user to magnify an area of the drawing by dragging a magnify window over the area.
+
+**Syntax**
+
+```javascript
+RxCore.magnifyGlass(selected);
+```
+
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
+
+Returns NA
+
+### `markupAddBlockText`
+
+Adds a text markup to block in a vector file.
+
+**Syntax**
+
+```javascript
+RxCore.markupAddBlockText(BlockId, height, text, color);
+```
+
+**Parameters**
+
+-   `BlockId`: Block ID to add text to.
+-   `height`: Height of text in mm
+-   `text`: Text of the markup text
+-   `color`: Markup text color.
+
+Returns NA
+
+### `markupAddMulti`
+
+Set to allow adding multiple annotations and disables the callback that automatically selects newly added markup.
+
+**Syntax**
+
+```javascript
+RxCore.markupAddMulti(onoff);
+```
+
+**Parameters**
+
+-   `Onoff`: Boolean value. true = on, false = off.
+
+Returns NA
+
+### `markUpArea`
+
+Use this method to turn on/off the markup area tool. This enables the user to draw a markup area on the currently open drawing, using the mouse.
+
+**Syntax**
+
+```javascript
+RxCore.markUpArea(selected);
+```
+
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
+
+Returns NA
+
+### `markUpArrow`
+
+Use this method to turn on/off the markup arrow tool. This enables the user to draw a markup arrow of the given type using the mouse.
+
+**Syntax**
+
+```javascript
+RxCore.markUpArrow(selected, type);
+```
+
+**Parameters**
+
+-   `selected`: Boolean value. true = on, false = off.
+-   `type`: Type of arrow 0=single open, 1=single filled, 2=double open, 3=double filled.
+
+Returns NA
+
+### `markupButton`
+
+Activates the symbol markup tool but adding the symbol to be used as a button.
+
+**Syntax**
+
+```javascript
+RxCore.markupButton(selected);
+```
+
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
+
+Returns NA
+
+### `markupButtonFromMatch`
+
+Can be used in combination with RxCore.getTextRects() text search to create a markup button at a position returned in the RxCore.GUI_NumMathcesRect callback.
+
+**Syntax**
+
+```javascript
+RxCore.markupButtonFromMatch(rectanle, pagenumber, image, padding);
+```
+
+**Parameters**
+
+-   `rectangle` Rectangle object. = \{
+    `x` : // rectangle left,
+    `y` : //retanglle top
+    `w` : //rectangle width,
+    `h` : //rectangle height,
+    `pagenum` : //0 indexed page number,
+    `pageheight` : //page height
+    \};
+
+-   `pagenumber`: Number – pagenumber
+-   `image`: Image object= \{
+    `src`: html image source
+    `width`: image width
+    `height`: image height
+    `orgwidth`: original image width
+    `orgheight`: original image height
+    \};
+-   `padding`: Padding object = \{left : 0, top : 10, right : 0, bottom : 0\};
+
+Returns `<promise>`: Promise that can be used to set button action.
 
 **Example**
 
@@ -2367,117 +2805,235 @@ RxCore.markupButtonFromMatch(rects[ri], pagenumber, singbuttondrop, padding)
 	});
 ```
 
-2.201 markupChanged
+### `markupChanged`
+
 Returns true if any markup has been changed.
-Syntax RxCore.markupChanged()
-Parameters None
-Returns Boolean True = markup has changed.
 
-2.202 markupCircle
+**Syntax**
+
+```javascript
+RxCore.markupChanged();
+```
+
+**Parameters** None
+
+Returns `Boolean`: True = markup has changed.
+
+### `markupCircle`
+
 Use this method to turn on/off the markup circle tool. This enables the user to draw a markup circle.
-Syntax RxCore.markupCircle (selected)
-Parameters selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markupCircle(selected);
+```
+
+**Parameters**
+
+-   `selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
-2.203 markupCount
+### `markupCount`
+
 Use this method to turn on/off the markup count tool. This enables the user to count objects using the markup counter.
+
 Syntax RxCore.markupCircle (selected, shape)
-Parameters selected Boolean value. true = on, false = off.
-shape Number corresponding to a counter shape,
-0=Circle, 1=Square, 2=Triangle, 3=Diamond, 4=Star, 5=Cross, 6=Checkmark, 7=Diagonal Cross.
+
+**Parameters**
+
+-   `selected`: Boolean value. true = on, false = off.
+-   `shape`: Number corresponding to a counter shape,0=Circle, 1=Square, 2=Triangle, 3=Diamond, 4=Star, 5=Cross, 6=Checkmark, 7=Diagonal Cross.
+
 Returns NA
 
-2.204 markUpDimension
+### `markUpDimension`
+
 Use this method to turn on/off the markup dimension tool. This enables the user to draw a markup dimension line of the given type using the mouse.
-Syntax RxCore.markUpDimension (selected,type)
-Parameters Selected Boolean value. true = on, false = off.
-Type Type of dimension line 0=bar end points, 1=bar and arrow end points.
+
+**Syntax**
+
+```javascript
+RxCore.markUpDimension(selected, type);
+```
+
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
+-   `Type`: Type of dimension line 0=bar end points, 1=bar and arrow end points.
+
 Returns NA
 
-2.205 markupDisplay
+### `markupDisplay`
+
 Turns the visibility of currently selected markup on/off
-Syntax RxCore. markupDisplay (onoff)
-Parameters Onoff Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markupDisplay(onoff);
+```
+
+**Parameters**
+
+-   `Onoff`: Boolean value. true = on, false = off.
+
 Returns NA
 
-2.206 markUpErase
+### `markUpErase`
+
 Use this method to turn on/off the markup eraser tool. This enables the user to redact drawing information with the current background color using the mouse.
-Syntax RxCore.markUpErase (selected)
-Parameters Selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markUpErase(selected);
+```
+
+**Parameters**
+
+-   Selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
-2.207 markUpFilled
+### `markUpFilled`
+
 Set Markup fill style to filled to Draw markup objects with filled with current markup color. Also changes selected markup entities to use this fill type.
-Syntax RxCore.markUpFilled ()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.markUpFilled();
+```
+
+**Parameters** None
+
 Returns NA
 
-2.208 markUpFreePen
+### `markUpFreePen`
+
 Use this method to turn on/off the markup free pen tool. This enables the user to free hand draw with the current background color using the mouse.
-Syntax RxCore.markUpFreePen (selected)
-Parameters Selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markUpFreePen(selected);
+```
+
+**Parameters**
+
+-   `Selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
-2.209 markUpHighlight
+### `markUpHighlight`
+
 Use this method to turn on/off the markup highlight tool. This enables the user to highlight sections of the drawing with a transparent color using the mouse.
-Syntax RxCore.markUpHighlight(selected)
-Parameters Selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markUpHighlight(selected);
+```
+
+**Parameters**
+
+-   `Selected` Boolean value. true = on, false = off.
+
 Returns NA
 
-2.210 markuphoverevent
+### `markuphoverevent`
+
 Use this method to enable disable the GUI_MarkupHover callback for markup mouse over event. This can be used in the UI to display information about a markup when the mouse is moved over it.
-Syntax RxCore.markuphoverevent (onoff)
-Parameters onoff Boolean - If false the callback is disabled if true enabled.
+
+**Syntax**
+
+```javascript
+RxCore.markuphoverevent(onoff);
+```
+
+**Parameters**
+
+-   `onoff`: Boolean - If false the callback is disabled if true enabled.
+
 Returns NA
 
-2.211 markUpLayerDialog
+### `markUpLayerDialog`
+
 Opens a dialog containing a list of markup layers and their visibility state and the current active markup layer. Allows the user to turn the visibility of markup layers on/off if the user is allowed to do this.
-Syntax RxCore.markUpLayerDialog()
-Parameters None
+
+**Syntax**
+
+```javascript
+RxCore.markUpLayerDialog();
+```
+
+**Parameters** None
+
 Returns NA
 
-2.212 markupLine
+### `markupLine`
+
 Use this method to turn on/off the markup line tool. This enables the user to draw a markup line.
-Syntax RxCore.markupLine (selected)
-Parameters selected Boolean value. true = on, false = off.
+
+**Syntax**
+
+```javascript
+RxCore.markupLine(selected);
+```
+
+**Parameters**
+
+-   `selected`: Boolean value. true = on, false = off.
+
 Returns NA
 
-2.213 markupLinkRect
-Creates a markup with a link given a text rectangle from callbacks RxCore.GUI_MathcesRectsPage or RxCore.GUI_NumMathcesRect
-Syntax RxCore.markupLinkRect(Boolean usemarker, object rectangle, int page, string linkurl, object padding)
-Parameters usemarker
-If true a marker rectangle is created, if false an outline rectangle is created.
-rectangle
-Rect = \{x : int, y : int, w : int, h : int\}
-The start point in x and y and the height and width of the rectangle.
-Page
-Number indicating the 0 indexed page number for the markup.
-linkurl
-String indicating the link target.
-Padding (optional)
-padding = \{top : int, left : int, right : int, bottom : int\}
-Increases the size of the markup relative to the rectangle
-rect.x - padding.left;
-rect.y - padding.top;
-rect.w + padding.right;
-rect.h + padding.bottom;
+### `markupLinkRect`
+
+Creates a markup with a link given a text rectangle from callbacks `RxCore.GUI_MathcesRectsPage` or `RxCore.GUI_NumMathcesRect`
+
+**Syntax**
+
+```javascript
+RxCore.markupLinkRect(Boolean usemarker, object rectangle, int page, string linkurl, object padding);
+```
+
+**Parameters**
+
+-   `usemarker`: If true a marker rectangle is created, if false an outline rectangle is created.
+-   `rectangle`: Rect = \{x : int, y : int, w : int, h : int\}, The start point in x and y and the height and width of the rectangle.
+-   `Page`: Number indicating the 0 indexed page number for the markup.
+-   `linkurl`: String indicating the link target.
+-   `Padding`: (optional), padding = \{top : int, left : int, right : int, bottom : int\},Increases the size of the markup relative to the rectangle
+
+    `rect.x` - padding.left;
+    `rect.y` - padding.top;
+    `rect.w` + padding.right;
+    `rect.h` + padding.bottom;
+
 Returns N/A
 
 **Example**
 
 ```javascript
-function onGetMatches(rects, currentpage){
-var padding = {left:5, top:5, right:15, bottom:15};
-if(rects.length > 0){
-for(var ri = 0; ri < rects.length; ri ++){
-RxCore.markupLinkRect(true, rects[ri], currentpage,
-"https://www.rasterex.com/", padding);
-}//end for
-}// end if
-}//end function
-Callbacks RxCore.GUI_MathcesRectsPage
-RxCore.GUI_NumMathcesRect
+function onGetMatches(rects, currentpage) {
+	var padding = { left: 5, top: 5, right: 15, bottom: 15 };
+	if (rects.length > 0) {
+		for (var ri = 0; ri < rects.length; ri++) {
+			RxCore.markupLinkRect(
+				true,
+				rects[ri],
+				currentpage,
+				"https://www.rasterex.com/",
+				padding
+			);
+		} //end for
+	} // end if
+} //end function
 ```
+
+**Callbacks** `RxCore.GUI_MathcesRectsPage` , `RxCore.GUI_NumMathcesRect`
 
 2.214 markupMeasurePath
 Use this method to turn on/off the markup measure path tool. This enables the user to add a measure path that is a poly line that has a label containing the accumulated length of all the lines.
@@ -4528,7 +5084,7 @@ The callback function should have the following parameters.
 ### `GUI_FoxitReady`
 
 Callback similar to GUI_Ready but called when Foxit is ready for interaction.
-\Use this to perform tasks when the page loads, like opening a file on startup.
+Use this to perform tasks when the page loads, like opening a file on startup.
 
 **Callback Parameters**
 
@@ -4717,7 +5273,7 @@ Connection callback that is called when markup is loaded.
 
 -   `Nummarkupfiles`: Number of markup files loaded.
 
-## `GUI_markupParamsError`
+### `GUI_markupParamsError`
 
 When setting markup dimensions using either applyAngleLength, applyAngleLengthSelected applyWidthHeightSelected or applyWidthHeight this callback event will return a text string 'outside’ if the values cause the markup to exceed the boundaries of the drawing.
 

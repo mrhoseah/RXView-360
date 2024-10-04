@@ -21,6 +21,7 @@ module.exports = {
         {href: 'https://github.com/rasterex/rxview360-api-docs', label: 'GitHub', position: 'right'},
       ],
     },
+    
     footer: {
       style: 'dark',
       links: [
